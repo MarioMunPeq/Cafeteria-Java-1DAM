@@ -13,6 +13,7 @@ public class AquiVaElSwing extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		// todo insalar swing en eclipsa. una panel por cada una de las ventanas a saber: app principao; cafes, infusiones, refrescos, alcoholicas, dulce, salado
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
