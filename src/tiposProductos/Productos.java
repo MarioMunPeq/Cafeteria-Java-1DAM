@@ -6,7 +6,7 @@ public class Productos {
 
     protected int id; // Numero identificativo del producto
     protected String nombre; // Nombre del producto
-    protected double precio; // Lo que cuesta el producto
+    protected float precio; // Lo que cuesta el producto
     protected int stock; // Las unidades que quedan del producto
     protected boolean alergeno; // Si tiene o no alérgeno (?)
     
@@ -58,7 +58,7 @@ public class Productos {
      * @param stock
      * @param alergeno
      */
-    public Productos(int id, String nombre, double precio, int stock, boolean alergeno) {
+    public Productos(int id, String nombre, float precio, int stock, boolean alergeno) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -83,11 +83,11 @@ public class Productos {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 

@@ -9,38 +9,34 @@ import java.util.Arrays;
 
 public class Cajero {
 
-	private final double caja_chica = 0;
+	private final float caja_chica = 0;
 	private ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 	private boolean pagoTarjeta;
-	private double cajaFinalMetalico;
-	private double cajaFinalTarjeta;
+	private float cajaFinalMetalico;
+	private float cajaFinalTarjeta;
 
 	// Valores de las monedas y billetes
-	public static final double CENT_1 = 0.01;
+	public static final float CENT_1 = 0.01;
 
-	public static final double CENT_2 = 0.02;
+	public static final float CENT_2 = 0.02;
 
-	public static final double CENT_5 = 0.05;
+	public static final float CENT_5 = 0.05;
 
-	public static final double CENT_10 = 0.1;
+	public static final float CENT_10 = 0.1;
 
-	public static final double CENT_20 = 0.2;
+	public static final float CENT_20 = 0.2;
 
-	public static final double CENT_50 = 0.5;
+	public static final float CENT_50 = 0.5;
 
-	public static final double EURO_1 = 1;
+	public static final float EURO_1 = 1;
 
-	public static final double EURO_2 = 2;
+	public static final float EURO_2 = 2;
 
-	public static final int BILLETE_5 = 5;
-
-	public static final int BILLETE_10 = 10;
-
-	public static final int BILLETE_20 = 20;
-
-	public static final int BILLETE_50 = 50;
-
-	public static final int BILLETE_100 = 100;
+	public static final float BILLETE_5 = 5;
+	public static final float BILLETE_10 = 10;
+	public static final float BILLETE_20 = 20;
+	public static final float BILLETE_50 = 50;
+	public static final float BILLETE_100 = 100;
 
 	/**
 	 * Metodo para añadir tiquet a la lista de tiquets
@@ -69,9 +65,9 @@ public class Cajero {
 	 * @return Devuelve la cantidad a devolver
 	 */
 
-	public void calcularVuelta(double precio, double pagado) {
+	public void calcularVuelta(float precio, float pagado) {
 
-		double totalDevolver = pagado - precio;
+		float totalDevolver = pagado - precio;
 		sugerenciaCambio(totalDevolver);
 
 	}
@@ -109,7 +105,7 @@ public class Cajero {
 	        }
 	    });
 	}*/
-	public void sugerenciaCambio(double totalDevolver) {
+	public void sugerenciaCambio(float totalDevolver) {
 
 		// damos el valor que tiene cada moneda en euros.
 
@@ -136,56 +132,55 @@ public class Cajero {
 		
 		System.out.println("Total a devolver: " + totalDevolver);
 		do {
-			
-			while (totalDevolver >= BILLETE_100) {
+			if(totalDevolver >= BILLETE_100){
 				totalDevolver = totalDevolver - BILLETE_100;
 				contadorEur100++;
-			}
-			while (totalDevolver >= BILLETE_50) {
+
+			}elseif(totalDevolver >= BILLETE_50){
 				totalDevolver = totalDevolver - BILLETE_50;
 				contadorEur50++;
 			}
-			while (totalDevolver >= BILLETE_20) {
+			elseif (totalDevolver >= BILLETE_20) {
 				totalDevolver = totalDevolver - BILLETE_20;
 				contadorEur20++;
 			}
-			while (totalDevolver >= BILLETE_10) {
+			elseif (totalDevolver >= BILLETE_10) {
 				totalDevolver = totalDevolver - BILLETE_10;
 				contadorEur10++;
 			}
-			while (totalDevolver >= BILLETE_5) {
+			elseif (totalDevolver >= BILLETE_5) {
 				totalDevolver = totalDevolver - BILLETE_5;
 				contadorEur5++;
 			}
-			while (totalDevolver >= EURO_2) {
+			elseif (totalDevolver >= EURO_2) {
 				totalDevolver = totalDevolver - EURO_2;
 				contadorEur2++;
 			}
-			while (totalDevolver >= EURO_1) {
+			elseif (totalDevolver >= EURO_1) {
 				totalDevolver = totalDevolver - EURO_1;
 				contadorEur1++;
 			}
-			while (totalDevolver >= CENT_50) {
+			elseif (totalDevolver >= CENT_50) {
 				totalDevolver = totalDevolver - CENT_50;
 				contadorCent50++;
 			}
-			while (totalDevolver >= CENT_20) {
+			elseif (totalDevolver >= CENT_20) {
 				totalDevolver = totalDevolver - CENT_20;
 				contadorCent20++;
 			}
-			while (totalDevolver >= CENT_10) {
+			elseif (totalDevolver >= CENT_10) {
 				totalDevolver = totalDevolver - CENT_10;
 				contadorCent10++;
 			}
-			while (totalDevolver >= CENT_5) {
+			elseif (totalDevolver >= CENT_5) {
 				totalDevolver = totalDevolver - CENT_5;
 				contadorCent5++;
 			}
-			while (totalDevolver >= CENT_2) {
+			elseif (totalDevolver >= CENT_2) {
 				totalDevolver = totalDevolver - CENT_2;
 				contadorCent2++;
 			}
-			while (totalDevolver >= CENT_2) {
+			elseif (totalDevolver >= CENT_2) {
 				totalDevolver = totalDevolver - CENT_2;
 				contadorCent1++;
 			}
@@ -260,23 +255,23 @@ public class Cajero {
 		this.pagoTarjeta = pagoTarjeta;
 	}
 
-	public double getCajaFinalMetalico() {
+	public float getCajaFinalMetalico() {
 		return cajaFinalMetalico;
 	}
 
-	public void setCajaFinalMetalico(double cajaFinalMetalico) {
+	public void setCajaFinalMetalico(float cajaFinalMetalico) {
 		this.cajaFinalMetalico = cajaFinalMetalico;
 	}
 
-	public double getCajaFinalTarjeta() {
+	public float getCajaFinalTarjeta() {
 		return cajaFinalTarjeta;
 	}
 
-	public void setCajaFinalTarjeta(double cajaFinalTarjeta) {
+	public void setCajaFinalTarjeta(float cajaFinalTarjeta) {
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
 	}
 
-	public double getCaja_chica() {
+	public float getCaja_chica() {
 		return caja_chica;
 	}
 }

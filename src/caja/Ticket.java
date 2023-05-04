@@ -56,12 +56,12 @@ public class Ticket {
 	/**
 	 * Este metodo sirve para calcular el total del coste de los productos de un ticket
 	 * @param listaProductos contiene la lsita de productos de un ticket
-	 * @return devuelve la suma de todos los prodcutos como double
+	 * @return devuelve la suma de todos los prodcutos como float
 	 */
 	
-	public double totalTicket(Productos listaProductos ) {
+	public float totalTicket(Productos listaProductos ) {
 		
-		double suma = 0;
+		float suma = 0;
 		for (Productos productos : this.listaProductos) {
 			suma = suma + productos.getPrecio();
 		}

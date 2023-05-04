@@ -2,10 +2,10 @@ package tiposProductos;
 import java.util.Objects;
 public class Cafe extends Productos {
 
-    private static final double SUPLEMENTOGRANO = 0.5;
-    private static final double SUPLEMENTOLECHE = 0.7;
+    private static final float SUPLEMENTOGRANO = 0.5;
+    private static final float SUPLEMENTOLECHE = 0.7;
 
-    public Cafe(int id, String nombre, double precio, int stock, boolean alergeno) {
+    public Cafe(int id, String nombre, float precio, int stock, boolean alergeno) {
         super(id, nombre, precio, stock, alergeno);
         // Constructor que me ha obligado a poner por tener herencia
     }
@@ -20,7 +20,7 @@ public class Cafe extends Productos {
      * 
      * @return el precio con el suplemento por el tipo de grano sumado
      */
-    public double suplementoTipoGrano() {
+    public float suplementoTipoGrano() {
 
         return precio + SUPLEMENTOGRANO;
     }
@@ -29,7 +29,7 @@ public class Cafe extends Productos {
      * 
      * @return el precio con el suplemento por el tipo de leche sumado
      */
-    public double suplementoTipoLeche() {
+    public float suplementoTipoLeche() {
 
         return precio + SUPLEMENTOLECHE;
     }
