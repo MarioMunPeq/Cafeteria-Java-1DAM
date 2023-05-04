@@ -1,6 +1,11 @@
 package caja;
 
+
 import java.util.ArrayList;
+import java.util.Arrays;
+
+
+
 
 public class Cajero {
 
@@ -70,28 +75,39 @@ public class Cajero {
 		sugerenciaCambio(totalDevolver);
 
 	}
-	/*public void sugerenciaCambio(double totalDevolver) {
-		
-		// damos el valor que tiene cada moneda en euros.
-		List<Double> monedas = Arrays.asList(BILLETE_100, BILLETE_50, BILLETE_20, BILLETE_10, BILLETE_5, EURO_2, EURO_1, CENT_50, CENT_20, CENT_10, CENT_5, CENT_2, CENT_1);
-		Map<Double, Integer> contadores = new HashMap<>();
-		
-		System.out.println("Total a devolver: " + totalDevolver);
-		do {
-			monedas.forEach(m -> {
-				if (totalDevolver >= m) {
-					totalDevolver = totalDevolver - m;
-					contadores.put(m, contadores.getOrDefault(m, 0) + 1);
-				}
-			});
-		} while (totalDevolver > 0);
-		
-		// imprimimos solo las monedas o billetes cuyo contador es mayor que 0.
-		contadores.forEach((k, v) -> {
-			if (v > 0) {
-				System.out.println(v + " monedas de " + k + "euros");
-			}
-		});
+	/*Este metodo podria ser implementado en el futuro para ser menos cutre pero necesitariamos que los tipos de datos numericos 
+	 * fueran de tipo BigDecimal
+	 * 
+	public void sugerenciaCambio(BigDecimal totalDevolver) {
+	    if (totalDevolver.compareTo(BigDecimal.ZERO) < 0) {
+	        throw new IllegalArgumentException("El valor a devolver debe ser positivo.");
+	    }
+
+	    List<BigDecimal> monedas = Arrays.asList(
+	        BigDecimal.valueOf(100), BigDecimal.valueOf(50), BigDecimal.valueOf(20), BigDecimal.valueOf(10), 
+	        BigDecimal.valueOf(5), BigDecimal.valueOf(2), BigDecimal.valueOf(1), BigDecimal.valueOf(0.5), 
+	        BigDecimal.valueOf(0.2), BigDecimal.valueOf(0.1), BigDecimal.valueOf(0.05), BigDecimal.valueOf(0.02), 
+	        BigDecimal.valueOf(0.01)
+	    );
+	    Map<BigDecimal, Integer> contadores = new HashMap<>();
+
+	    System.out.println("Total a devolver: " + totalDevolver);
+	    for (BigDecimal moneda : monedas) {
+	        while (totalDevolver.compareTo(moneda) >= 0) {
+	            totalDevolver = totalDevolver.subtract(moneda);
+	            contadores.put(moneda, contadores.getOrDefault(moneda, 0) + 1);
+	        }
+	    }
+
+	    contadores.forEach((k, v) -> {
+	        if (v > 0) {
+	            if (k.compareTo(BigDecimal.ONE) >= 0) {
+	                System.out.println(v + " billete(s) de " + k + " euros");
+	            } else {
+	                System.out.println(v + " moneda(s) de " + k.multiply(BigDecimal.valueOf(100)) + " centios");
+	            }
+	        }
+	    });
 	}*/
 	public void sugerenciaCambio(double totalDevolver) {
 
@@ -111,8 +127,8 @@ public class Cajero {
 		int contadorEur50 = 0;
 		int contadorEur100 = 0;
 		
-		/*
-		 * Aqui comenzamos a restar al valor de la devolucion
+		
+		 /* Aqui comenzamos a restar al valor de la devolucion
 		 * empezando desde la mas grande a la mas pequeña hasta conseguir que lo que
 		 * queda a devolver sea igual a 0, utilizando tambien un contador para cada tipo
 		 * de moneda y billete y asi obtener el numero total de cada una.
@@ -176,57 +192,56 @@ public class Cajero {
 			
 		} while (totalDevolver < 0);
 
-		// imprimimos solo las monedas o billetes cuyo contador es mayor que 0.
+		 //imprimimos solo las monedas o billetes cuyo contador es mayor que 0.
+		
 		if (contadorEur100 > 0) {
-			System.out.println(contadorEur100 + " monedas de " + BILLETE_100 + "euros");
+			System.out.println(contadorEur100 + " billetes de " + BILLETE_100 + " euros");
 		}
 		if (contadorEur50 > 0) {
-			System.out.println(contadorEur50 + " monedas de " + BILLETE_50 + "euros");
+			System.out.println(contadorEur50 + " billetes de " + BILLETE_50 + " euros");
 		}
 		if (contadorEur20 > 0) {
-			System.out.println(contadorEur20 + " monedas de " + BILLETE_20 + "euros");
+			System.out.println(contadorEur20 + " billetes de " + BILLETE_20 + " euros");
 		}
 		if (contadorEur10 > 0) {
-			System.out.println(contadorEur10 + " monedas de " + BILLETE_10 + "euros");
+			System.out.println(contadorEur10 + " billetes de " + BILLETE_10 + " euros");
 		}
 		if (contadorEur5 > 0) {
-			System.out.println(contadorEur5 + " monedas de " + BILLETE_5 + "euros");
+			System.out.println(contadorEur5 + " billetes de " + BILLETE_5 + " euros");
 		}
 		if (contadorEur2 > 0) {
-			System.out.println(contadorEur2 + " monedas de " + EURO_2 + "euros");
+			System.out.println(contadorEur2 + " monedas de " + (int)EURO_2 + " euros");
 		}
 		if (contadorEur1 > 0) {
-			System.out.println(contadorEur1 + " monedas de " + EURO_1 + "euros");
+			System.out.println(contadorEur1 + " monedas de " + (int)EURO_1 + " euro");
 		}
 		if (contadorCent50 > 0) {
-			System.out.println(contadorCent50 + " monedas de " + CENT_50 + "euros");
+			System.out.println(contadorCent50 + " monedas de " + (int)(CENT_50*100) + " centimos");
 		}
 		if (contadorCent20 > 0) {
-			System.out.println(contadorCent20 + " monedas de " + CENT_20 + "euros");
+			System.out.println(contadorCent20 + " monedas de " + (int)(CENT_20*100) + " centimos");
 		}
 		if (contadorCent10 > 0) {
-			System.out.println(contadorCent10 + " monedas de " + CENT_10 + "euros");
+			System.out.println(contadorCent10 + " monedas de " + (int)(CENT_10*100) + " centimos");
 		}
 		if (contadorCent5 > 0) {
-			System.out.println(contadorCent5 + " monedas de " + CENT_5 + "euros");
+			System.out.println(contadorCent5 + " monedas de " + (int)(CENT_5*100) + " centimos");
 		}
 		if (contadorCent2 > 0) {
-			System.out.println(contadorCent2 + " monedas de " + CENT_2 + "euros");
+			System.out.println(contadorCent2 + " monedas de " + (int)(CENT_2*100) + " centimos");
 		}
 		if (contadorCent1 > 0) {
-			System.out.println(contadorCent1 + " monedas de " + CENT_1 + "euros");
+			System.out.println(contadorCent1 + " monedas de " + (int)(CENT_1*100) + " centimo");
 		}
 	
 	}
-	
+
 	//CONSTRUCTOR, GETTERS Y SETTERS
-	public Cajero(ArrayList<Ticket> listaTickets, boolean pagoTarjeta, double cajaFinalMetalico,
-			double cajaFinalTarjeta) {
+	public Cajero(ArrayList<Ticket> listaTickets, boolean pagoTarjeta) {
 		super();
 		this.listaTickets = listaTickets;
 		this.pagoTarjeta = pagoTarjeta;
-		this.cajaFinalMetalico = cajaFinalMetalico;
-		this.cajaFinalTarjeta = cajaFinalTarjeta;
+		
 	}
 
 	public ArrayList<Ticket> getListaTickets() {

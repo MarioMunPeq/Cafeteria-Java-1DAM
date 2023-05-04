@@ -4,12 +4,12 @@ package tiposProductos;
  */
 public class Productos {
 
-    protected String id; // Numero identificativo del producto
+    protected int id; // Numero identificativo del producto
     protected String nombre; // Nombre del producto
     protected double precio; // Lo que cuesta el producto
     protected int stock; // Las unidades que quedan del producto
     protected boolean alergeno; // Si tiene o no alérgeno (?)
-
+    
     /**
      * 
      * @param stock
@@ -58,19 +58,20 @@ public class Productos {
      * @param stock
      * @param alergeno
      */
-    public Productos(String id, String nombre, double precio, int stock, boolean alergeno) {
+    public Productos(int id, String nombre, double precio, int stock, boolean alergeno) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
         this.alergeno = alergeno;
     }
-
-    public String getId() {
+    
+    
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
