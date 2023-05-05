@@ -37,10 +37,10 @@ public class AquiVaElSwing extends JFrame {
 		
 		ArrayList<Productos>listaProductos1 = new ArrayList<Productos>();
 		ArrayList<Productos>listaProductos2 = new ArrayList<Productos>();
-		Cafe cafeConLeche = new Cafe(1,"Cafe con leche",1.20f,400,true);
-		Comida tostada = new Comida (2,"Tostada",0.50f,200,false);
-		OtrasBebidas cocacola = new OtrasBebidas(3,"Cocacola",2.20f,300,false);
-		Infusion manzanilla = new Infusion(1,"Manzanilla",1.10f,200,false);
+		Cafe cafeConLeche = new Cafe(1,"Cafe con leche",1.20f,400,null);
+		Comida tostada = new Comida (2,"Tostada",0.49f,200,null);
+		OtrasBebidas cocacola = new OtrasBebidas(3,"Cocacola",2.21f,300,null);
+		Infusion manzanilla = new Infusion(1,"Manzanilla",1.10f,200,null);
 		
 		listaProductos1.add(cafeConLeche);
 		listaProductos1.add(tostada);
@@ -51,11 +51,15 @@ public class AquiVaElSwing extends JFrame {
 		ArrayList<Ticket>listaTicket = new ArrayList<Ticket>();
 		Ticket ticketPrueba1 = new Ticket(1, listaProductos1, false , null);
 		Ticket ticketPrueba2 = new Ticket(2, listaProductos2, false , null);
+		
 		listaTicket.add(ticketPrueba1);
 		listaTicket.add(ticketPrueba2);
 		Cajero cajeroPrueba = new Cajero(listaTicket,false);
-		//Prueba del metodo calcular vuelta y sugerencia de cambio ✓
-		cajeroPrueba.calcularVuelta(ticketPrueba1.totalTicket(manzanilla),20);
+		//Prueba de metodos calcular vuelta y sugerencia de cambio ✓
+		cajeroPrueba.calcularVuelta(ticketPrueba1.totalTicket(listaProductos1),20);
+		cajeroPrueba.calcularVuelta(ticketPrueba2.totalTicket(listaProductos2),20);
+		//Prueba metodo cobrarTicket ✓
+		System.out.println("pagado:" + cajeroPrueba.cobrarTicket(ticketPrueba1));
 		
 	}
 

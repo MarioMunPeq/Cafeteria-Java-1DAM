@@ -8,18 +8,18 @@ public class Productos {
     protected String nombre; // Nombre del producto
     protected float precio; // Lo que cuesta el producto
     protected int stock; // Las unidades que quedan del producto
-    protected boolean alergeno; // Si tiene o no alérgeno (?)
+    protected String alergeno; // Si tiene o no alérgeno (?)
     
     /**
      * 
      * @param stock
      */
     public void reponer(int stock) {
-        /*
-         * if (stock < 30%) {
-         * System.out.println("Queda menos de un 30%, toca reponer");
-         * }
-         */
+        
+          if (stock < 50) {
+          System.out.println("Queda menos de un 30%, toca reponer");
+          }
+         
     }
 
     /**
@@ -43,7 +43,7 @@ public class Productos {
      * 
      * @param alergeno Si tiene o no algún alérgeno
      */
-    public void mostrarAlergeno(boolean alergeno) {
+    public void mostrarAlergeno(String alergeno) {
 
         System.out.println("Los alergenos son:");
 
@@ -58,7 +58,7 @@ public class Productos {
      * @param stock
      * @param alergeno
      */
-    public Productos(int id, String nombre, float precio, int stock, boolean alergeno) {
+    public Productos(int id, String nombre, float precio, int stock, String alergeno) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -99,11 +99,11 @@ public class Productos {
         this.stock = stock;
     }
 
-    public boolean isAlergeno() {
+    public String isAlergeno() {
         return alergeno;
     }
 
-    public void setAlergeno(boolean alergeno) {
+    public void setAlergeno(String alergeno) {
         this.alergeno = alergeno;
     }
 

@@ -5,7 +5,7 @@ public class Cafe extends Productos {
     private static final float SUPLEMENTOGRANO = 0.5f;
     private static final float SUPLEMENTOLECHE = 0.7f;
 
-    public Cafe(int id, String nombre, float precio, int stock, boolean alergeno) {
+    public Cafe(int id, String nombre, float precio, int stock, String alergeno) {
         super(id, nombre, precio, stock, alergeno);
         // Constructor que me ha obligado a poner por tener herencia
     }

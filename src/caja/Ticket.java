@@ -13,12 +13,59 @@ public class Ticket {
     private Date fecha;
     
     
-    
+    /**
+	 * Este metodo sirve para calcular el total del coste de los productos de un ticket
+	 * @param listaProductos1 contiene la lsita de productos de un ticket
+	 * @return devuelve la suma de todos los prodcutos como float
+	 */
+	
+	public float totalTicket(ArrayList<Productos> listaProductos1 ) {
+		
+		float suma = 0;
+		for (Productos productos : this.listaProductos) {
+			suma = suma + productos.getPrecio();
+		}
+		
+		return suma;
+	}
+	
+	/**
+	 * Metodo para añadir producto a un ticket
+	 * @param producto
+	 */
+	
+	public void añadirProducto(Productos producto) {
+		
+		listaProductos.add(producto);
+	}
+	
+	/**
+	 * Metodo para borrar producto de un ticket
+	 * @param producto
+	 */
+	
+	public void borrarProducto(Productos producto) {
+		
+		listaProductos.remove(producto);
+	}
+	
+	/**
+	 * Metodo para borrar todos los productos de un ticket
+	 */
+	
+	public void borrarTicketEntero() {
+		
+		listaProductos.clear();
+		
+	}
+	
+	//CONSTRUCTOR GETTERS Y SETTERS
 	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagado, Date fecha) {
 		super();
 		this.id = id;
 		this.listaProductos = listaProductos;
-		this.pagado = pagado;
+		//MODIFICADO PARA QUE SIEMPRE QUE SE CREE UN TICKET PAGADO SEA FALSE Y CAMBIARLO CON EL METODO.
+		this.pagado = false;
 		this.fecha = fecha;
 	}
 
@@ -53,20 +100,6 @@ public class Ticket {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	/**
-	 * Este metodo sirve para calcular el total del coste de los productos de un ticket
-	 * @param listaProductos contiene la lsita de productos de un ticket
-	 * @return devuelve la suma de todos los prodcutos como float
-	 */
 	
-	public float totalTicket(Productos listaProductos ) {
-		
-		float suma = 0;
-		for (Productos productos : this.listaProductos) {
-			suma = suma + productos.getPrecio();
-		}
-		
-		return suma;
-	}
 	
 }

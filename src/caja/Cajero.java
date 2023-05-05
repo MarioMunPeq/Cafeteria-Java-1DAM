@@ -1,7 +1,8 @@
 package caja;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Cajero {
 
@@ -17,21 +18,25 @@ public class Cajero {
 	public static final float CENT_2 = 0.02f;
 
 	public static final float CENT_5 = 0.05f;
-
+	
 	public static final float CENT_10 = 0.1f;
-
+	
 	public static final float CENT_20 = 0.2f;
-
+	
 	public static final float CENT_50 = 0.5f;
-
+	
 	public static final float EURO_1 = 1;
-
+	
 	public static final float EURO_2 = 2;
 
 	public static final float BILLETE_5 = 5;
+	
 	public static final float BILLETE_10 = 10;
+	
 	public static final float BILLETE_20 = 20;
+	
 	public static final float BILLETE_50 = 50;
+	
 	public static final float BILLETE_100 = 100;
 
 	/**
@@ -42,13 +47,14 @@ public class Cajero {
 	 */
 
 	public boolean cobrarTicket(Ticket ticket) {
-
-		boolean cobrado = false;
-
-		if (listaTickets.add(ticket)) {
-			cobrado = true;
-		}
-		return cobrado;
+		
+		boolean pagado = false;
+		ticket.setPagado(true);
+		
+			if(ticket.isPagado()) {
+				pagado = true;
+			}
+		return pagado;
 	}
 
 	/**
@@ -61,155 +67,62 @@ public class Cajero {
 	 */
 
 	public void calcularVuelta(float precio, float pagado) {
-
-		float totalDevolver = pagado - precio;
-		sugerenciaCambio(totalDevolver);
-
+	    float totalDevolver = pagado - precio;
+	    totalDevolver = Math.round(totalDevolver * 100) / 100f; // redondeo a 2 decimales
+	    System.out.println("El cambio a devolver es: " + totalDevolver);
+	    sugerenciaCambio(totalDevolver);
 	}
-
-	/*
-	 * Este metodo podria ser implementado en el futuro para ser menos cutre pero
-	 * necesitariamos que los tipos de datos numericos
-	 * fueran de tipo BigDecimal
-	 * 
-	 * public void sugerenciaCambio(BigDecimal totalDevolver) {
-	 * if (totalDevolver.compareTo(BigDecimal.ZERO) < 0) {
-	 * throw new IllegalArgumentException("El valor a devolver debe ser positivo.");
-	 * }
-	 * 
-	 * List<BigDecimal> monedas = Arrays.asList(
-	 * BigDecimal.valueOf(100), BigDecimal.valueOf(50), BigDecimal.valueOf(20),
-	 * BigDecimal.valueOf(10),
-	 * BigDecimal.valueOf(5), BigDecimal.valueOf(2), BigDecimal.valueOf(1),
-	 * BigDecimal.valueOf(0.5),
-	 * BigDecimal.valueOf(0.2), BigDecimal.valueOf(0.1), BigDecimal.valueOf(0.05),
-	 * BigDecimal.valueOf(0.02),
-	 * BigDecimal.valueOf(0.01)
-	 * );
-	 * Map<BigDecimal, Integer> contadores = new HashMap<>();
-	 * 
-	 * System.out.println("Total a devolver: " + totalDevolver);
-	 * for (BigDecimal moneda : monedas) {
-	 * while (totalDevolver.compareTo(moneda) >= 0) {
-	 * totalDevolver = totalDevolver.subtract(moneda);
-	 * contadores.put(moneda, contadores.getOrDefault(moneda, 0) + 1);
-	 * }
-	 * }
-	 * 
-	 * contadores.forEach((k, v) -> {
-	 * if (v > 0) {
-	 * if (k.compareTo(BigDecimal.ONE) >= 0) {
-	 * System.out.println(v + " billete(s) de " + k + " euros");
-	 * } else {
-	 * System.out.println(v + " moneda(s) de " + k.multiply(BigDecimal.valueOf(100))
-	 * + " centios");
-	 * }
-	 * }
-	 * });
-	 * }
+	
+	/**
+	 * Este metodo sirve para sugerir el cambio que hay que dar en monedas y billetes utilizando bucles
+	 * para ir restando al cambio los distintos tipos de moneda de mayor a menor hasta que el resultado
+	 * del cambio es 0 y almacenando la cantidad de billetes/monedas utilizados en sus respectivos arrays
+	 * @param cambio valor total del cambio a devolver.
 	 */
-	public void sugerenciaCambio(float totalDevolver) {
+	public static void sugerenciaCambio(double cambio) {
+	    
+	    int[] billetes = {500, 200, 100, 50, 20, 10, 5};
+	    double[] monedas = {2, 1, 0.50, 0.20, 0.10, 0.05, 0.02, 0.01};
 
-		// damos el valor que tiene cada moneda en euros.
+	    int[] cantidadBilletes = new int[billetes.length];
+	    int[] cantidadMonedas = new int[monedas.length];
 
-		int contadorCent1 = 0;
-		int contadorCent2 = 0;
-		int contadorCent5 = 0;
-		int contadorCent10 = 0;
-		int contadorCent20 = 0;
-		int contadorCent50 = 0;
-		int contadorEur1 = 0;
-		int contadorEur2 = 0;
-		int contadorEur5 = 0;
-		int contadorEur10 = 0;
-		int contadorEur20 = 0;
-		int contadorEur50 = 0;
-		int contadorEur100 = 0;
+	    BigDecimal bdCambio = new BigDecimal(cambio).setScale(2, RoundingMode.HALF_DOWN);
+	    double cambioRedondeado = bdCambio.doubleValue();
 
-		/*
-		 * Aqui comenzamos a restar al valor de la devolucion
-		 * empezando desde la mas grande a la mas pequeña hasta conseguir que lo que
-		 * queda a devolver sea igual a 0, utilizando tambien un contador para cada tipo
-		 * de moneda y billete y asi obtener el numero total de cada una.
-		 */
+	    for (int i = 0; i < billetes.length; i++) {
+	        while (cambioRedondeado >= billetes[i]) {
+	           cambioRedondeado -= billetes[i];
+	            cantidadBilletes[i]++;
+	        }
+	    }
 
-		System.out.println("Total a devolver: " + totalDevolver);
-		do {
-			if (totalDevolver >= BILLETE_100) {
-				totalDevolver = totalDevolver - BILLETE_100;
-				contadorEur100++;
+	    for (int i = 0; i < monedas.length; i++) {
+	        while (cambioRedondeado >= monedas[i]) {
+	            cambioRedondeado -= monedas[i];
+	            cantidadMonedas[i]++;
+	        }
+	    }
+	    if(cambioRedondeado > 0.001) {
+	        cantidadMonedas[7]++;
+	    }
 
-			} else if (totalDevolver >= BILLETE_50) {
-				totalDevolver = totalDevolver - BILLETE_50;
-				contadorEur50++;
-			} else if (totalDevolver >= BILLETE_20) {
-				totalDevolver = totalDevolver - BILLETE_20;
-				contadorEur20++;
-			} else if (totalDevolver >= BILLETE_10) {
-				totalDevolver = totalDevolver - BILLETE_10;
-				contadorEur10++;
-			} else if (totalDevolver >= BILLETE_5) {
-				totalDevolver = totalDevolver - BILLETE_5;
-				contadorEur5++;
-			} else if (totalDevolver >= EURO_2) {
-				totalDevolver = totalDevolver - EURO_2;
-				contadorEur2++;
-			} else if (totalDevolver >= EURO_1) {
-				totalDevolver = totalDevolver - EURO_1;
-				contadorEur1++;
-			} else if (totalDevolver >= CENT_50) {
-				totalDevolver = totalDevolver - CENT_50;
-				contadorCent50++;
-			} else if (totalDevolver >= CENT_20) {
-				totalDevolver = totalDevolver - CENT_20;
-				contadorCent20++;
-			} else if (totalDevolver >= CENT_10) {
-				totalDevolver = totalDevolver - CENT_10;
-				contadorCent10++;
-			} else if (totalDevolver >= CENT_5) {
-				totalDevolver = totalDevolver - CENT_5;
-				contadorCent5++;
-			} else if (totalDevolver >= CENT_2) {
-				totalDevolver = totalDevolver - CENT_2;
-				contadorCent2++;
-			} else if (totalDevolver >= CENT_2) {
-				totalDevolver = totalDevolver - CENT_2;
-				contadorCent1++;
-			}
+	    System.out.println("Billetes:");
+	    for (int i = 0; i < billetes.length; i++) {
+	        if (cantidadBilletes[i] > 0) {
+	            System.out.println(cantidadBilletes[i] + " billetes de " + billetes[i]);
+	        }
+	    }
 
-		} while (totalDevolver < 0);
-
-		// imprimimos solo las monedas o billetes cuyo contador es mayor que 0.
-
-		if (contadorEur100 > 0) {
-			System.out.println(contadorEur100 + " billetes de " + BILLETE_100 + " euros");
-		} else if (contadorEur50 > 0) {
-			System.out.println(contadorEur50 + " billetes de " + BILLETE_50 + " euros");
-		} else if (contadorEur20 > 0) {
-			System.out.println(contadorEur20 + " billetes de " + BILLETE_20 + " euros");
-		} else if (contadorEur10 > 0) {
-			System.out.println(contadorEur10 + " billetes de " + BILLETE_10 + " euros");
-		} else if (contadorEur5 > 0) {
-			System.out.println(contadorEur5 + " billetes de " + BILLETE_5 + " euros");
-		} else if (contadorEur2 > 0) {
-			System.out.println(contadorEur2 + " monedas de " + (int) EURO_2 + " euros");
-		} else if (contadorEur1 > 0) {
-			System.out.println(contadorEur1 + " monedas de " + (int) EURO_1 + " euro");
-		} else if (contadorCent50 > 0) {
-			System.out.println(contadorCent50 + " monedas de " + (int) (CENT_50 * 100) + " centimos");
-		} else if (contadorCent20 > 0) {
-			System.out.println(contadorCent20 + " monedas de " + (int) (CENT_20 * 100) + " centimos");
-		} else if (contadorCent10 > 0) {
-			System.out.println(contadorCent10 + " monedas de " + (int) (CENT_10 * 100) + " centimos");
-		} else if (contadorCent5 > 0) {
-			System.out.println(contadorCent5 + " monedas de " + (int) (CENT_5 * 100) + " centimos");
-		} else if (contadorCent2 > 0) {
-			System.out.println(contadorCent2 + " monedas de " + (int) (CENT_2 * 100) + " centimos");
-		} else if (contadorCent1 > 0) {
-			System.out.println(contadorCent1 + " monedas de " + (int) (CENT_1 * 100) + " centimo");
-		}
-
+	    System.out.println("Monedas:");
+	    for (int i = 0; i < monedas.length; i++) {
+	        if (cantidadMonedas[i] > 0) {
+	            System.out.println(cantidadMonedas[i] + " monedas de " + monedas[i]);
+	        }
+	    }
+	    
 	}
+
 
 	// CONSTRUCTOR, GETTERS Y SETTERS
 	public Cajero(ArrayList<Ticket> listaTickets, boolean pagoTarjeta) {
