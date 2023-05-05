@@ -37,10 +37,10 @@ public class AquiVaElSwing extends JFrame {
 		
 		ArrayList<Productos>listaProductos1 = new ArrayList<Productos>();
 		ArrayList<Productos>listaProductos2 = new ArrayList<Productos>();
-		Cafe cafeConLeche = new Cafe(1,"Cafe con leche",1.20,400,true);
-		Comida tostada = new Comida (2,"Tostada",0.50,200,false);
-		OtrasBebidas cocacola = new OtrasBebidas(3,"Cocacola",2.20,300,false);
-		Infusion manzanilla = new Infusion(1,"Manzanilla",1.10,200,false);
+		Cafe cafeConLeche = new Cafe(1,"Cafe con leche",1.20f,400,true);
+		Comida tostada = new Comida (2,"Tostada",0.50f,200,false);
+		OtrasBebidas cocacola = new OtrasBebidas(3,"Cocacola",2.20f,300,false);
+		Infusion manzanilla = new Infusion(1,"Manzanilla",1.10f,200,false);
 		
 		listaProductos1.add(cafeConLeche);
 		listaProductos1.add(tostada);
