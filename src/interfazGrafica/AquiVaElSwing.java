@@ -23,20 +23,21 @@ public class AquiVaElSwing extends JFrame {
 	 */
 	public static void main(String[] args) {
 		// todo insalar swing en eclipsa. una panel por cada una de las ventanas a saber: app principao; cafes, infusiones, refrescos, alcoholicas, dulce, salado
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+		//EventQueue.invokeLater(new Runnable() {
+			//public void run() {
 				try {
 					AquiVaElSwing frame = new AquiVaElSwing();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			}
-		});
+			
+		
 	// OBJETOS PARA HACER PRUEBAS
 		
 		ArrayList<Productos>listaProductos1 = new ArrayList<Productos>();
 		ArrayList<Productos>listaProductos2 = new ArrayList<Productos>();
+
 		Cafe cafeConLeche = new Cafe(1,"Cafe con leche",1.20f,400,null);
 		Comida tostada = new Comida (2,"Tostada",0.49f,200,null);
 		OtrasBebidas cocacola = new OtrasBebidas(3,"Cocacola",2.21f,300,null);
@@ -55,13 +56,16 @@ public class AquiVaElSwing extends JFrame {
 		listaTicket.add(ticketPrueba1);
 		listaTicket.add(ticketPrueba2);
 		Cajero cajeroPrueba = new Cajero(listaTicket,false);
+
 		//Prueba de metodos calcular vuelta y sugerencia de cambio ✓
 		cajeroPrueba.calcularVuelta(ticketPrueba1.totalTicket(listaProductos1),20);
 		cajeroPrueba.calcularVuelta(ticketPrueba2.totalTicket(listaProductos2),20);
 		//Prueba metodo cobrarTicket ✓
 		System.out.println("pagado:" + cajeroPrueba.cobrarTicket(ticketPrueba1));
 		
+		
 	}
+
 
 	/**
 	 * Create the frame.
