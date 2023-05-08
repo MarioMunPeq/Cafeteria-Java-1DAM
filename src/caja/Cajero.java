@@ -38,7 +38,8 @@ public class Cajero {
 	public static final float BILLETE_50 = 50;
 	
 	public static final float BILLETE_100 = 100;
-
+	
+	
 	/**
 	 * Metodo para añadir tiquet a la lista de tiquets
 	 * 
