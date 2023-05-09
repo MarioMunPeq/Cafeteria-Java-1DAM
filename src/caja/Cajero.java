@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 
 public class Cajero {
 
-	private final float caja_chica = 0;
+	
 	private ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 
 	private float cajaFinalMetalico;
@@ -38,7 +38,11 @@ public class Cajero {
 	public static final float BILLETE_50 = 50;
 
 	public static final float BILLETE_100 = 100;
-
+	
+	public static final float VALOR_CAJA_CHICA_INICIAL = 300;
+	
+	
+	
 	/**
 	 * Añade a la lista de tickets un ticket nuevo
 	 * 
@@ -49,6 +53,7 @@ public class Cajero {
 	public boolean anadirTicket(Ticket ticket) {
 
 		return listaTickets.add(ticket);
+		
 	}
 
 	/**
@@ -75,11 +80,23 @@ public class Cajero {
 		}
 
 	}
-	
-	public double cajaTotal() {
+	/**
+	 * Devuelve el valor de la caja total del dia.
+	 * @return total caja del dia.
+	 */
+	public float cajaTotal() {
 		float cajaTotal = cajaFinalTarjeta + cajaFinalMetalico;
 		return cajaTotal;
 	}
+	
+	/**
+	 * Devuelve el valor total del beneficio diario calculando la caja total menos el valor inicial con el que empieza la caja chica para dar el cambio
+	 * @return beneficio total del dia.
+	 */
+	public float beneficioDiario() {
+		return (cajaTotal()-VALOR_CAJA_CHICA_INICIAL);
+	}
+	
 	/**
 	 * Metodo para calcular la cuantia de la vuelta del pago del cliente
 	 * 
@@ -153,7 +170,7 @@ public class Cajero {
 	public Cajero(ArrayList<Ticket> listaTickets, float cajaFinalMetalico, float cajaFinalTarjeta) {
 		super();
 		this.listaTickets = listaTickets;
-		this.cajaFinalMetalico = cajaFinalMetalico;
+		this.cajaFinalMetalico = VALOR_CAJA_CHICA_INICIAL;
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
 	}
 
@@ -181,7 +198,4 @@ public class Cajero {
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
 	}
 
-	public float getCaja_chica() {
-		return caja_chica;
-	}
 }

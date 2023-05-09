@@ -10,6 +10,14 @@ public class Productos {
     protected int stock; // Las unidades que quedan del producto
     protected String alergeno; // Si tiene o no alérgeno (?)
     
+    
+    protected static final String LECHE_ENTERA = "Entera";
+    protected static final String LECHE_SEMI = "Semi";
+    protected static final String LECHE_DESNATADA = "Desnatada";
+    protected static final String LECHE_AVENA = "Avena";
+    protected static final String LECHE_SOJA = "Soja";
+    protected static final String LECHE_SINLACTOSA = "SinLactosa";
+    
     /**
      * 
      * @param stock

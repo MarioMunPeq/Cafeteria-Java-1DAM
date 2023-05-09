@@ -8,16 +8,9 @@ public class OtrasBebidas extends Productos {
     }
 
     private Boolean tieneAlcohol;
-    private String tipo;
-    private Boolean combinado;
+    private String nombre;
+ 
 
-    public void suplementoCombinado() {
-
-        // Restar stock de ambos?
-
-        // precio= precio + suplemento;
-
-    }
 
 
     public Boolean isTieneAlcohol() {
@@ -32,63 +25,26 @@ public class OtrasBebidas extends Productos {
         this.tieneAlcohol = tieneAlcohol;
     }
 
-    public String getTipo() {
-        return this.tipo;
-    }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+    public String getNombre() {
+		return nombre;
+	}
 
-    public Boolean isCombinado() {
-        return this.combinado;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public Boolean getCombinado() {
-        return this.combinado;
-    }
-
-    public void setCombinado(Boolean combinado) {
-        this.combinado = combinado;
-    }
-
-    public OtrasBebidas tieneAlcohol(Boolean tieneAlcohol) {
+	public OtrasBebidas tieneAlcohol(Boolean tieneAlcohol) {
         setTieneAlcohol(tieneAlcohol);
         return this;
     }
 
-    public OtrasBebidas tipo(String tipo) {
-        setTipo(tipo);
-        return this;
-    }
-
-    public OtrasBebidas combinado(Boolean combinado) {
-        setCombinado(combinado);
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof OtrasBebidas)) {
-            return false;
-        }
-        OtrasBebidas otrasBebidas = (OtrasBebidas) o;
-        return Objects.equals(tieneAlcohol, otrasBebidas.tieneAlcohol) && Objects.equals(tipo, otrasBebidas.tipo) && Objects.equals(combinado, otrasBebidas.combinado);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(tieneAlcohol, tipo, combinado);
-    }
 
     @Override
     public String toString() {
         return "{" +
             " tieneAlcohol='" + isTieneAlcohol() + "'" +
-            ", tipo='" + getTipo() + "'" +
-            ", combinado='" + isCombinado() + "'" +
+            ", tipo='" + getNombre() + "'" +
             "}";
     }
     

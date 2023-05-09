@@ -13,7 +13,10 @@ public class Ticket {
 	private boolean pagado;
 	private Date fecha;
 	public static final float IVA = 1.21f;
-
+	
+	
+	
+	
 	/**
 	 * Metodo para cambiar el booleano "pagado" a true
 	 * 
@@ -108,10 +111,6 @@ public class Ticket {
 		super();
 		this.id = id;
 		this.listaProductos = listaProductos;
-
-		// MODIFICADOs PARA QUE SIEMPRE QUE SE CREE UN TICKET Y PAGADO Y PAGADO CON
-		// TARJETA SEAN FALSE Y
-		// CAMBIARLO CON EL METODO.
 		this.pagoTarjeta = false;
 		this.pagado = false;
 		this.fecha = fecha;
