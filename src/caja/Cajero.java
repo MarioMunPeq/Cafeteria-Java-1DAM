@@ -70,7 +70,7 @@ public class Cajero {
 
 		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
 			cajaFinalTarjeta=cajaFinalTarjeta + ticket.totalTicket(ticket, ticket.getListaProductos());
-		}else if (ticket.isPagado()&& ticket.isPagoTarjeta()==false) {
+		}else if (ticket.isPagado() && ticket.isPagoTarjeta()==false) {
 			cajaFinalMetalico=cajaFinalMetalico + ticket.totalTicket(ticket, ticket.getListaProductos());
 		}
 
