@@ -9,38 +9,66 @@ public class Ticket {
 
 	private int id;
 	private ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
 	public static final float IVA = 1.21f;
-	
-	
+
+	/**
+	 * Metodo para cambiar el booleano "pagado" a true
+	 * 
+	 * @param ticket, ticket que queremos pagar
+	 * @return true si se cambia pagado a true
+	 */
+	public boolean ticketPagado(Ticket ticket) {
+
+		ticket.setPagado(true);
+		
+		return ticket.isPagado();
+	}
+
+	/**
+	 * Cambia el booleano pagado con tarjeta a true
+	 * @param ticket, ticekt que se quiere indicar el pago con tarjeta
+	 * @return true si se cambia el atributo a true, false si no
+	 */
+	public boolean pagarConTarjeta(Ticket ticket) {
+		
+		ticket.setPagoTarjeta(true);
+		
+		return ticket.isPagoTarjeta();
+
+	}
+
 	/**
 	 * Calcula el iva total del ticket
+	 * 
 	 * @param precio total del precio sin iva del conjunto de productos del ticket
 	 * @return precio total con iva del conjunto de productos del ticket
 	 */
 	public float calcularIVA(float precio) {
-		
-		return precio*IVA;
+
+		return precio * IVA;
 	}
 
 	/**
 	 * Este metodo sirve para calcular el total del coste de los productos de un
 	 * ticket
+	 * 
 	 * @param listaProductos1 contiene la lsita de productos de un ticket
 	 * @return devuelve la suma de todos los prodcutos como float
 	 */
 
-	public float totalTicket(ArrayList<Productos> listaProductos1) {
+	public float totalTicket(Ticket ticket,ArrayList<Productos> listaProductos1) {
 
 		float precioSinIva = 0;
 
 		for (Productos productos : this.listaProductos) {
 			precioSinIva = precioSinIva + productos.getPrecio();
 		}
-		
+
 		return calcularIVA(precioSinIva);
-		
+
 	}
 
 	/**
@@ -76,12 +104,15 @@ public class Ticket {
 	}
 
 	// CONSTRUCTOR GETTERS Y SETTERS
-	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagado, Date fecha) {
+	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagoTarjeta, boolean pagado, Date fecha) {
 		super();
 		this.id = id;
 		this.listaProductos = listaProductos;
-		// MODIFICADO PARA QUE SIEMPRE QUE SE CREE UN TICKET PAGADO SEA FALSE Y
+
+		// MODIFICADOs PARA QUE SIEMPRE QUE SE CREE UN TICKET Y PAGADO Y PAGADO CON
+		// TARJETA SEAN FALSE Y
 		// CAMBIARLO CON EL METODO.
+		this.pagoTarjeta = false;
 		this.pagado = false;
 		this.fecha = fecha;
 	}
@@ -116,6 +147,14 @@ public class Ticket {
 
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+
+	public boolean isPagoTarjeta() {
+		return pagoTarjeta;
+	}
+
+	public void setPagoTarjeta(boolean pagoTarjeta) {
+		this.pagoTarjeta = pagoTarjeta;
 	}
 
 }

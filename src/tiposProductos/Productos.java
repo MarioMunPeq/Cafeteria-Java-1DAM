@@ -16,7 +16,7 @@ public class Productos {
      */
     public void reponer(int stock) {
         
-          if (stock < 50) {
+          if (stock < 60) {
           System.out.println("Queda menos de un 30%, toca reponer");
           }
          
