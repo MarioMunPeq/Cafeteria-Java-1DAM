@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_cafe_2;
+package interfaces;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,12 +11,12 @@ import javax.swing.JPanel;
  *
  * @author admin
  */
-public class Main_botones_cafe extends javax.swing.JFrame {
+public class Main_botones extends javax.swing.JFrame {
 
     /**
      * Creates new form Main_botones_cafe
      */
-    public Main_botones_cafe() {
+    public Main_botones() {
         initComponents();
         
         
@@ -463,20 +463,20 @@ public class Main_botones_cafe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main_botones_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_botones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main_botones_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_botones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main_botones_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_botones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main_botones_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_botones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main_botones_cafe().setVisible(true);
+                new Main_botones().setVisible(true);
              /* cosas para ver si funciona el cambio de pantalla OJO
                 Cafes cafe = new Cafes();
                 cafe.updateUI();

@@ -85,8 +85,9 @@ public class Cajero {
 	 * @return total caja del dia.
 	 */
 	public double cajaTotal() {
-		double cajaTotal = cajaFinalTarjeta + cajaFinalMetalico;
-		return cajaTotal;
+		
+		return cajaFinalTarjeta + cajaFinalMetalico;
+		
 	}
 	
 	/**
@@ -94,7 +95,9 @@ public class Cajero {
 	 * @return beneficio total del dia.
 	 */
 	public double beneficioDiario() {
+		
 		return (cajaTotal()-VALOR_CAJA_CHICA_INICIAL);
+		
 	}
 	
 	/**

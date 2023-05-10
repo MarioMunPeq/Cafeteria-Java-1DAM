@@ -15,8 +15,6 @@ public class Ticket {
 	public static final double IVA = 1.21;
 	
 	
-	
-	
 	/**
 	 * Metodo para cambiar el booleano "pagado" a true
 	 * 
