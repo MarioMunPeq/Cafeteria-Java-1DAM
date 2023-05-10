@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_interfaz_3;
+package interfaces;
 // OJO!! HAY UN BOTTON GROUP QUE SE LLAMAN IGUAL EN CAFES Y EN INFUSIONES QUE ES EL TIPO DE LECHE
 /**
  *

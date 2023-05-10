@@ -2,9 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyecto_interfaz_3;
+package interfaces;
 
-import proyecto_cafe_2.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
