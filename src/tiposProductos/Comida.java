@@ -1,7 +1,7 @@
 package tiposProductos;
 public class Comida extends Productos {
 
-    public Comida(int id, String nombre, float precio, int stock, String alergeno) {
+    public Comida(int id, String nombre, double precio, int stock, String alergeno) {
         super(id, nombre, precio, stock, alergeno);
         // Constructor que me ha obligado a poner por tener herencia
     }

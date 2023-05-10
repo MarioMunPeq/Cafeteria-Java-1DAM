@@ -12,7 +12,7 @@ public class Ticket {
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
-	public static final float IVA = 1.21f;
+	public static final double IVA = 1.21;
 	
 	
 	
@@ -49,7 +49,7 @@ public class Ticket {
 	 * @param precio total del precio sin iva del conjunto de productos del ticket
 	 * @return precio total con iva del conjunto de productos del ticket
 	 */
-	public float calcularIVA(float precio) {
+	public double calcularIVA(double precio) {
 
 		return precio * IVA;
 	}
@@ -59,12 +59,12 @@ public class Ticket {
 	 * ticket
 	 * 
 	 * @param listaProductos1 contiene la lsita de productos de un ticket
-	 * @return devuelve la suma de todos los prodcutos como float
+	 * @return devuelve la suma de todos los prodcutos como double
 	 */
 
-	public float totalTicket(Ticket ticket,ArrayList<Productos> listaProductos1) {
+	public double totalTicket(Ticket ticket,ArrayList<Productos> listaProductos1) {
 
-		float precioSinIva = 0;
+		double precioSinIva = 0;
 
 		for (Productos productos : this.listaProductos) {
 			precioSinIva = precioSinIva + productos.getPrecio();

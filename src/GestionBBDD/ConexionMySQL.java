@@ -12,16 +12,16 @@ public class ConexionMySQL {
 
     public static void enviarComandoSQL(String SentenciaSQL) {
 
-        String url = "jdbc:mysql://localhost:3306/Cafeteria"; // La dirección de la base de datos(libreria de MySQL,
+        final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // La dirección de la base de datos(libreria de MySQL,
                                                               // localhost es donde se ejecuta la base de datos, 3306 es
                                                               // el puerto, y Cafetería el nombre de la base de datos )
-        String usuario = "root"; // El nombre de usuario con el que se va a acceder a la base de datos
-        String password = "admin123@"; // La contraseña usuario !!!!!! OJO QUE LA CONTRASEÑA SEA LA CORRECTA
+        final String USUARIO = "root"; // El nombre de usuario con el que se va a acceder a la base de datos
+        final String PASSWORD = "admin123@"; // La contraseña usuario !!!!!! OJO QUE LA CONTRASEÑA SEA LA CORRECTA
         try {
             // Cargar el controlador JDBC de MySQL
             Class.forName("com.mysql.cj.jdbc.Driver"); // Este comando carga el driver MySQL en la clase
             // Establecer la conexión con la base de datos
-            Connection conexion = DriverManager.getConnection(url, usuario, password); // Utilizas el driver MySQL y te
+            Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD); // Utilizas el driver MySQL y te
                                                                                        // conectas a la base de datos
                                                                                        // utilizando la ruta de la
                                                                                        // propia base, el usuario y la
@@ -39,7 +39,7 @@ public class ConexionMySQL {
                                                  // variable con su mismo nombre y tipo
                 String nombre = resultado.getString("nombre"); // Se busca en la tabla una columna que se llame "nombre"
                                                                // y se asocia a una variable con su mismo nombre y tipo
-                float precio = resultado.getFloat("precio"); // Se busca en la tabla una columna que se llame "precio" y
+                double precio = resultado.getdouble("precio"); // Se busca en la tabla una columna que se llame "precio" y
                                                              // se asocia a una variable con su mismo nombre y tipo
                 String alergeno = resultado.getString("alergeno"); // Se busca en la tabla una columna que se llame
                                                                    // "alergeno" y se asocia a una variable con su mismo

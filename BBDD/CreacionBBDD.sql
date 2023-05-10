@@ -9,7 +9,7 @@ use Cafeteria;
 CREATE TABLE productos (
   id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(50) NOT NULL,
-  precio FLOAT NOT NULL,
+  precio double NOT NULL,
   alergeno VARCHAR(50),
   stock INT NOT NULL
 );
@@ -17,7 +17,7 @@ CREATE TABLE productos (
 -- Tabla de caja
 CREATE TABLE caja (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  dinero FLOAT,
+  dinero double,
   fecha DATE -- Formato YYYY-MM-DD
 );
 

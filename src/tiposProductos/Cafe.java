@@ -4,9 +4,9 @@ import java.util.Objects;
 public class Cafe extends Productos {
 
     
-    private static final float SUPLEMENTOLECHE = 0.7f;
+    private static final double SUPLEMENTOLECHE = 0.7f;
 
-    public Cafe(int id, String nombre, float precio, int stock, String alergeno) {
+    public Cafe(int id, String nombre, double precio, int stock, String alergeno) {
         super(id, nombre, precio, stock, alergeno);
         // Constructor que me ha obligado a poner por tener herencia
     }

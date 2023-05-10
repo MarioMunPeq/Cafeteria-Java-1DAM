@@ -9,37 +9,37 @@ public class Cajero {
 	
 	private ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 
-	private float cajaFinalMetalico;
-	private float cajaFinalTarjeta;
+	private double cajaFinalMetalico;
+	private double cajaFinalTarjeta;
 
 	// Valores de las monedas y billetes
-	public static final float CENT_1 = 0.01f;
+	public static final double CENT_1 = 0.01;
 
-	public static final float CENT_2 = 0.02f;
+	public static final double CENT_2 = 0.02;
 
-	public static final float CENT_5 = 0.05f;
+	public static final double CENT_5 = 0.05;
 
-	public static final float CENT_10 = 0.1f;
+	public static final double CENT_10 = 0.1;
 
-	public static final float CENT_20 = 0.2f;
+	public static final double CENT_20 = 0.2;
 
-	public static final float CENT_50 = 0.5f;
+	public static final double CENT_50 = 0.5;
 
-	public static final float EURO_1 = 1;
+	public static final double EURO_1 = 1;
 
-	public static final float EURO_2 = 2;
+	public static final double EURO_2 = 2;
 
-	public static final float BILLETE_5 = 5;
+	public static final double BILLETE_5 = 5;
 
-	public static final float BILLETE_10 = 10;
+	public static final double BILLETE_10 = 10;
 
-	public static final float BILLETE_20 = 20;
+	public static final double BILLETE_20 = 20;
 
-	public static final float BILLETE_50 = 50;
+	public static final double BILLETE_50 = 50;
 
-	public static final float BILLETE_100 = 100;
+	public static final double BILLETE_100 = 100;
 	
-	public static final float VALOR_CAJA_CHICA_INICIAL = 300;
+	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
 	
 	
 	
@@ -84,8 +84,8 @@ public class Cajero {
 	 * Devuelve el valor de la caja total del dia.
 	 * @return total caja del dia.
 	 */
-	public float cajaTotal() {
-		float cajaTotal = cajaFinalTarjeta + cajaFinalMetalico;
+	public double cajaTotal() {
+		double cajaTotal = cajaFinalTarjeta + cajaFinalMetalico;
 		return cajaTotal;
 	}
 	
@@ -93,7 +93,7 @@ public class Cajero {
 	 * Devuelve el valor total del beneficio diario calculando la caja total menos el valor inicial con el que empieza la caja chica para dar el cambio
 	 * @return beneficio total del dia.
 	 */
-	public float beneficioDiario() {
+	public double beneficioDiario() {
 		return (cajaTotal()-VALOR_CAJA_CHICA_INICIAL);
 	}
 	
@@ -106,9 +106,9 @@ public class Cajero {
 	 * @return Devuelve la cantidad a devolver
 	 */
 
-	public void calcularVuelta(float precio, float pagado) {
-		float totalDevolver = pagado - precio;
-		totalDevolver = Math.round(totalDevolver * 100) / 100f; // redondeo a 2 decimales
+	public void calcularVuelta(double precio, double pagado) {
+		double totalDevolver = pagado - precio;
+		totalDevolver = Math.round(totalDevolver * 100) / 100; // redondeo a 2 decimales
 		System.out.println("El cambio a devolver es: " + totalDevolver);
 		sugerenciaCambio(totalDevolver);
 	}
@@ -167,7 +167,7 @@ public class Cajero {
 
 	// CONSTRUCTOR, GETTERS Y SETTERS
 
-	public Cajero(ArrayList<Ticket> listaTickets, float cajaFinalMetalico, float cajaFinalTarjeta) {
+	public Cajero(ArrayList<Ticket> listaTickets, double cajaFinalMetalico, double cajaFinalTarjeta) {
 		super();
 		this.listaTickets = listaTickets;
 		this.cajaFinalMetalico = VALOR_CAJA_CHICA_INICIAL;
@@ -182,19 +182,19 @@ public class Cajero {
 		this.listaTickets = listaTickets;
 	}
 
-	public float getCajaFinalMetalico() {
+	public double getCajaFinalMetalico() {
 		return cajaFinalMetalico;
 	}
 
-	public void setCajaFinalMetalico(float cajaFinalMetalico) {
+	public void setCajaFinalMetalico(double cajaFinalMetalico) {
 		this.cajaFinalMetalico = cajaFinalMetalico;
 	}
 
-	public float getCajaFinalTarjeta() {
+	public double getCajaFinalTarjeta() {
 		return cajaFinalTarjeta;
 	}
 
-	public void setCajaFinalTarjeta(float cajaFinalTarjeta) {
+	public void setCajaFinalTarjeta(double cajaFinalTarjeta) {
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
 	}
 
