@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class ConexionMySQL {
 
     public static void enviarComandoSQL(String SentenciaSQL) {
-
+    	
         final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // La dirección de la base de datos(libreria de MySQL,
                                                               // localhost es donde se ejecuta la base de datos, 3306 es
                                                               // el puerto, y Cafetería el nombre de la base de datos )
@@ -33,21 +33,23 @@ public class ConexionMySQL {
                                                                         // el String de entrada del método
 
             // Se recorre el resultado
-            /* 
+            
             while (resultado.next()) {
                 int id = resultado.getInt("id"); // Se busca en la tabla una columna que se llame 'id' y se asocia a una
                                                  // variable con su mismo nombre y tipo
                 String nombre = resultado.getString("nombre"); // Se busca en la tabla una columna que se llame "nombre"
-                                                               // y se asocia a una variable con su mismo nombre y tipo
-                double precio = resultado.getdouble("precio"); // Se busca en la tabla una columna que se llame "precio" y
+               System.out.println(nombre);                                               // y se asocia a una variable con su mismo nombre y tipo
+                double precio = resultado.getDouble("precio"); // Se busca en la tabla una columna que se llame "precio" y
                                                              // se asocia a una variable con su mismo nombre y tipo
                 String alergeno = resultado.getString("alergeno"); // Se busca en la tabla una columna que se llame
                                                                    // "alergeno" y se asocia a una variable con su mismo
                                                                    // nombre y tipo
                 int stock = resultado.getInt("stock"); // Se busca en la tabla una columna que se llame "stock" y se
                                                        // asocia a una variable con su mismo nombre y tipo
+                System.out.println("Consulta" + resultado);  
             }
-            */
+            
+            
             conexion.close(); // Cerrar la conexión
         } catch (SQLException sqlException) {
             System.err.println("Ha habido un error relacionado con MySQL");

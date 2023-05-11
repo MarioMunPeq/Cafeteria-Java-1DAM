@@ -18,6 +18,8 @@ public class Productos {
     protected static final String LECHE_SOJA = "Soja";
     protected static final String LECHE_SINLACTOSA = "SinLactosa";
     
+    
+    
     /**
      * 
      * @param stock

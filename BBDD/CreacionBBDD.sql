@@ -40,8 +40,7 @@ CREATE TABLE ticket_productos (
   FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
 
-delete from
-  productos;
+
 
 -- Se borran todos los datos, por si no estuviese vacío
 INSERT INTO

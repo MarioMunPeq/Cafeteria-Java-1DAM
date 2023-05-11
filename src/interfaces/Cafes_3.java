@@ -5,12 +5,15 @@
 
 package interfaces;
 
+import GestionBBDD.ConexionMySQL;
+
 /**
  *
  * @author admin
  */
 public class Cafes_3 extends javax.swing.JFrame {
-
+	
+	public static final String CONSULTA_PRODUCTOS = "SELECT nombre, precio, alergeno, stock FROM productos WHERE id = ";
     /** Creates new form Cafes_3 */
     public Cafes_3() {
         initComponents();
@@ -398,10 +401,11 @@ public class Cafes_3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_c_cortadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_cortadoActionPerformed
+    	//ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+2);
         // añade cafe cortado al jta_info_add_ticket_cafes
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_cortadoActionPerformed
-
+    
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_bombonActionPerformed
         // añade cafe bombón al jta_info_add_ticket_cafes
 
