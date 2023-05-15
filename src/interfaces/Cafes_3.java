@@ -13,7 +13,7 @@ import GestionBBDD.ConexionMySQL;
  */
 public class Cafes_3 extends javax.swing.JFrame {
 	
-	public static final String CONSULTA_PRODUCTOS = "SELECT nombre, precio, alergeno, stock FROM productos WHERE id = ";
+	public static final String CONSULTA_PRODUCTOS = "SELECT id, nombre, precio, alergeno, stock FROM productos WHERE id = ";
     /** Creates new form Cafes_3 */
     public Cafes_3() {
         initComponents();
@@ -401,53 +401,56 @@ public class Cafes_3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_c_cortadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_cortadoActionPerformed
-    	//ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+2);
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+2);
         // añade cafe cortado al jta_info_add_ticket_cafes
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_cortadoActionPerformed
     
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_bombonActionPerformed
         // añade cafe bombón al jta_info_add_ticket_cafes
-
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+5);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_bombonActionPerformed
 
     private void jb_capuchinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_capuchinoActionPerformed
         // añade capuchino al jta_info_add_ticket_cafes
-
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+4);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_capuchinoActionPerformed
 
     private void jb_c_soloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_soloActionPerformed
         // añade cafe solo al jta_info_add_ticket_cafes
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+1);
         //OJO-- si se pincha en
     }//GEN-LAST:event_jb_c_soloActionPerformed
 
     private void jb_c_lecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_lecheActionPerformed
         // añade cafe con leche al jta_info_add_ticket_cafes
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+3);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_lecheActionPerformed
 
     private void jb_supraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_supraActionPerformed
         // añade supracam   al jta_info_add_ticket_cafes
-
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+6);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_supraActionPerformed
 
     private void jb_shakeratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_shakeratoActionPerformed
         // añade shakerato al jta_info_add_ticket_cafes
-
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+8);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_shakeratoActionPerformed
 
     private void jb_baileysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_baileysActionPerformed
         // añade cafe con baileys al jta_info_add_ticket_cafes
-
+    	ConexionMySQL.enviarComandoSQL(CONSULTA_PRODUCTOS+7);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_baileysActionPerformed
 
     private void jbr_chocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbr_chocoActionPerformed
         // TODO add your handling code here:
+    	
     }//GEN-LAST:event_jbr_chocoActionPerformed
 
     private void jrb_vainillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_vainillaActionPerformed
