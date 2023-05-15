@@ -421,7 +421,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
     private void jb_modificar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificar_ticketActionPerformed
         // modifica el ticket seleccionado y salta a la ventana de productos
         //OJO- en productos el jta_info_ticket debe mostrar el contenido del ticket seleccionado
-
+        jtp_pestanias.setSelectedComponent(jp_productos);
 
     }//GEN-LAST:event_jb_modificar_ticketActionPerformed
 
