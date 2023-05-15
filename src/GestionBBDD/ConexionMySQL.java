@@ -16,7 +16,7 @@ public class ConexionMySQL {
                                                               // localhost es donde se ejecuta la base de datos, 3306 es
                                                               // el puerto, y Cafetería el nombre de la base de datos )
         final String USUARIO = "root"; // El nombre de usuario con el que se va a acceder a la base de datos
-        final String PASSWORD = "admin123@"; // La contraseña usuario !!!!!! OJO QUE LA CONTRASEÑA SEA LA CORRECTA
+        final String PASSWORD = "admin"; // La contraseña usuario !!!!!! OJO QUE LA CONTRASEÑA SEA LA CORRECTA
         try {
             // Cargar el controlador JDBC de MySQL
             Class.forName("com.mysql.cj.jdbc.Driver"); // Este comando carga el driver MySQL en la clase

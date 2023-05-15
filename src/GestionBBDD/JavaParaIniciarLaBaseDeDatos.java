@@ -17,8 +17,8 @@ public class JavaParaIniciarLaBaseDeDatos {
 
         String url = "jdbc:mysql://localhost:3306/Cafeteria";
         String user = "root";
-        String password = "admin123@";
-        String archivoSql = "/BBDD/CreacionBBDD.sql";
+        String password = "admin";
+        String archivoSql = "BBDD\\CreacionBBDD.sql";
 
         try {
 
@@ -44,7 +44,7 @@ public class JavaParaIniciarLaBaseDeDatos {
             conn.close();
         } catch (Exception e) {
             // Manejar cualquier excepción que pueda surgir al ejecutar los comandos SQL
-            System.out.println("Excepcion sin manejar");
+            System.out.println(e);
         }
     }
 

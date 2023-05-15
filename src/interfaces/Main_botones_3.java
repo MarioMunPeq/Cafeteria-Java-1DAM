@@ -7,6 +7,9 @@ package interfaces;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import GestionBBDD.ConexionMySQL;
+import GestionBBDD.JavaParaIniciarLaBaseDeDatos;
+
 /**
  *
  * @author admin
@@ -457,6 +460,11 @@ public class Main_botones_3 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
+
+            ConexionMySQL.enviarComandoSQL("Show databases");
+
+            JavaParaIniciarLaBaseDeDatos.iniciarBBDD();
+
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
