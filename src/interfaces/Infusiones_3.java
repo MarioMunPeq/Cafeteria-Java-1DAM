@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaces;
+package proyecto_interfaz_3;
 // OJO!! HAY UN BOTTON GROUP QUE SE LLAMAN IGUAL EN CAFES Y EN INFUSIONES QUE ES EL TIPO DE LECHE
 /**
  *
@@ -29,7 +29,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
         bg_tipo_leche = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jt_te_verde = new javax.swing.JButton();
+        jb_te_verde = new javax.swing.JButton();
         jb_frutos_rojos = new javax.swing.JButton();
         jb_te_azul = new javax.swing.JButton();
         jb_te_rojo = new javax.swing.JButton();
@@ -40,7 +40,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
         jb_chai = new javax.swing.JButton();
         jb_matcha = new javax.swing.JButton();
         jb_pink = new javax.swing.JButton();
-        jt_tila = new javax.swing.JButton();
+        jb_tila = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jrb_avena = new javax.swing.JRadioButton();
         jrab_soja = new javax.swing.JRadioButton();
@@ -51,18 +51,18 @@ public class Infusiones_3 extends javax.swing.JFrame {
         jta_info_add_ticket_infusiones = new javax.swing.JTextArea();
         jb_aniadir_ticket_infusiones = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(204, 153, 0));
 
-        jt_te_verde.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jt_te_verde.setText("Té verde");
-        jt_te_verde.addActionListener(new java.awt.event.ActionListener() {
+        jb_te_verde.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jb_te_verde.setText("Té verde");
+        jb_te_verde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_te_verdeActionPerformed(evt);
+                jb_te_verdeActionPerformed(evt);
             }
         });
 
@@ -146,11 +146,11 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
-        jt_tila.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jt_tila.setText("Tila");
-        jt_tila.addActionListener(new java.awt.event.ActionListener() {
+        jb_tila.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jb_tila.setText("Tila");
+        jb_tila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_tilaActionPerformed(evt);
+                jb_tilaActionPerformed(evt);
             }
         });
 
@@ -176,9 +176,9 @@ public class Infusiones_3 extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jb_te_rojo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jt_te_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_te_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jt_tila, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jb_tila, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jb_frutos_rojos, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -194,8 +194,8 @@ public class Infusiones_3 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_te_rojo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jt_te_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jt_tila, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jb_te_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_tila, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_te_negro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -216,6 +216,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(102, 255, 102));
 
+        jrb_avena.setBackground(new java.awt.Color(102, 255, 102));
         bg_tipo_leche.add(jrb_avena);
         jrb_avena.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jrb_avena.setText("Avena");
@@ -225,6 +226,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
+        jrab_soja.setBackground(new java.awt.Color(102, 255, 102));
         bg_tipo_leche.add(jrab_soja);
         jrab_soja.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jrab_soja.setText("Soja");
@@ -234,6 +236,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
+        jrab_sin_lactosa.setBackground(new java.awt.Color(102, 255, 102));
         bg_tipo_leche.add(jrab_sin_lactosa);
         jrab_sin_lactosa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jrab_sin_lactosa.setText("Sin Lactosa");
@@ -243,6 +246,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
+        jrb_desna.setBackground(new java.awt.Color(102, 255, 102));
         bg_tipo_leche.add(jrb_desna);
         jrb_desna.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jrb_desna.setText("Desnatada");
@@ -252,6 +256,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
+        jrb_agua.setBackground(new java.awt.Color(102, 255, 102));
         bg_tipo_leche.add(jrb_agua);
         jrb_agua.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jrb_agua.setSelected(true);
@@ -349,16 +354,18 @@ public class Infusiones_3 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 781, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jt_te_verdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_te_verdeActionPerformed
+    private void jb_te_verdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_te_verdeActionPerformed
         // té verde al jta_info_add_ticket_infusiones
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
-    }//GEN-LAST:event_jt_te_verdeActionPerformed
+    }//GEN-LAST:event_jb_te_verdeActionPerformed
 
     private void jb_frutos_rojosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_frutos_rojosActionPerformed
         // té de frutos rojos al jta_info_add_ticket_infusiones
@@ -410,10 +417,10 @@ public class Infusiones_3 extends javax.swing.JFrame {
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }//GEN-LAST:event_jb_pinkActionPerformed
 
-    private void jt_tilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_tilaActionPerformed
+    private void jb_tilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_tilaActionPerformed
         // tila al jta_info_add_ticket_infusiones
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
-    }//GEN-LAST:event_jt_tilaActionPerformed
+    }//GEN-LAST:event_jb_tilaActionPerformed
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_avenaActionPerformed
         // TODO add your handling code here:
@@ -492,13 +499,13 @@ public class Infusiones_3 extends javax.swing.JFrame {
     private javax.swing.JButton jb_te_azul;
     private javax.swing.JButton jb_te_negro;
     private javax.swing.JButton jb_te_rojo;
+    private javax.swing.JButton jb_te_verde;
+    private javax.swing.JButton jb_tila;
     private javax.swing.JRadioButton jrab_sin_lactosa;
     private javax.swing.JRadioButton jrab_soja;
     private javax.swing.JRadioButton jrb_agua;
     private javax.swing.JRadioButton jrb_avena;
     private javax.swing.JRadioButton jrb_desna;
-    private javax.swing.JButton jt_te_verde;
-    private javax.swing.JButton jt_tila;
     private javax.swing.JTextArea jta_info_add_ticket_infusiones;
     // End of variables declaration//GEN-END:variables
 }

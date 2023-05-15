@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaces;
+package proyecto_interfaz_3;
 
 /**
  *
@@ -28,7 +28,7 @@ public class Comidas_3 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jba_jamon = new javax.swing.JButton();
+        jb_jamon = new javax.swing.JButton();
         jb_mermelada = new javax.swing.JButton();
         jb_aguacate = new javax.swing.JButton();
         jb_t_limon = new javax.swing.JButton();
@@ -42,7 +42,7 @@ public class Comidas_3 extends javax.swing.JFrame {
         jta_info_add_ticket_comida = new javax.swing.JTextArea();
         jb_aniadir_ticket_comidas = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 255));
@@ -50,11 +50,11 @@ public class Comidas_3 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 153, 0));
         jPanel2.setPreferredSize(new java.awt.Dimension(435, 529));
 
-        jba_jamon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jba_jamon.setText("Jamón");
-        jba_jamon.addActionListener(new java.awt.event.ActionListener() {
+        jb_jamon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jb_jamon.setText("Jamón");
+        jb_jamon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jba_jamonActionPerformed(evt);
+                jb_jamonActionPerformed(evt);
             }
         });
 
@@ -145,7 +145,7 @@ public class Comidas_3 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jb_aguacate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jba_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
@@ -165,7 +165,7 @@ public class Comidas_3 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jba_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -239,9 +239,9 @@ public class Comidas_3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jba_jamonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jba_jamonActionPerformed
+    private void jb_jamonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_jamonActionPerformed
         // se añade tostadas con jamón al jta_info_add_ticket_comida
-    }//GEN-LAST:event_jba_jamonActionPerformed
+    }//GEN-LAST:event_jb_jamonActionPerformed
 
     private void jb_tomateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_tomateActionPerformed
         // se añade tostadas con tomate al jta_info_add_ticket_comida
@@ -329,13 +329,13 @@ public class Comidas_3 extends javax.swing.JFrame {
     private javax.swing.JButton jb_aniadir_ticket_comidas;
     private javax.swing.JButton jb_bizcocho;
     private javax.swing.JButton jb_donut;
+    private javax.swing.JButton jb_jamon;
     private javax.swing.JButton jb_mermelada;
     private javax.swing.JButton jb_pulguita;
     private javax.swing.JButton jb_t_limon;
     private javax.swing.JButton jb_t_queso;
     private javax.swing.JButton jb_tomate;
     private javax.swing.JButton jb_tortilla;
-    private javax.swing.JButton jba_jamon;
     private javax.swing.JTextArea jta_info_add_ticket_comida;
     // End of variables declaration//GEN-END:variables
 }

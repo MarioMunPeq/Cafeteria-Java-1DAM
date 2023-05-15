@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaces;
+package proyecto_interfaz_3;
 
 /**
  *
@@ -28,7 +28,7 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jt_f_naranja = new javax.swing.JButton();
+        jb_f_naranja = new javax.swing.JButton();
         jb_agua = new javax.swing.JButton();
         jb_sprite = new javax.swing.JButton();
         jb_cocacola = new javax.swing.JButton();
@@ -37,7 +37,7 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
         jb_agua_gas = new javax.swing.JButton();
         jb_corto = new javax.swing.JButton();
         jb_nestea = new javax.swing.JButton();
-        jt_f_limon = new javax.swing.JButton();
+        jb_f_limon = new javax.swing.JButton();
         jb_canion = new javax.swing.JButton();
         jb_martini = new javax.swing.JButton();
         jb_blanco = new javax.swing.JButton();
@@ -47,7 +47,7 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
         jta_info_add_ticket_otras_bebidas = new javax.swing.JTextArea();
         jb_aniadir_ticket_iotras_bebidas = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 255));
@@ -57,11 +57,11 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 153, 0));
 
-        jt_f_naranja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jt_f_naranja.setText("Fanta Naranja");
-        jt_f_naranja.addActionListener(new java.awt.event.ActionListener() {
+        jb_f_naranja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jb_f_naranja.setText("Fanta Naranja");
+        jb_f_naranja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_f_naranjaActionPerformed(evt);
+                jb_f_naranjaActionPerformed(evt);
             }
         });
 
@@ -129,11 +129,11 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
             }
         });
 
-        jt_f_limon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jt_f_limon.setText("Fanta Limon");
-        jt_f_limon.addActionListener(new java.awt.event.ActionListener() {
+        jb_f_limon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jb_f_limon.setText("Fanta Limon");
+        jb_f_limon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_f_limonActionPerformed(evt);
+                jb_f_limonActionPerformed(evt);
             }
         });
 
@@ -193,9 +193,9 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jb_cocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jt_f_naranja, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_f_naranja, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jt_f_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jb_f_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jb_agua, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -225,8 +225,8 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_cocacola, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jt_f_naranja, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jt_f_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jb_f_naranja, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_f_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_acuarius, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -286,7 +286,7 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jb_aniadir_ticket_iotras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -298,16 +298,16 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 58, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jt_f_naranjaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_f_naranjaActionPerformed
+    private void jb_f_naranjaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_f_naranjaActionPerformed
         // añade fanta naranja al jta_info_add_ticket_otras_bebidas
-    }//GEN-LAST:event_jt_f_naranjaActionPerformed
+    }//GEN-LAST:event_jb_f_naranjaActionPerformed
 
     private void jb_aguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_aguaActionPerformed
         // añade agua mineral al jta_info_add_ticket_otras_bebidas
@@ -341,9 +341,9 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
         // añade nestea al jta_info_add_ticket_otras_bebidas
     }//GEN-LAST:event_jb_nesteaActionPerformed
 
-    private void jt_f_limonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_f_limonActionPerformed
+    private void jb_f_limonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_f_limonActionPerformed
         // añade fanta limón al jta_info_add_ticket_otras_bebidas
-    }//GEN-LAST:event_jt_f_limonActionPerformed
+    }//GEN-LAST:event_jb_f_limonActionPerformed
 
     private void jb_canionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_canionActionPerformed
         // añade cañón al jta_info_add_ticket_otras_bebidas
@@ -419,13 +419,13 @@ public class Otras_bebidas_3 extends javax.swing.JFrame {
     private javax.swing.JButton jb_canion;
     private javax.swing.JButton jb_cocacola;
     private javax.swing.JButton jb_corto;
+    private javax.swing.JButton jb_f_limon;
+    private javax.swing.JButton jb_f_naranja;
     private javax.swing.JButton jb_martini;
     private javax.swing.JButton jb_nestea;
     private javax.swing.JButton jb_rosado;
     private javax.swing.JButton jb_sprite;
     private javax.swing.JButton jb_tinto;
-    private javax.swing.JButton jt_f_limon;
-    private javax.swing.JButton jt_f_naranja;
     private javax.swing.JTextArea jta_info_add_ticket_otras_bebidas;
     // End of variables declaration//GEN-END:variables
 }
