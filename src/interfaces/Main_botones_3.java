@@ -461,8 +461,6 @@ public class Main_botones_3 extends javax.swing.JFrame {
          */
         try {
 
-            ConexionMySQL.enviarComandoSQL("Show databases");
-
             JavaParaIniciarLaBaseDeDatos.iniciarBBDD();
 
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
