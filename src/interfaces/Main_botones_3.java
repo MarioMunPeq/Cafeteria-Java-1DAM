@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaces;
+package proyecto_interfaz_3;
 
+import java.awt.Dimension;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+import proyecto_cafe_2.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -13,12 +17,37 @@ import javax.swing.JPanel;
  */
 public class Main_botones_3 extends javax.swing.JFrame {
 
+    /*OJO aqui se ha metido la imagen
+    intento VERSION 0.0 
+    copnsultado en: https://panamahitek.com/insertar-una-imagen-dentro-de-un-jpanel-en-java/#:~:text=Se%20puede%20arrastrar%20desde%20cualquier,Netbeans%20donde%20la%20tengamos%20guardada.&text=Con%20esto%20podemos%20ejecutar%20nuestro,Eso%20es%20todo%20por%20ahora.
+    
+    public class Imagen extends javax.swing.JPanel {
+
+        public Imagen() {
+            this.setSize(700, 460);// el tamaño del panel a cubrir
+        }
+        // Metodo que tiene como parametri un objeto de la clase graphics  
+
+        public void paint(Graphics grafico) {
+            Dimension altura = getSize();
+
+            // se selecciona la imagen del paquete cpn la ruta de la misma
+            ImageIcon fondo1 = new ImageIcon(getClass().getResource("C:\\Users\\admin\\Desktop\\OneDrive - Educacyl\\PROGRAMACION\\proyecto_cafe\\src\\imagenes\\fondo1.jpg"));
+
+            // se dibuja la imagen que esta dentro del paquete imagenes dentro del jpanel que va a ocupar
+            grafico.drawImage(fondo1.getImage(), 0, 0, altura.width, altura.height, null);
+
+            setOpaque(false);
+            super.paintComponents(grafico);
+        }
+    }
+*/
     public static Main_botones_3 boton3 = new Main_botones_3();
     public static Cafes_3 cafe3 = new Cafes_3();
     public static Comidas_3 comida3 = new Comidas_3();
     public static Infusiones_3 infusion3 = new Infusiones_3();
     public static Otras_bebidas_3 otrasbebe3 = new Otras_bebidas_3();
-    
+
     /**
      * Creates new form Main_botones_cafe
      */
@@ -179,7 +208,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                     .addComponent(jScrollPane6))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         jp_caja_mainLayout.setVerticalGroup(
             jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +235,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
                         .addComponent(jb_borrar_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jtp_pestanias.addTab("CAJA", jp_caja_main);
@@ -265,10 +294,10 @@ public class Main_botones_3 extends javax.swing.JFrame {
             .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
                 .addContainerGap(32, Short.MAX_VALUE)
                 .addGroup(jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                    .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jb_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_cafes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jp_botoenes_principalesLayout.setVerticalGroup(
@@ -381,18 +410,18 @@ public class Main_botones_3 extends javax.swing.JFrame {
 
     private void jb_ticket_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ticket_nuevoActionPerformed
         // crea un ticket nuevo y salta a la ventana de productos
-        //  jp_productos.setVisible(true);
-        // jp_caja_main.setVisible(false);
-
+        /* intento de poner el fondo VERSION 0.0
+        Imagen fondo1 = new Imagen();
+        jp_productos.add(fondo1);
+        jp_productos.repaint();
+        */
         jtp_pestanias.setSelectedComponent(jp_productos); //.seteSelectedComponente lanza a la ventana que llama
     }//GEN-LAST:event_jb_ticket_nuevoActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cafesActionPerformed
         // ir a frame cafesys
 
-        //OJO- esta opcion hace el cambio de ventana pero no carga el contenido
-        // jtp_pestanias.setVisible(false);
-        //  Cafes_3 cafe3 = new Cafes_3();
+        //valido
         cafe3.setVisible(true);
         boton3.setVisible(false);
     }//GEN-LAST:event_jb_cafesActionPerformed
@@ -526,4 +555,18 @@ public class Main_botones_3 extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_id_ticket_uso;
     private javax.swing.JTabbedPane jtp_pestanias;
     // End of variables declaration//GEN-END:variables
+
+    /* intento poder imagen VERSION 0.1
+    https://www.youtube.com/watch?v=CfKlAHInank
+   
+class fondo_productos extends JPanel{
+    private Imagen fondo_produ;
+    
+    @Override
+    public void paint (Graphics g){
+        fondo_produ = new ImageIcon(getClass);
+        
+    }
+} */
+
 }

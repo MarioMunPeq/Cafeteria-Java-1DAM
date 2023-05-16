@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaces;
+package proyecto_interfaz_3;
 // OJO!! HAY UN BOTTON GROUP QUE SE LLAMAN IGUAL EN CAFES Y EN INFUSIONES QUE ES EL TIPO DE LECHE
 /**
  *
@@ -43,8 +43,8 @@ public class Infusiones_3 extends javax.swing.JFrame {
         jb_tila = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jrb_avena = new javax.swing.JRadioButton();
-        jrab_soja = new javax.swing.JRadioButton();
-        jrab_sin_lactosa = new javax.swing.JRadioButton();
+        jrb_soja = new javax.swing.JRadioButton();
+        jrb_sin_lactosa = new javax.swing.JRadioButton();
         jrb_desna = new javax.swing.JRadioButton();
         jrb_agua = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -226,23 +226,23 @@ public class Infusiones_3 extends javax.swing.JFrame {
             }
         });
 
-        jrab_soja.setBackground(new java.awt.Color(102, 255, 102));
-        bg_tipo_leche.add(jrab_soja);
-        jrab_soja.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrab_soja.setText("Soja");
-        jrab_soja.addActionListener(new java.awt.event.ActionListener() {
+        jrb_soja.setBackground(new java.awt.Color(102, 255, 102));
+        bg_tipo_leche.add(jrb_soja);
+        jrb_soja.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrb_soja.setText("Soja");
+        jrb_soja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrab_sojaActionPerformed(evt);
+                jrb_sojaActionPerformed(evt);
             }
         });
 
-        jrab_sin_lactosa.setBackground(new java.awt.Color(102, 255, 102));
-        bg_tipo_leche.add(jrab_sin_lactosa);
-        jrab_sin_lactosa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrab_sin_lactosa.setText("Sin Lactosa");
-        jrab_sin_lactosa.addActionListener(new java.awt.event.ActionListener() {
+        jrb_sin_lactosa.setBackground(new java.awt.Color(102, 255, 102));
+        bg_tipo_leche.add(jrb_sin_lactosa);
+        jrb_sin_lactosa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jrb_sin_lactosa.setText("Sin Lactosa");
+        jrb_sin_lactosa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrab_sin_lactosaActionPerformed(evt);
+                jrb_sin_lactosaActionPerformed(evt);
             }
         });
 
@@ -275,7 +275,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jrb_agua)
                 .addGap(86, 86, 86)
-                .addComponent(jrab_soja)
+                .addComponent(jrb_soja)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jrb_avena)
                 .addContainerGap())
@@ -283,7 +283,7 @@ public class Infusiones_3 extends javax.swing.JFrame {
                 .addContainerGap(79, Short.MAX_VALUE)
                 .addComponent(jrb_desna)
                 .addGap(63, 63, 63)
-                .addComponent(jrab_sin_lactosa)
+                .addComponent(jrb_sin_lactosa)
                 .addGap(64, 64, 64))
         );
         jPanel4Layout.setVerticalGroup(
@@ -293,10 +293,10 @@ public class Infusiones_3 extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jrb_agua)
                     .addComponent(jrb_avena)
-                    .addComponent(jrab_soja))
+                    .addComponent(jrb_soja))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrab_sin_lactosa)
+                    .addComponent(jrb_sin_lactosa)
                     .addComponent(jrb_desna))
                 .addGap(84, 84, 84))
         );
@@ -324,26 +324,28 @@ public class Infusiones_3 extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_aniadir_ticket_infusiones))
-                .addGap(104, 104, 104))
+                .addComponent(jb_aniadir_ticket_infusiones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_aniadir_ticket_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jb_aniadir_ticket_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(22, 22, 22)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(275, 275, 275))
+                        .addGap(184, 184, 184)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(209, 209, 209))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -424,22 +426,27 @@ public class Infusiones_3 extends javax.swing.JFrame {
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_avenaActionPerformed
         // TODO add your handling code here:
+        jrb_avena.setActionCommand(" Avena");
     }//GEN-LAST:event_jrb_avenaActionPerformed
 
-    private void jrab_sojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrab_sojaActionPerformed
+    private void jrb_sojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_sojaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jrab_sojaActionPerformed
+        jrb_soja.setActionCommand(" Soja"); 
+    }//GEN-LAST:event_jrb_sojaActionPerformed
 
-    private void jrab_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrab_sin_lactosaActionPerformed
+    private void jrb_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_sin_lactosaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jrab_sin_lactosaActionPerformed
+        jrb_sin_lactosa.setActionCommand(" Sin Lactosa");
+    }//GEN-LAST:event_jrb_sin_lactosaActionPerformed
 
     private void jrb_desnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_desnaActionPerformed
         // TODO add your handling code here:
+        jrb_desna.setActionCommand(" Desnatada"); 
     }//GEN-LAST:event_jrb_desnaActionPerformed
 
     private void jrb_aguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_aguaActionPerformed
         // TODO add your handling code here:
+        jrb_agua.setActionCommand("");
     }//GEN-LAST:event_jrb_aguaActionPerformed
 
     private void jb_aniadir_ticket_infusionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_aniadir_ticket_infusionesActionPerformed
@@ -501,11 +508,11 @@ public class Infusiones_3 extends javax.swing.JFrame {
     private javax.swing.JButton jb_te_rojo;
     private javax.swing.JButton jb_te_verde;
     private javax.swing.JButton jb_tila;
-    private javax.swing.JRadioButton jrab_sin_lactosa;
-    private javax.swing.JRadioButton jrab_soja;
     private javax.swing.JRadioButton jrb_agua;
     private javax.swing.JRadioButton jrb_avena;
     private javax.swing.JRadioButton jrb_desna;
+    private javax.swing.JRadioButton jrb_sin_lactosa;
+    private javax.swing.JRadioButton jrb_soja;
     private javax.swing.JTextArea jta_info_add_ticket_infusiones;
     // End of variables declaration//GEN-END:variables
 }

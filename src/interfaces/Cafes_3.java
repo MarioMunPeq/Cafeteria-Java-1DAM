@@ -3,24 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-package interfaces;
+package proyecto_interfaz_3;
 
-import GestionBBDD.ConexionMySQL;
-import tiposProductos.Cafe;
-import tiposProductos.Productos;
+
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+
+
+
 
 /**
  *
  * @author admin
  */
 public class Cafes_3 extends javax.swing.JFrame {
-	
-	
+    
+
+
     /** Creates new form Cafes_3 */
     public Cafes_3() {
         initComponents();
     }
-    
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -59,7 +65,7 @@ public class Cafes_3 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jta_info_add_ticket_cafes = new javax.swing.JTextArea();
         jb_aniadir_ticket_cafe = new javax.swing.JButton();
-        
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jp_cafes.setBackground(new java.awt.Color(153, 153, 0));
@@ -198,15 +204,30 @@ public class Cafes_3 extends javax.swing.JFrame {
         bg_sabores.add(jrb_caramelo);
         jrb_caramelo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_caramelo.setText("Caramelo");
+        jrb_caramelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_carameloActionPerformed(evt);
+            }
+        });
 
         bg_sabores.add(jrb_clasico);
         jrb_clasico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_clasico.setSelected(true);
         jrb_clasico.setText("Clásico");
+        jrb_clasico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_clasicoActionPerformed(evt);
+            }
+        });
 
         bg_sabores.add(jrb_avellana);
         jrb_avellana.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_avellana.setText("Avellana");
+        jrb_avellana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_avellanaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -403,119 +424,92 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_c_cortadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_cortadoActionPerformed
         // añade cafe cortado al jta_info_add_ticket_cafes
-    	if(jb_c_cortado.isSelected()) {
-    		ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"2");
-    	}
-    	
-    	if(jrb_choco.isSelected()) {
-    		
-    	}
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
+       
+        System.out.println("cortado con leche de tipo: " +  bg_tipo_leche.getSelection().getActionCommand());
     }//GEN-LAST:event_jb_c_cortadoActionPerformed
 
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_bombonActionPerformed
         // añade cafe bombón al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"5");
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_bombonActionPerformed
 
     private void jb_capuchinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_capuchinoActionPerformed
         // añade capuchino al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"4");
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_capuchinoActionPerformed
 
     private void jb_c_soloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_soloActionPerformed
         // añade cafe solo al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"1");
         //OJO-- si se pincha en
     }//GEN-LAST:event_jb_c_soloActionPerformed
 
     private void jb_c_lecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_lecheActionPerformed
         // añade cafe con leche al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"3");
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_lecheActionPerformed
 
     private void jb_supraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_supraActionPerformed
         // añade supracam   al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"6");
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_supraActionPerformed
 
     private void jb_shakeratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_shakeratoActionPerformed
         // añade shakerato al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"8");
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_shakeratoActionPerformed
 
     private void jb_baileysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_baileysActionPerformed
         // añade cafe con baileys al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"7");
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_baileysActionPerformed
 
     private void jrb_chocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_chocoActionPerformed
         // TODO add your handling code here:
-    	if(jrb_choco.isSelected()) {
-    		
-    	}
+        jrb_choco.setActionCommand(" de Chocolate");
     }//GEN-LAST:event_jrb_chocoActionPerformed
 
     private void jrb_vainillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_vainillaActionPerformed
         // TODO add your handling code here:
-    	if(jrb_vainilla.isSelected()) {
-    		
-    	}
+        jrb_vainilla.setActionCommand(" de Vainilla");
     }//GEN-LAST:event_jrb_vainillaActionPerformed
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_avenaActionPerformed
         // TODO add your handling code here:
-    	if(jrb_avena.isSelected()) {
-    		
-    	}
+        jrb_avena.setActionCommand(" Avena");
     }//GEN-LAST:event_jrb_avenaActionPerformed
 
     private void jrb_sojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_sojaActionPerformed
         // TODO add your handling code here:
-    	if(jrb_soja.isSelected()) {
-    		
-    	}
+        jrb_soja.setActionCommand(" Soja");
     }//GEN-LAST:event_jrb_sojaActionPerformed
 
     private void jrb_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_sin_lactosaActionPerformed
         // TODO add your handling code here:
-    	if(jrb_sin_lactosa.isSelected()) {
-    		
-    	}
+        jrb_sin_lactosa.setActionCommand(" Sin Lactosa");
     }//GEN-LAST:event_jrb_sin_lactosaActionPerformed
 
     private void jrb_desnatadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_desnatadaActionPerformed
         // TODO add your handling code here:
-    	if(jrb_desnatada.isSelected()) {
-    		
-    	}
+        jrb_desnatada.setActionCommand(" Desnatada");
     }//GEN-LAST:event_jrb_desnatadaActionPerformed
 
     private void jrb_enteraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_enteraActionPerformed
         // TODO add your handling code here:
-    	if(jrb_entera.isSelected()) {
-    		
-    	}
+        jrb_entera.setActionCommand("");
     }//GEN-LAST:event_jrb_enteraActionPerformed
 
     private void jcb_hieloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_hieloActionPerformed
         // TODO add your handling code here:
-    	if(jcb_hielo.isSelected()) {
-    		
-    	}
     }//GEN-LAST:event_jcb_hieloActionPerformed
 
     private void jcb_descaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_descaActionPerformed
         // TODO add your handling code here:
-    	if(jcb_desca.isSelected()) {
-    		
-    	}
     }//GEN-LAST:event_jcb_descaActionPerformed
 
     private void jb_aniadir_ticket_cafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_aniadir_ticket_cafeActionPerformed
@@ -525,6 +519,21 @@ public class Cafes_3 extends javax.swing.JFrame {
     // Main_botones_3.cafe3.setVisible(false);
     Main_botones_3.cafe3.dispose();
     }//GEN-LAST:event_jb_aniadir_ticket_cafeActionPerformed
+
+    private void jrb_avellanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_avellanaActionPerformed
+        // TODO add your handling code here:
+        jrb_avellana.setActionCommand("  de Avellana");
+    }//GEN-LAST:event_jrb_avellanaActionPerformed
+
+    private void jrb_carameloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_carameloActionPerformed
+        // TODO add your handling code here:
+        jrb_caramelo.setActionCommand(" de Caramelo");
+    }//GEN-LAST:event_jrb_carameloActionPerformed
+
+    private void jrb_clasicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_clasicoActionPerformed
+        // TODO add your handling code here:
+        jrb_clasico.setActionCommand("");
+    }//GEN-LAST:event_jrb_clasicoActionPerformed
 
     /**
      * @param args the command line arguments
