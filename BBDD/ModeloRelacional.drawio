@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="vz4viON2MNyJGt9LGI-4" name="Page-1">
-        <mxGraphModel dx="894" dy="477" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="500" math="0" shadow="0">
+        <mxGraphModel dx="947" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="500" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -43,7 +43,7 @@
                     <mxGeometry y="104" width="170" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Ticket_Productos" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;rounded=1;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="300" width="170" height="130" as="geometry">
+                    <mxGeometry x="360" y="300" width="170" height="104" as="geometry">
                         <mxRectangle x="440" y="160" width="110" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -55,9 +55,6 @@
                 </mxCell>
                 <mxCell id="18" value="Producto_Id INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rounded=1;" parent="15" vertex="1">
                     <mxGeometry y="78" width="170" height="26" as="geometry"/>
-                </mxCell>
-                <mxCell id="19" value="Cantidad INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rounded=1;" parent="15" vertex="1">
-                    <mxGeometry y="104" width="170" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="Productos" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="630" y="274" width="170" height="156" as="geometry">
@@ -89,7 +86,7 @@
                     <mxGeometry x="330" y="180" width="20" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="relación de muchos a muchos(nueva tabla)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="440" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="370" y="410" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="qQAF8Ok186BCmn0BAiIg-39" value="Decode en alergenos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="800" y="380" width="120" height="20" as="geometry"/>
@@ -100,10 +97,10 @@
                 <mxCell id="em2sPH7K4VbC0hfgrUfy-41" value="(TextArea)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="90" y="290" width="60" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="1:n" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+                <mxCell id="41" value="1:n" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="570" y="370" width="20" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="1:n" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+                <mxCell id="42" value="1:n" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="460" y="280" width="20" height="20" as="geometry"/>
                 </mxCell>
             </root>
