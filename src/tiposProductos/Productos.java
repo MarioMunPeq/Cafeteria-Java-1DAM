@@ -18,7 +18,7 @@ public class Productos {
     protected static final String LECHE_SOJA = "Soja";
     protected static final String LECHE_SINLACTOSA = "SinLactosa";
     
-    
+    public static final String CONSULTA_SQL = "select id  from productos where nombre =";
     
     /**
      * 
@@ -72,7 +72,6 @@ public class Productos {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.stock = stock;
         this.alergeno = alergeno;
     }
     

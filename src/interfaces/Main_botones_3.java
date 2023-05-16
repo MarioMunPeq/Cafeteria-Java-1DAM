@@ -18,7 +18,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
     public static Comidas_3 comida3 = new Comidas_3();
     public static Infusiones_3 infusion3 = new Infusiones_3();
     public static Otras_bebidas_3 otrasbebe3 = new Otras_bebidas_3();
-
+    
     /**
      * Creates new form Main_botones_cafe
      */

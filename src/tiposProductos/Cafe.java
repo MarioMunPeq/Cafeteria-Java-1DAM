@@ -8,10 +8,12 @@ public class Cafe extends Productos {
 
     public Cafe(int id, String nombre, double precio, int stock, String alergeno) {
         super(id, nombre, precio, stock, alergeno);
-        // Constructor que me ha obligado a poner por tener herencia
+        
     }
+    
 
     private String tipoCafe;
+    private String sabor;
     private Boolean descafeinado;
     private String tipoLeche;
     
@@ -24,7 +26,14 @@ public class Cafe extends Productos {
     public void setTipoCafe(String tipoCafe) {
         this.tipoCafe = tipoCafe;
     }
+    public String getSabor() {
+		return sabor;
+	}
 
+	public void setSabor(String sabor) {
+		this.sabor = sabor;
+	}
+    
 
     public Boolean isDescafeinado() {
         return this.descafeinado;
@@ -87,5 +96,6 @@ public class Cafe extends Productos {
             ", tipoLeche='" + getTipoLeche() + "'" +
             "}";
     }
-    
+
+	
 }
