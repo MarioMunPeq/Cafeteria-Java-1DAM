@@ -1,63 +1,181 @@
 package GestionBBDD;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-// Se importa la librería SQL 
-
 public class ConexionMySQL {
 
-    public static void enviarComandoSQL(String SentenciaSQL) {
-    	
-        final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // La dirección de la base de datos(libreria de MySQL,
-                                                              // localhost es donde se ejecuta la base de datos, 3306 es
-                                                              // el puerto, y Cafetería el nombre de la base de datos )
-        final String USUARIO = "root"; // El nombre de usuario con el que se va a acceder a la base de datos
-        final String PASSWORD = "admin123@"; // La contraseña usuario !!!!!! OJO QUE LA CONTRASEÑA SEA LA CORRECTA
+    final static Statement SENTENCIA = conexionBaseDatos();
+    private static final String CONSULTA_SQL = "Select id from productos where nombre =";
+
+    public static Statement conexionBaseDatos() {
+        final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // Direccion BBDD
+        final String USUARIO = "root"; // Nombre usuario acceder BBDD
+        final String PASSWORD = "admin"; // Contraseña acceder BBDD
+
         try {
             // Cargar el controlador JDBC de MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Este comando carga el driver MySQL en la clase
-            // Establecer la conexión con la base de datos
-            Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD); // Utilizas el driver MySQL y te
-                                                                                       // conectas a la base de datos
-                                                                                       // utilizando la ruta de la
-                                                                                       // propia base, el usuario y la
-                                                                                       // contraseña correspondientes
-            // Ejecutar la sentencia SQL
-            Statement sentencia = conexion.createStatement();
-            ResultSet resultado = sentencia.executeQuery(SentenciaSQL); // se manda a la base de datos la variable
-                                                                        // "SQL", que es
-                                                                        // el String de entrada del método
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Se recorre el resultado
-            
-            while (resultado.next()) {
-                int id = resultado.getInt("id"); // Se busca en la tabla una columna que se llame 'id' y se asocia a una
-                                                 // variable con su mismo nombre y tipo
-                String nombre = resultado.getString("nombre"); // Se busca en la tabla una columna que se llame "nombre"
-               System.out.println(nombre);                                               // y se asocia a una variable con su mismo nombre y tipo
-                double precio = resultado.getDouble("precio"); // Se busca en la tabla una columna que se llame "precio" y
-                                                             // se asocia a una variable con su mismo nombre y tipo
-                String alergeno = resultado.getString("alergeno"); // Se busca en la tabla una columna que se llame
-                                                                   // "alergeno" y se asocia a una variable con su mismo
-                                                                   // nombre y tipo
-                int stock = resultado.getInt("stock"); // Se busca en la tabla una columna que se llame "stock" y se
-                                                       // asocia a una variable con su mismo nombre y tipo
-                System.out.println("Consulta" + resultado);  
-            }
-            
-            
-            conexion.close(); // Cerrar la conexión
-        } catch (SQLException sqlException) {
-            System.err.println("Ha habido un error relacionado con MySQL");
-        } catch (ClassNotFoundException classNotFoundException) {
-            System.err.println("No se ha podido encontrar el driver para conectar con MySQL");
-        } catch (Exception e) {
-            System.err.println("Error sin identificar");
+            // Establecer conexión con BBDD
+            Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
+
+            return conexion.createStatement();
+
+        } catch (ClassNotFoundException e) {
+            // Manejar la excepción de clase no encontrada
+            System.err.println("Error de clase: " + e);
+        } catch (SQLException e) {
+            // Manejar la excepción de SQL
+            System.err.println("Error de SQL:" + e);
         }
 
+        return null; // Retornar null en caso de error
     }
+
+    public static int sacarIdProductos(String nombreProducto) {
+
+        ResultSet resultadoConsulta = null;
+        try {
+            resultadoConsulta = SENTENCIA.executeQuery(CONSULTA_SQL + nombreProducto);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Se devuelve un id con la consulta que se le ha metido
+        try {
+            return resultadoConsulta.getInt("id");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public static String datosProductoParaTicket(int id) {
+
+        ResultSet resultadoConsulta = null;
+        try {
+            resultadoConsulta = SENTENCIA.executeQuery("SELECT * FROM productos WHERE ID=" + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Recoger datos del nombre
+        String nombre = null;
+        try {
+            nombre = resultadoConsulta.getString("nombre");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger datos de precio
+        double precio = 0;
+        try {
+            precio = resultadoConsulta.getDouble("precio");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return (nombre + "  " + precio);
+    }
+
+    public static String consultarDatosTickets(int id) {
+
+        ResultSet resultadoConsulta = null;
+        try {
+            resultadoConsulta = SENTENCIA.executeQuery("SELECT * FROM tickets WHERE ID=" + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Recoger datos de si está pagado
+        boolean pagado = false;
+        try {
+            pagado = resultadoConsulta.getBoolean("pagado");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger dato de si se ha pagado con tarjeta
+        boolean pagadoTarjeta = false;
+        try {
+            pagadoTarjeta = resultadoConsulta.getBoolean("pagado_tarjeta");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger el id de la caja del ticket
+        int caja_id = 0;
+        try {
+            caja_id = resultadoConsulta.getInt("caja_id");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Prueba para imprimir los datos
+        return (pagado + "  " + pagadoTarjeta + "  " + caja_id);
+    }
+
+    public static String consultarDatosCaja(int id) {
+
+        // Se almacena la salida de la consulta
+        ResultSet resultadoConsulta = null;
+        try {
+            resultadoConsulta = SENTENCIA.executeQuery("SELECT * FROM caja WHERE ID=" + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Recoger datos del dinero que hay en la caja
+        double dinero = 0;
+        try {
+            dinero = resultadoConsulta.getDouble("dinero");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger datos de la fecha en la que se hace caja
+        Date fecha = null;
+        try {
+            fecha = resultadoConsulta.getDate("fecha");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger los comentarios
+        String comentarios = null;
+        try {
+            comentarios = resultadoConsulta.getString("comentarios");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return (dinero + "  " + fecha + "  " + comentarios);
+    }
+
+    public static String consultarDatosTicket_productos(int id) {
+
+        // Se almacena la salida de la consulta
+        ResultSet resultadoConsulta = null;
+        try {
+            resultadoConsulta = SENTENCIA.executeQuery("SELECT * FROM ticket_productos" + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Recoger el id del ticket
+        int ticket_id = 0;
+        try {
+            ticket_id = resultadoConsulta.getInt("ticket_id");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Recoger el id del producto
+        int producto_id = 0;
+        try {
+            producto_id = resultadoConsulta.getInt("producto_id");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return (ticket_id + "  " + producto_id);
+    }
+
 }
