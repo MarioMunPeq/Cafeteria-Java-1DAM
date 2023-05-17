@@ -41,20 +41,14 @@ CREATE TABLE ticket_productos (
 );
 
 
-
 -- Se borran todos los datos, por si no estuviese vacío
 INSERT INTO
   productos (nombre, precio, alergeno, stock)
 VALUES
-  ('Café solo', 1.4, Null, 300),
+  ('Café solo', 1.4, Null, 300),	
   ('Café cortado', 1.4, 'Lactosa', 300),
   ('Café leche', 1.4, 'Lactosa', 300),
-  ('Capuchino clasico', 2.2, 'Lactosa/canela', 300),
-  ('Capu chocolate', 2.2, 'Lactosa/canela', 300),
-  ('Capu vainilla', 2.2, 'Lactosa/canela', 300),
-  ('Capu caramelo', 2.2, 'Lactosa/canela', 300),
-  ('Capu avellana', 2.2, 'Lactosa/canela', 300),
-  ('Capu Wonka', 2.5, 'Lactosa', 300),
+  ('Capuchino', 2.2, 'Lactosa/canela', 300),
   ('Café bombon', 2.4, 'Lactosa/canela', 300),
   ('Supra caramel', 2.6, 'Lactosa', 300),
   ('Café con beilys', 3, 'Lactosa/alcohólico', 300),
@@ -74,35 +68,28 @@ VALUES
   ('Coca-cola', 2.4, Null, 300),
   ('Fanta naranja', 2.4, Null, 300),
   ('Fanta limon', 2.4, Null, 300),
-  ('Acuarios limon', 2.4, Null, 300),
-  ('Acuarios naranja', 2.4, Null, 300),
+  ('Acuarius', 2.4, Null, 300),
   ('Sprite', 2.4, Null, 300),
-  ('Neste limon', 2.4, Null, 300),
-  ('Agua mineral', 1.1, Null, 300),
+  ('Nestea', 2.4, Null, 300),
   ('Agua con gas', 1.4, Null, 300),
-  ('Agua grande', 1.6, Null, 300),
+  ('Agua', 1.6, Null, 300),
   ('Caña', 1.8, Null, 300),
   ('Corto', 1, Null, 300),
-  ('Caña limon', 1.8, Null, 300),
-  ('Jarra helada', 1.9, Null, 300),
-  ('Cañon helado', 2.4, Null, 300),
+  ('Cañon', 2.4, Null, 300),
   ('Vinjo tinto', 2, Null, 300),
   ('Vino blanco', 1.6, Null, 300),
   ('Vino rosado', 1.8, Null, 300),
   ('Martini rojo', 2, Null, 300),
-  ('Martini blanco', 2, Null, 300),
-  (
-    'Tosta aceite y tomate',
-    1.2,
-    "Gluten/tomate",
-    300
-  ),
+  ('Tosta aceite y tomate',1.2,"Gluten/tomate",300),
   ('Tosta jamon', 1.8, "Gluten/tomate", 300),
   ('Tosta aguacate', 1.6, "Gluten", 300),
-  ('Croisant', 1.4, "Gluten", 300),
   ('Tarta queso', 2.1, "Gluten", 300),
-  ('Tarta zanahoria', 2.1, "Gluten", 300),
+  ('Mermelada', 2.1, "Gluten", 300),
   ('Bizcocho', 1.6, "Gluten", 300),
   ('Donut', 1.5, "Gluten", 300),
   ('Tortilla', 1.6, "Huevo", 300),
-  ('Bocaillo tortilla', 1.2, "Huevo/Gluten", 300);
+  ('pulguita', 1.2, "Gluten", 300),
+  ('Bocadillo tortilla', 1.2, "Huevo/Gluten", 300);
+  
+  select id ,nombre from productos;
+  

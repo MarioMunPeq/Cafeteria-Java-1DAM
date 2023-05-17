@@ -178,5 +178,4 @@ public class ConexionMySQL {
         return (ticket_id + "  " + producto_id);
     }
 
-
 }
