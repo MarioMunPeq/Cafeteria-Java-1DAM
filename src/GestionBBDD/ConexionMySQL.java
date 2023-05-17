@@ -9,13 +9,13 @@ import java.sql.Statement;
 
 public class ConexionMySQL {
 
-    final static Statement SENTENCIA = conexionBaseDatos();
+    static Statement SENTENCIA = conexionBaseDatos();
     private static final String CONSULTA_SQL = "Select id from productos where nombre =";
 
     public static Statement conexionBaseDatos() {
         final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // Direccion BBDD
         final String USUARIO = "root"; // Nombre usuario acceder BBDD
-        final String PASSWORD = "admin"; // Contraseña acceder BBDD
+        final String PASSWORD = "admin123@"; // Contraseña acceder BBDD
 
         try {
             // Cargar el controlador JDBC de MySQL
@@ -29,6 +29,7 @@ public class ConexionMySQL {
         } catch (ClassNotFoundException e) {
             // Manejar la excepción de clase no encontrada
             System.err.println("Error de clase: " + e);
+            
         } catch (SQLException e) {
             // Manejar la excepción de SQL
             System.err.println("Error de SQL:" + e);

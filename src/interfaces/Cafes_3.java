@@ -404,7 +404,7 @@ public class Cafes_3 extends javax.swing.JFrame {
     private void jb_c_cortadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_cortadoActionPerformed
         // añade cafe cortado al jta_info_add_ticket_cafes
     	if(jb_c_cortado.isSelected()) {
-    		ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"2");
+    		ConexionMySQL.datosProductoParaTicket(2);
     	}
     	
     	if(jrb_choco.isSelected()) {
@@ -415,43 +415,43 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_bombonActionPerformed
         // añade cafe bombón al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"5");
+    	ConexionMySQL.datosProductoParaTicket(5);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_bombonActionPerformed
 
     private void jb_capuchinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_capuchinoActionPerformed
         // añade capuchino al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"4");
+    	ConexionMySQL.datosProductoParaTicket(4);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_capuchinoActionPerformed
 
     private void jb_c_soloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_soloActionPerformed
         // añade cafe solo al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"1");
+    	ConexionMySQL.datosProductoParaTicket(1);
         //OJO-- si se pincha en
     }//GEN-LAST:event_jb_c_soloActionPerformed
 
     private void jb_c_lecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_lecheActionPerformed
         // añade cafe con leche al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"3");
+    	ConexionMySQL.datosProductoParaTicket(3);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_lecheActionPerformed
 
     private void jb_supraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_supraActionPerformed
         // añade supracam   al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"6");
+    	ConexionMySQL.datosProductoParaTicket(6);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_supraActionPerformed
 
     private void jb_shakeratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_shakeratoActionPerformed
         // añade shakerato al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"8");
+    	ConexionMySQL.datosProductoParaTicket(8);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_shakeratoActionPerformed
 
     private void jb_baileysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_baileysActionPerformed
         // añade cafe con baileys al jta_info_add_ticket_cafes
-    	ConexionMySQL.enviarComandoSQL(Productos.CONSULTA_SQL+"7");
+    	ConexionMySQL.datosProductoParaTicket(7);
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_baileysActionPerformed
 
@@ -536,6 +536,9 @@ public class Cafes_3 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
+
+            ConexionMySQL.conexionBaseDatos();
+
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
