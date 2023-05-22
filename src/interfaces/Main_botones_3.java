@@ -4,17 +4,26 @@
  */
 package interfaces;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
-import GestionBBDD.ConexionMySQL;
-import GestionBBDD.JavaParaIniciarLaBaseDeDatos;
+import GestionBBDD.Conexion2;
+import tiposProductos.Productos;
 
 /**
  *
  * @author admin
  */
 public class Main_botones_3 extends javax.swing.JFrame {
+
+
+    static Conexion2 conexionPrueba = new Conexion2();
+    // arraylist de productos que pilla datos de la base de datos
+    public static ArrayList<Productos> productosAux = new ArrayList<Productos>();
 
     public static Main_botones_3 boton3 = new Main_botones_3();
     public static Cafes_3 cafe3 = new Cafes_3();
@@ -463,8 +472,10 @@ public class Main_botones_3 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
+            conexionPrueba.conectar();
+            recogerDatosProductos();
 
-            ConexionMySQL.conexionBaseDatos();
+           // ConexionMySQL.conexionBaseDatos();
 
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -499,7 +510,37 @@ public class Main_botones_3 extends javax.swing.JFrame {
             }
         });
 
+        // Metodo para recoger todos los datos de la base de datos de la tabla productos y los guarde en un arraylist
+
+        
+
+
     }
+
+
+    public static void recogerDatosProductos() {
+
+        try {
+            // Conectamos con la base de datos
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/cafe", "root", "");
+            // Creamos un Statement
+            Statement sentencia = conexion.createStatement();
+            // Creamos un ResultSet para guardar los datos obtenidos
+            ResultSet rs = sentencia.executeQuery("SELECT * FROM productos");
+            // Recorremos el resultado, mientras haya registros para leer, y escribimos el resultado en pantalla.
+            while (rs.next()) {
+                // Guardamos los datos en un arraylist
+                productosAux.add(new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3),rs.getInt(4) ,rs.getString(5)));
+                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getInt(4) + " " + rs.getString(5));
+            }
+            // Cerramos la conexión con la base de datos.
+            conexion.close();
+        } catch (SQLException e) {
+            System.out.println("Problemas con la BD");
+            e.printStackTrace();
+        }
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

@@ -15,7 +15,7 @@ public class ConexionMySQL {
     public static Statement conexionBaseDatos() {
         final String URL = "jdbc:mysql://localhost:3306/Cafeteria"; // Direccion BBDD
         final String USUARIO = "root"; // Nombre usuario acceder BBDD
-        final String PASSWORD = "admin123@"; // Contraseña acceder BBDD
+        final String PASSWORD = "admin"; // Contraseña acceder BBDD
 
         try {
             // Cargar el controlador JDBC de MySQL
@@ -53,6 +53,7 @@ public class ConexionMySQL {
             e.printStackTrace();
         }
         return 0;
+
     }
 
     public static String datosProductoParaTicket(int id) {
