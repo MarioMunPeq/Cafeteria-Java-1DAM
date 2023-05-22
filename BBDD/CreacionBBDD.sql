@@ -1,5 +1,4 @@
 drop database Cafeteria;
-
 -- Se borra en caso de que ya exista una
 create database Cafeteria;
 
@@ -91,5 +90,4 @@ VALUES
   ('pulguita', 1.2, "Gluten", 300),
   ('Bocadillo tortilla', 1.2, "Huevo/Gluten", 300);
   
-  select id ,nombre from productos;
   
