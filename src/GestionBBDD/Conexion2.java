@@ -1,4 +1,4 @@
-package ej2_objeto;
+package GestionBBDD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,13 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Time;
 
 /**
  *
- * @author dasm
+ * Clase que gestiona la conexión con la base de datos
  */
-public class Conexion {
+public class Conexion2 {
 
     private final String usuario;
     private final String clave;
@@ -21,7 +20,14 @@ public class Conexion {
     private Statement declaracion;
     private PreparedStatement ps;
 
-    public Conexion(String usuario, String clave, String url) {
+    /**
+     * Constructor de la clase
+     * 
+     * @param usuario un String con el nombre de usuario
+     * @param clave   un String con la contraseña
+     * @param url     un String con la url de la base de datos
+     */
+    public Conexion2(String usuario, String clave, String url) {
         this.usuario = usuario;
         this.clave = clave;
         this.url = url;
@@ -29,7 +35,10 @@ public class Conexion {
         ps = null;
     }
 
-    public Conexion() {
+    /**
+     * Constructor vacío de la clase
+     */
+    public Conexion2() {
         this.usuario = "root";
         this.clave = "admin";
         this.url = "jdbc:mysql://localhost:3306/Cafeteria";
@@ -37,6 +46,10 @@ public class Conexion {
         ps = null;
     }
 
+    /**
+     * Método que conecta con la base de datos
+     * 
+     */
     public void conectar() {
 
         try {
@@ -48,8 +61,13 @@ public class Conexion {
 
     }
 
+    /**
+     * Método que cierra la conexión con la base de datos
+     * 
+     * @throws SQLException
+     */
     public void cierraConexion() throws SQLException {
-        
+
         try {
             if (this.declaracion == null || this.declaracion.isClosed())
                 this.ps.close();
@@ -63,6 +81,13 @@ public class Conexion {
         }
     }
 
+    /**
+     * Método que realiza una consulta a la base de datos
+     * 
+     * @param consulta String con la consulta a realizar
+     * @return un ResultSet con el resultado de la consulta(Todos los datos de todas
+     *         las columnas)
+     */
     public ResultSet consulta(String consulta) {
 
         try {
@@ -71,16 +96,26 @@ public class Conexion {
         } catch (SQLException e) {
             System.out.println("Error");
             return null;
+
         }
 
     }
 
-    public int actualizar(String actualiza) {
+    /**
+     * Método que actualiza un registro de la base de datos
+     * 
+     * @param actualiza String con la consulta a realizar
+     * @return un booleano que indica si se ha actualizado o no
+     * 
+     * 
+     */
+    public boolean actualizar(String actualiza) {
 
         try {
             boolean realizado;
             this.declaracion = (Statement) this.conn.createStatement();
 
+            // ExecuteUpdate devuelve un entero con el número de filas afectadas
             if (this.declaracion.executeUpdate(actualiza) > 0) {
                 realizado = true;
 
@@ -96,6 +131,12 @@ public class Conexion {
 
     }
 
+    /**
+     * Método que borra un registro de la base de datos
+     * 
+     * @param borra String con la consulta a realizar
+     * @return un booleano que indica si se ha borrado o no
+     */
     public boolean borrar(String borra) {
 
         try {
@@ -119,6 +160,12 @@ public class Conexion {
 
     }
 
+    /**
+     * Método que inserta un registro en la base de datos
+     * 
+     * @param inserta String con la consulta a realizar
+     * @return un booleano que indica si se ha insertado o no
+     */
     public boolean insertar(String inserta) {
 
         try {
