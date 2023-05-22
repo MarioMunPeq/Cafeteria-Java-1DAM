@@ -43,10 +43,10 @@ public class Main_botones_3 extends javax.swing.JFrame {
     }
 */
     public static Main_botones_3 boton3 = new Main_botones_3();
-    public static Cafes_3 cafe3 = new Cafes_3();
-    public static Comidas_3 comida3 = new Comidas_3();
-    public static Infusiones_3 infusion3 = new Infusiones_3();
-    public static Otras_bebidas_3 otrasbebe3 = new Otras_bebidas_3();
+    public static Ventana_cafe cafe3 = new Ventana_cafe();
+    public static Ventana_comida comida3 = new Ventana_comida();
+    public static Ventana_infusion infusion3 = new Ventana_infusion();
+    public static Ventana_otra_bebida otrasbebe3 = new Ventana_otra_bebida();
 
     /**
      * Creates new form Main_botones_cafe
@@ -107,10 +107,10 @@ public class Main_botones_3 extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(880, 600));
 
         jtp_pestanias.setBackground(new java.awt.Color(0, 153, 0));
-        jtp_pestanias.setEnabled(false);
+        jtp_pestanias.setPreferredSize(new java.awt.Dimension(880, 600));
 
         jp_caja_main.setBackground(new java.awt.Color(255, 204, 204));
 
@@ -195,20 +195,22 @@ public class Main_botones_3 extends javax.swing.JFrame {
             .addGroup(jp_caja_mainLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+                    .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3))
+                .addGap(94, 94, 94)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addComponent(jScrollPane3))
-                    .addComponent(jLabel3))
-                .addGap(124, 124, 124)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
-                    .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6))
-                .addContainerGap(153, Short.MAX_VALUE))
+                        .addComponent(jLabel4)
+                        .addComponent(jScrollPane6)
+                        .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
+                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60))
         );
         jp_caja_mainLayout.setVerticalGroup(
             jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,7 +313,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
                 .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jb_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jScrollPane1.setBackground(new java.awt.Color(255, 102, 102));
@@ -350,41 +352,40 @@ public class Main_botones_3 extends javax.swing.JFrame {
         jp_productosLayout.setHorizontalGroup(
             jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_productosLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(49, 49, 49)
                 .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jp_productosLayout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_productosLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
+                        .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel2)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)))
+                .addGap(89, 89, 89))
         );
         jp_productosLayout.setVerticalGroup(
             jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_productosLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(14, 14, 14)
+                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jp_productosLayout.createSequentialGroup()
+                        .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jb_guardar_ticket)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(90, 90, 90))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         jtp_pestanias.addTab("PRODUCTOS", jp_productos);
@@ -393,11 +394,11 @@ public class Main_botones_3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtp_pestanias)
+            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtp_pestanias)
+            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -408,6 +409,62 @@ public class Main_botones_3 extends javax.swing.JFrame {
         jtp_pestanias.setSelectedComponent(jp_caja_main);
     }//GEN-LAST:event_jb_guardar_ticketActionPerformed
 
+    private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cafesActionPerformed
+        // ir a frame cafesys
+
+        //valido
+        cafe3.setVisible(true);
+        boton3.setVisible(false);
+    }//GEN-LAST:event_jb_cafesActionPerformed
+
+    private void jb_comidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_comidasActionPerformed
+        // ir a frame comidas
+        comida3.setVisible(true);
+
+    }//GEN-LAST:event_jb_comidasActionPerformed
+
+    private void jb_otras_bebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_otras_bebidasActionPerformed
+        // ir a frame otras bebidas
+        otrasbebe3.setVisible(true);
+    }//GEN-LAST:event_jb_otras_bebidasActionPerformed
+
+    private void jb_infusionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_infusionesActionPerformed
+        // ir a frame infusiones
+
+        infusion3.setVisible(true);
+    }//GEN-LAST:event_jb_infusionesActionPerformed
+
+    private void jb_borrar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_borrar_productoActionPerformed
+        // borra el prodcuto seleccionado en jl_lista_productos_ticket_seleccionado
+    }//GEN-LAST:event_jb_borrar_productoActionPerformed
+
+    private void jb_borrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_borrar_ticketActionPerformed
+        // borra el ticket seleccionado
+    }//GEN-LAST:event_jb_borrar_ticketActionPerformed
+
+    private void jb_hacer_cajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_hacer_cajaActionPerformed
+        // abre un joptionpane con:
+        /*
+        caja total: -- suma la caja chica + total metalico+ total tarjeta
+        caja chica: -- muestra la caja chica
+        total metalico: -- muestra el total metalico
+        total tarjeta: -- muestra el total tarjeta
+        beneficios: -- muestra caja total- caja chica
+        */
+    }//GEN-LAST:event_jb_hacer_cajaActionPerformed
+
+    private void jb_modificar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificar_ticketActionPerformed
+        // modifica el ticket seleccionado y salta a la ventana de productos
+        //OJO- en productos el jta_info_ticket debe mostrar el contenido del ticket seleccionado
+        jtp_pestanias.setSelectedComponent(jp_productos);
+    }//GEN-LAST:event_jb_modificar_ticketActionPerformed
+
+    private void jb_cobrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cobrar_ticketActionPerformed
+        // cobra el ticket seleccionado
+        // si se ha seleccionado pago con tarjeta no saca el joptionpanel
+        // si no esta seleccionado abre un joption panel que pide la cantidad y hace la suegerencia de devolución
+    }//GEN-LAST:event_jb_cobrar_ticketActionPerformed
+
     private void jb_ticket_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ticket_nuevoActionPerformed
         // crea un ticket nuevo y salta a la ventana de productos
         /* intento de poner el fondo VERSION 0.0
@@ -417,67 +474,6 @@ public class Main_botones_3 extends javax.swing.JFrame {
         */
         jtp_pestanias.setSelectedComponent(jp_productos); //.seteSelectedComponente lanza a la ventana que llama
     }//GEN-LAST:event_jb_ticket_nuevoActionPerformed
-
-    private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cafesActionPerformed
-        // ir a frame cafesys
-
-        //valido
-        cafe3.setVisible(true);
-        boton3.setVisible(false);
-    }//GEN-LAST:event_jb_cafesActionPerformed
-
-    private void jb_infusionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_infusionesActionPerformed
-        // ir a frame infusiones
-
-        infusion3.setVisible(true);
-
-    }//GEN-LAST:event_jb_infusionesActionPerformed
-
-    private void jb_otras_bebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_otras_bebidasActionPerformed
-        // ir a frame otras bebidas
-        otrasbebe3.setVisible(true);
-
-    }//GEN-LAST:event_jb_otras_bebidasActionPerformed
-
-    private void jb_comidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_comidasActionPerformed
-        // ir a frame comidas
-        comida3.setVisible(true);
-
-
-    }//GEN-LAST:event_jb_comidasActionPerformed
-
-    private void jb_modificar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificar_ticketActionPerformed
-        // modifica el ticket seleccionado y salta a la ventana de productos
-        //OJO- en productos el jta_info_ticket debe mostrar el contenido del ticket seleccionado
-        jtp_pestanias.setSelectedComponent(jp_productos);
-
-    }//GEN-LAST:event_jb_modificar_ticketActionPerformed
-
-    private void jb_borrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_borrar_ticketActionPerformed
-        // borra el ticket seleccionado
-
-    }//GEN-LAST:event_jb_borrar_ticketActionPerformed
-
-    private void jb_borrar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_borrar_productoActionPerformed
-        // borra el prodcuto seleccionado en jl_lista_productos_ticket_seleccionado
-    }//GEN-LAST:event_jb_borrar_productoActionPerformed
-
-    private void jb_cobrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cobrar_ticketActionPerformed
-        // cobra el ticket seleccionado
-        // si se ha seleccionado pago con tarjeta no saca el joptionpanel
-        // si no esta seleccionado abre un joption panel que pide la cantidad y hace la suegerencia de devolución
-    }//GEN-LAST:event_jb_cobrar_ticketActionPerformed
-
-    private void jb_hacer_cajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_hacer_cajaActionPerformed
-        // abre un joptionpane con:
-        /*
-     caja total: -- suma la caja chica + total metalico+ total tarjeta
-        caja chica: -- muestra la caja chica
-        total metalico: -- muestra el total metalico 
-        total tarjeta: -- muestra el total tarjeta
-     beneficios: -- muestra caja total- caja chica
-         */
-    }//GEN-LAST:event_jb_hacer_cajaActionPerformed
 
     /**
      * @param args the command line arguments
