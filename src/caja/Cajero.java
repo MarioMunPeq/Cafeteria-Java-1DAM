@@ -6,43 +6,40 @@ import java.math.RoundingMode;
 
 public class Cajero {
 
-	
 	private ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 
 	private double cajaFinalMetalico;
 	private double cajaFinalTarjeta;
 
 	// Valores de las monedas y billetes
-	public static final double CENT_1 = 0.01;
+	private static final double CENT_1 = 0.01;
 
-	public static final double CENT_2 = 0.02;
+	private static final double CENT_2 = 0.02;
 
-	public static final double CENT_5 = 0.05;
+	private static final double CENT_5 = 0.05;
 
-	public static final double CENT_10 = 0.1;
+	private static final double CENT_10 = 0.1;
 
-	public static final double CENT_20 = 0.2;
+	private static final double CENT_20 = 0.2;
 
-	public static final double CENT_50 = 0.5;
+	private static final double CENT_50 = 0.5;
 
-	public static final double EURO_1 = 1;
+	private static final double EURO_1 = 1;
 
-	public static final double EURO_2 = 2;
+	private static final double EURO_2 = 2;
 
-	public static final double BILLETE_5 = 5;
+	private static final double BILLETE_5 = 5;
 
-	public static final double BILLETE_10 = 10;
+	private static final double BILLETE_10 = 10;
 
-	public static final double BILLETE_20 = 20;
+	private static final double BILLETE_20 = 20;
 
-	public static final double BILLETE_50 = 50;
+	private static final double BILLETE_50 = 50;
 
-	public static final double BILLETE_100 = 100;
-	
-	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
-	
-	
-	
+	private static final double BILLETE_100 = 100;
+
+	private static final double VALOR_CAJA_CHICA_INICIAL = 300;
+
 	/**
 	 * Añade a la lista de tickets un ticket nuevo
 	 * 
@@ -53,7 +50,7 @@ public class Cajero {
 	public boolean anadirTicket(Ticket ticket) {
 
 		return listaTickets.add(ticket);
-		
+
 	}
 
 	/**
@@ -66,40 +63,47 @@ public class Cajero {
 
 		return listaTickets.remove(ticket);
 	}
-	
+
 	/**
-	 * Añade el dinero de los tickets pagados a sus respectivas cajas de metallico o con tarjeta
-	 * @param ticket parametro del que se coge la cantidad de dinero a añadir en la caja
+	 * Añade el dinero de los tickets pagados a sus respectivas cajas de metallico o
+	 * con tarjeta
+	 * 
+	 * @param ticket parametro del que se coge la cantidad de dinero a añadir en la
+	 *               caja
 	 */
 	public void anadirDineroCaja(Ticket ticket) {
 
 		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
-			cajaFinalTarjeta=cajaFinalTarjeta + ticket.totalTicket(ticket, ticket.getListaProductos());
-		}else if (ticket.isPagado() && ticket.isPagoTarjeta()==false) {
-			cajaFinalMetalico=cajaFinalMetalico + ticket.totalTicket(ticket, ticket.getListaProductos());
+			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket, ticket.getListaProductos());
+		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
+			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket, ticket.getListaProductos());
 		}
 
 	}
+
 	/**
 	 * Devuelve el valor de la caja total del dia.
+	 * 
 	 * @return total caja del dia.
 	 */
 	public double cajaTotal() {
-		
+
 		return cajaFinalTarjeta + cajaFinalMetalico;
-		
+
 	}
-	
+
 	/**
-	 * Devuelve el valor total del beneficio diario calculando la caja total menos el valor inicial con el que empieza la caja chica para dar el cambio
+	 * Devuelve el valor total del beneficio diario calculando la caja total menos
+	 * el valor inicial con el que empieza la caja chica para dar el cambio
+	 * 
 	 * @return beneficio total del dia.
 	 */
 	public double beneficioDiario() {
-		
-		return (cajaTotal()-VALOR_CAJA_CHICA_INICIAL);
-		
+
+		return (cajaTotal() - VALOR_CAJA_CHICA_INICIAL);
+
 	}
-	
+
 	/**
 	 * Metodo para calcular la cuantia de la vuelta del pago del cliente
 	 * 
