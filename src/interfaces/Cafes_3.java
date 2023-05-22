@@ -5,6 +5,7 @@
 
 package interfaces;
 
+import GestionBBDD.Conexion2;
 import GestionBBDD.ConexionMySQL;
 import tiposProductos.Cafe;
 import tiposProductos.Productos;
@@ -403,13 +404,7 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_c_cortadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_cortadoActionPerformed
         // añade cafe cortado al jta_info_add_ticket_cafes
-    	if(jb_c_cortado.isSelected()) {
-    		ConexionMySQL.datosProductoParaTicket(2);
-    	}
     	
-    	if(jrb_choco.isSelected()) {
-    		
-    	}
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_c_cortadoActionPerformed
 
@@ -427,7 +422,8 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_c_soloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_c_soloActionPerformed
         // añade cafe solo al jta_info_add_ticket_cafes
-    	ConexionMySQL.datosProductoParaTicket(1);
+    	//System.out.println(conexionPrueba.consulta(Productos.CONSULTA_SQL + "'Café solo'")); ;
+    	
         //OJO-- si se pincha en
     }//GEN-LAST:event_jb_c_soloActionPerformed
 
@@ -536,8 +532,8 @@ public class Cafes_3 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-
-            ConexionMySQL.conexionBaseDatos();
+        	
+            //ConexionMySQL.conexionBaseDatos();
 
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

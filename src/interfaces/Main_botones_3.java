@@ -473,7 +473,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
          */
         try {
             conexionPrueba.conectar();
-            recogerDatosProductos();
+            Conexion2.recogerDatosProductos();
 
            // ConexionMySQL.conexionBaseDatos();
 
@@ -518,28 +518,7 @@ public class Main_botones_3 extends javax.swing.JFrame {
     }
 
 
-    public static void recogerDatosProductos() {
-
-        try {
-            // Conectamos con la base de datos
-            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/cafe", "root", "");
-            // Creamos un Statement
-            Statement sentencia = conexion.createStatement();
-            // Creamos un ResultSet para guardar los datos obtenidos
-            ResultSet rs = sentencia.executeQuery("SELECT * FROM productos");
-            // Recorremos el resultado, mientras haya registros para leer, y escribimos el resultado en pantalla.
-            while (rs.next()) {
-                // Guardamos los datos en un arraylist
-                productosAux.add(new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3),rs.getInt(4) ,rs.getString(5)));
-                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getInt(4) + " " + rs.getString(5));
-            }
-            // Cerramos la conexión con la base de datos.
-            conexion.close();
-        } catch (SQLException e) {
-            System.out.println("Problemas con la BD");
-            e.printStackTrace();
-        }
-    }
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

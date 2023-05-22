@@ -2,8 +2,8 @@ package tiposProductos;
 import java.util.Objects;
 public class Infusion extends Productos {
 
-    public Infusion(int id, String nombre, double precio, int stock, String alergeno) {
-        super(id, nombre, precio, stock, alergeno);
+    public Infusion(int id, String nombre, double precio, String alergeno,int stock) {
+        super(id, nombre, precio, alergeno, stock);
         // Constructor que me ha obligado a poner por tener herencia
     }
 

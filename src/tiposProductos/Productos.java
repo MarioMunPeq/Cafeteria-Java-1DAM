@@ -68,7 +68,7 @@ public class Productos {
      * @param stock
      * @param alergeno
      */
-    public Productos(int id, String nombre, double precio, int stock, String alergeno) {
+    public Productos(int id, String nombre, double precio, String alergeno,int stock) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;

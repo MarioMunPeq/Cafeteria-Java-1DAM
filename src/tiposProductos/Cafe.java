@@ -6,8 +6,8 @@ public class Cafe extends Productos {
     
     private static final double SUPLEMENTOLECHE = 0.7f;
 
-    public Cafe(int id, String nombre, double precio, int stock, String alergeno) {
-        super(id, nombre, precio, stock, alergeno);
+    public Cafe(int id, String nombre, double precio, String alergeno,int stock) {
+        super(id, nombre, precio, alergeno,stock);
         
     }
     

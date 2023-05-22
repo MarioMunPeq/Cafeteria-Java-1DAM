@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import interfaces.Main_botones_3;
+import tiposProductos.Productos;
+
 /**
  *
  * Clase que gestiona la conexión con la base de datos
@@ -20,20 +23,6 @@ public class Conexion2 {
     private Statement declaracion;
     private PreparedStatement ps;
 
-    /**
-     * Constructor de la clase
-     * 
-     * @param usuario un String con el nombre de usuario
-     * @param clave   un String con la contraseña
-     * @param url     un String con la url de la base de datos
-     */
-    public Conexion2(String usuario, String clave, String url) {
-        this.usuario = usuario;
-        this.clave = clave;
-        this.url = url;
-        conn = null;
-        ps = null;
-    }
 
     /**
      * Constructor vacío de la clase
@@ -45,7 +34,28 @@ public class Conexion2 {
         conn = null;
         ps = null;
     }
+    public static void recogerDatosProductos() {
 
+        try {
+            // Conectamos con la base de datos
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cafeteria", "root", "admin");
+            // Creamos un Statement
+            Statement sentencia = conexion.createStatement();
+            // Creamos un ResultSet para guardar los datos obtenidos
+            ResultSet rs = sentencia.executeQuery("SELECT * FROM productos");
+            // Recorremos el resultado, mientras haya registros para leer, y escribimos el resultado en pantalla.
+            while (rs.next()) {
+                // Guardamos los datos en un arraylist
+                Main_botones_3.productosAux.add(new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3),rs.getString(4) ,rs.getInt(5)));
+                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4) + " " + rs.getInt(5));
+            }
+            // Cerramos la conexión con la base de datos.
+            conexion.close();
+        } catch (SQLException e) {
+            System.out.println("Problemas con la BD");
+            e.printStackTrace();
+        }
+    }
     /**
      * Método que conecta con la base de datos
      * 
