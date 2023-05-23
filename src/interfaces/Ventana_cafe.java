@@ -13,21 +13,17 @@ import javax.swing.ImageIcon;
 
 
 
-import GestionBBDD.Conexion2;
-import GestionBBDD.ConexionMySQL;
-import tiposProductos.Cafe;
-import tiposProductos.Productos;
 
 /**
  *
  * @author admin
  */
-public class Cafes_3 extends javax.swing.JFrame {
+public class Ventana_cafe extends javax.swing.JFrame {
     
 
 
     /** Creates new form Cafes_3 */
-    public Cafes_3() {
+    public Ventana_cafe() {
         initComponents();
     }
 
@@ -71,8 +67,10 @@ public class Cafes_3 extends javax.swing.JFrame {
         jb_aniadir_ticket_cafe = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(880, 600));
 
         jp_cafes.setBackground(new java.awt.Color(153, 153, 0));
+        jp_cafes.setPreferredSize(new java.awt.Dimension(895, 600));
 
         jPanel2.setBackground(new java.awt.Color(204, 153, 0));
 
@@ -245,7 +243,7 @@ public class Cafes_3 extends javax.swing.JFrame {
                     .addComponent(jrb_caramelo)
                     .addComponent(jrb_clasico)
                     .addComponent(jrb_avellana))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,19 +373,19 @@ public class Cafes_3 extends javax.swing.JFrame {
         jp_cafesLayout.setHorizontalGroup(
             jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_cafesLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(23, 23, 23)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jcb_desca)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jcb_hielo)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(jcb_hielo)
+                    .addComponent(jcb_desca)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42))
         );
         jp_cafesLayout.setVerticalGroup(
             jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,18 +394,18 @@ public class Cafes_3 extends javax.swing.JFrame {
                 .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jp_cafesLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jp_cafesLayout.createSequentialGroup()
                             .addGap(25, 25, 25)
                             .addComponent(jcb_desca)
-                            .addGap(18, 18, 18)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jcb_hielo)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
                             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(67, Short.MAX_VALUE))
         );
@@ -416,7 +414,7 @@ public class Cafes_3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -435,11 +433,13 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_bombonActionPerformed
         // añade cafe bombón al jta_info_add_ticket_cafes
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_bombonActionPerformed
 
     private void jb_capuchinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_capuchinoActionPerformed
         // añade capuchino al jta_info_add_ticket_cafes
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_capuchinoActionPerformed
 
@@ -455,16 +455,19 @@ public class Cafes_3 extends javax.swing.JFrame {
 
     private void jb_supraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_supraActionPerformed
         // añade supracam   al jta_info_add_ticket_cafes
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_supraActionPerformed
 
     private void jb_shakeratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_shakeratoActionPerformed
         // añade shakerato al jta_info_add_ticket_cafes
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_shakeratoActionPerformed
 
     private void jb_baileysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_baileysActionPerformed
         // añade cafe con baileys al jta_info_add_ticket_cafes
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }//GEN-LAST:event_jb_baileysActionPerformed
 
@@ -544,9 +547,6 @@ public class Cafes_3 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-        	
-            //ConexionMySQL.conexionBaseDatos();
-
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -554,20 +554,21 @@ public class Cafes_3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cafes_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cafes_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cafes_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cafes_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventana_cafe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cafes_3().setVisible(true);
+                new Ventana_cafe().setVisible(true);
             }
         });
     }
