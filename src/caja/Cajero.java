@@ -11,33 +11,6 @@ public class Cajero {
 	private double cajaFinalMetalico;
 	private double cajaFinalTarjeta;
 
-	// Valores de las monedas y billetes
-	private static final double CENT_1 = 0.01;
-
-	private static final double CENT_2 = 0.02;
-
-	private static final double CENT_5 = 0.05;
-
-	private static final double CENT_10 = 0.1;
-
-	private static final double CENT_20 = 0.2;
-
-	private static final double CENT_50 = 0.5;
-
-	private static final double EURO_1 = 1;
-
-	private static final double EURO_2 = 2;
-
-	private static final double BILLETE_5 = 5;
-
-	private static final double BILLETE_10 = 10;
-
-	private static final double BILLETE_20 = 20;
-
-	private static final double BILLETE_50 = 50;
-
-	private static final double BILLETE_100 = 100;
-
 	private static final double VALOR_CAJA_CHICA_INICIAL = 300;
 
 	/**
