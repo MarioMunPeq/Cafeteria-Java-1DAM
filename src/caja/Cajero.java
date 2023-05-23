@@ -1,16 +1,23 @@
 package caja;
 
 import java.util.ArrayList;
+
+import interfaces.Main_botones;
+import tiposProductos.Productos;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.sql.ResultSet;
 
 public class Cajero {
 
-	private ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+	
+	public static  ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+
 
 	private double cajaFinalMetalico;
 	private double cajaFinalTarjeta;
-
+	private static  int contadorTickets = 0;
 	private static final double VALOR_CAJA_CHICA_INICIAL = 300;
 
 	/**
@@ -20,6 +27,19 @@ public class Cajero {
 	 * @return devuelve true si se ha añadido correctamente y false si no se ha
 	 *         añadido.
 	 */
+	public static void cargarIdTickets(){
+		ResultSet tickets = Main_botones.conexionPrueba.consulta( "SELECT * FROM ticket");
+		ArrayList<Integer> ids = new ArrayList<Integer>();
+		try {
+			while(tickets.next()) {
+				
+				ids.add(tickets.getInt("id"));
+			}
+			contadorTickets =ids.get(ids.size()-1);
+		} catch (Exception e) {
+
+		}
+	}
 	public boolean anadirTicket(Ticket ticket) {
 
 		return listaTickets.add(ticket);
@@ -152,6 +172,7 @@ public class Cajero {
 		this.listaTickets = listaTickets;
 		this.cajaFinalMetalico = VALOR_CAJA_CHICA_INICIAL;
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
+		cargarIdTickets();
 	}
 
 	public ArrayList<Ticket> getListaTickets() {
@@ -178,4 +199,5 @@ public class Cajero {
 		this.cajaFinalTarjeta = cajaFinalTarjeta;
 	}
 
+	
 }

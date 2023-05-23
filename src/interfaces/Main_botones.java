@@ -12,6 +12,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import GestionBBDD.Conexion2;
+import caja.Cajero;
+import caja.Ticket;
 import tiposProductos.Productos;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -66,7 +68,7 @@ public class Main_botones extends javax.swing.JFrame {
     public static Ventana_infusion infusion3 = new Ventana_infusion();
     public static Ventana_otra_bebida otrasbebe3 = new Ventana_otra_bebida();
 
-    static Conexion2 conexionPrueba = new Conexion2();
+    public static Conexion2 conexionPrueba = new Conexion2();
     public static ArrayList<Productos> productosAux = new ArrayList<Productos>();
 
     /**
@@ -546,6 +548,10 @@ public class Main_botones extends javax.swing.JFrame {
          * jp_productos.add(fondo1);
          * jp_productos.repaint();
          */
+        
+        
+        Ticket ticketNuevo = new Ticket(contadorTickets, null, rootPaneCheckingEnabled, rootPaneCheckingEnabled, null);
+        
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que llama
     }// GEN-LAST:event_jb_ticket_nuevoActionPerformed
 
@@ -565,7 +571,7 @@ public class Main_botones extends javax.swing.JFrame {
         try {
             conexionPrueba.conectar();
             Conexion2.recogerDatosProductos();
-
+            Cajero cajeroNuevo = new Cajero();
             // ConexionMySQL.conexionBaseDatos();
 
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
