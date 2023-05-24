@@ -15,6 +15,7 @@ import GestionBBDD.Conexion2;
 import tiposProductos.Productos;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,10 +24,8 @@ import javax.swing.JPanel;
  *
  * @author admin
  */
-
 public class Main_botones extends javax.swing.JFrame {
 
-   
     public static Main_botones boton3 = new Main_botones();
     public static Ventana_cafe cafe3 = new Ventana_cafe();
     public static Ventana_comida comida3 = new Ventana_comida();
@@ -42,6 +41,22 @@ public class Main_botones extends javax.swing.JFrame {
     public Main_botones() {
         initComponents();
 
+// cafe
+        ImageIcon img_cafe = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\cafe.png");
+        Image im_cafe = img_cafe.getImage().getScaledInstance(jb_cafes.getWidth(), jb_cafes.getHeight(), Image.SCALE_SMOOTH);
+        jb_cafes.setIcon(new ImageIcon(im_cafe));
+// infusiones
+        ImageIcon img_infu = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\infusiones.png");
+        Image im_infu = img_infu.getImage().getScaledInstance(jb_infusiones.getWidth(), jb_infusiones.getHeight(), Image.SCALE_SMOOTH);
+        jb_infusiones.setIcon(new ImageIcon(im_infu));
+// otras bebidas
+        ImageIcon img_otros = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\otras.png");
+        Image im_otro = img_otros.getImage().getScaledInstance(jb_otras_bebidas.getWidth(), jb_otras_bebidas.getHeight(), Image.SCALE_SMOOTH);
+        jb_otras_bebidas.setIcon(new ImageIcon(im_otro));
+// comida
+        ImageIcon img_comida = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\otras.png");
+        Image im_comida = img_comida.getImage().getScaledInstance(jb_comidas.getWidth(), jb_comidas.getHeight(), Image.SCALE_SMOOTH);
+        jb_comidas.setIcon(new ImageIcon(im_comida));
     }
 
     /**
@@ -236,11 +251,10 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("TIKECT:");
 
-        jp_botoenes_principales.setBackground(new java.awt.Color(153, 255, 0));
+        jp_botoenes_principales.setBackground(new java.awt.Color(255, 102, 102));
 
-        jb_infusiones.setBackground(new java.awt.Color(255, 51, 51));
+        jb_infusiones.setBackground(new java.awt.Color(255, 204, 204));
         jb_infusiones.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_infusiones.setText("INFUSIONES");
         jb_infusiones.setHideActionText(true);
         jb_infusiones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,9 +262,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_otras_bebidas.setBackground(new java.awt.Color(255, 51, 51));
+        jb_otras_bebidas.setBackground(new java.awt.Color(255, 204, 204));
         jb_otras_bebidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_otras_bebidas.setText("OTRAS BEBIDAS");
         jb_otras_bebidas.setHideActionText(true);
         jb_otras_bebidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,9 +271,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_comidas.setBackground(new java.awt.Color(255, 51, 51));
+        jb_comidas.setBackground(new java.awt.Color(255, 204, 204));
         jb_comidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_comidas.setText("COMIDAS");
         jb_comidas.setHideActionText(true);
         jb_comidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,9 +280,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_cafes.setBackground(new java.awt.Color(255, 51, 51));
+        jb_cafes.setBackground(new java.awt.Color(255, 204, 204));
         jb_cafes.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_cafes.setText("CAFÉS");
         jb_cafes.setHideActionText(true);
         jb_cafes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -396,7 +407,7 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_guardar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_guardar_ticketActionPerformed
         // guarda la información del ticket con el que se esta trabajando
         jtp_pestanias.setSelectedComponent(jp_caja_main);
-       
+
     }// GEN-LAST:event_jb_guardar_ticketActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cafesActionPerformed
@@ -486,7 +497,6 @@ public class Main_botones extends javax.swing.JFrame {
             Conexion2.recogerDatosProductos();
 
             // ConexionMySQL.conexionBaseDatos();
-
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -527,7 +537,6 @@ public class Main_botones extends javax.swing.JFrame {
 
         // Metodo para recoger todos los datos de la base de datos de la tabla productos
         // y los guarde en un arraylist
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -576,5 +585,4 @@ public class Main_botones extends javax.swing.JFrame {
      * }
      * }
      */
-
 }

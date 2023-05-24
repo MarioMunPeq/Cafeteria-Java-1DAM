@@ -49,8 +49,7 @@ public class Conexion2 {
                 // Guardamos los datos en un arraylist
                 Main_botones.productosAux.add(
                         new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getString(4), rs.getInt(5)));
-                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4)
-                        + " " + rs.getInt(5));
+             //   System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4) + " " + rs.getInt(5));
             }
             // Cerramos la conexión con la base de datos.
             conexion.close();

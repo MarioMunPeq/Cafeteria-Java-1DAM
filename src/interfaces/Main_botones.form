@@ -368,7 +368,7 @@
             <Container class="javax.swing.JPanel" name="jp_botoenes_principales">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="ff" red="99" type="rgb"/>
+                  <Color blue="66" green="66" red="ff" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -407,12 +407,11 @@
                 <Component class="javax.swing.JButton" name="jb_infusiones">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="2"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="INFUSIONES"/>
                     <Property name="hideActionText" type="boolean" value="true"/>
                   </Properties>
                   <Events>
@@ -422,12 +421,11 @@
                 <Component class="javax.swing.JButton" name="jb_otras_bebidas">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="2"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="OTRAS BEBIDAS"/>
                     <Property name="hideActionText" type="boolean" value="true"/>
                   </Properties>
                   <Events>
@@ -437,12 +435,11 @@
                 <Component class="javax.swing.JButton" name="jb_comidas">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="2"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="COMIDAS"/>
                     <Property name="hideActionText" type="boolean" value="true"/>
                   </Properties>
                   <Events>
@@ -452,12 +449,11 @@
                 <Component class="javax.swing.JButton" name="jb_cafes">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="33" green="33" red="ff" type="rgb"/>
+                      <Color blue="cc" green="cc" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="14" style="2"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="CAF&#xc9;S"/>
                     <Property name="hideActionText" type="boolean" value="true"/>
                   </Properties>
                   <Events>

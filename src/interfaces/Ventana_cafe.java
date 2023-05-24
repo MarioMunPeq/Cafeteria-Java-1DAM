@@ -4,16 +4,10 @@
  */
 package interfaces;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
 import javax.swing.ImageIcon;
 
-import GestionBBDD.Conexion2;
-import GestionBBDD.ConexionMySQL;
-import static interfaces.Main_botones.productosAux;
+import java.awt.Image;
 import javax.swing.JOptionPane;
-import tiposProductos.Cafe;
-import tiposProductos.Productos;
 
 /**
  *
@@ -26,6 +20,44 @@ public class Ventana_cafe extends javax.swing.JFrame {
      */
     public Ventana_cafe() {
         initComponents();
+        //inserccion de imagenes en los botones
+// solo
+        ImageIcon img_solo = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\solo.png");
+        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del bototn que lo va a contener. getscaled lo redimensiona
+        Image im_solo = img_solo.getImage().getScaledInstance(jb_c_solo.getWidth(), jb_c_solo.getHeight(), Image.SCALE_SMOOTH);
+        jb_c_solo.setIcon(new ImageIcon(im_solo));
+// cortado
+        ImageIcon img_cortado = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\cortado.png");
+        Image im_cortado = img_cortado.getImage().getScaledInstance(jb_c_cortado.getWidth(), jb_c_cortado.getHeight(), Image.SCALE_SMOOTH);
+        jb_c_cortado.setIcon(new ImageIcon(im_cortado));
+// con leche
+        ImageIcon img_leche = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\con leche.png");
+        Image im_leche = img_leche.getImage().getScaledInstance(jb_c_leche.getWidth(), jb_c_leche.getHeight(), Image.SCALE_SMOOTH);
+        jb_c_leche.setIcon(new ImageIcon(im_leche));
+// capuchino
+        ImageIcon img_capu = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\capucchino.png");
+        Image im_capu = img_capu.getImage().getScaledInstance(jb_capuchino.getWidth(), jb_capuchino.getHeight(), Image.SCALE_SMOOTH);
+        jb_capuchino.setIcon(new ImageIcon(im_capu));
+// bombon
+        ImageIcon img_bombon = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\bombon.png");
+        Image im_bonbom = img_bombon.getImage().getScaledInstance(jb_bombon.getWidth(), jb_bombon.getHeight(), Image.SCALE_SMOOTH);
+        jb_bombon.setIcon(new ImageIcon(im_bonbom));
+// shakeraro
+        ImageIcon img_shake = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\shakerato.png");
+        Image im_shake = img_shake.getImage().getScaledInstance(jb_shakerato.getWidth(), jb_shakerato.getHeight(), Image.SCALE_SMOOTH);
+        jb_shakerato.setIcon(new ImageIcon(im_shake));
+// supra caramel
+        ImageIcon img_supra = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\supracaramel.png");
+        Image im_supra = img_supra.getImage().getScaledInstance(jb_supra.getWidth(), jb_supra.getHeight(), Image.SCALE_SMOOTH);
+        jb_supra.setIcon(new ImageIcon(im_supra));
+//baeleys
+        ImageIcon img_baely = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\baeleys.png");
+        Image im_baely = img_baely.getImage().getScaledInstance(jb_baileys.getWidth(), jb_baileys.getHeight(), Image.SCALE_SMOOTH);
+        jb_baileys.setIcon(new ImageIcon(im_baely));
+    }
+
+    public void hacerIcono() {
+
     }
 
     /**
@@ -75,64 +107,65 @@ public class Ventana_cafe extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 153, 0));
 
+        jb_c_cortado.setBackground(new java.awt.Color(255, 204, 204));
         jb_c_cortado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_c_cortado.setText("cortado");
         jb_c_cortado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_c_cortadoActionPerformed(evt);
             }
         });
 
+        jb_bombon.setBackground(new java.awt.Color(255, 204, 204));
         jb_bombon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_bombon.setText("Bombón");
         jb_bombon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_bombonActionPerformed(evt);
             }
         });
 
+        jb_capuchino.setBackground(new java.awt.Color(255, 204, 204));
         jb_capuchino.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_capuchino.setText("capuchino");
         jb_capuchino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_capuchinoActionPerformed(evt);
             }
         });
 
+        jb_c_solo.setBackground(new java.awt.Color(255, 204, 204));
         jb_c_solo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_c_solo.setText("cafe solo");
+        jb_c_solo.setBorder(null);
         jb_c_solo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_c_soloActionPerformed(evt);
             }
         });
 
+        jb_c_leche.setBackground(new java.awt.Color(255, 204, 204));
         jb_c_leche.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_c_leche.setText(" leche");
         jb_c_leche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_c_lecheActionPerformed(evt);
             }
         });
 
+        jb_supra.setBackground(new java.awt.Color(255, 204, 204));
         jb_supra.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_supra.setText("Supracam");
         jb_supra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_supraActionPerformed(evt);
             }
         });
 
+        jb_shakerato.setBackground(new java.awt.Color(255, 204, 204));
         jb_shakerato.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_shakerato.setText("shakerato");
         jb_shakerato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_shakeratoActionPerformed(evt);
             }
         });
 
+        jb_baileys.setBackground(new java.awt.Color(255, 204, 204));
         jb_baileys.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_baileys.setText("Baileys");
         jb_baileys.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_baileysActionPerformed(evt);
@@ -430,9 +463,9 @@ public class Ventana_cafe extends javax.swing.JFrame {
             if ((bg_tipo_leche.getSelection() == null) || (bg_sabores.getSelection() == null)) {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
-                System.out.println("cortado con leche de tipo: " + bg_tipo_leche.getSelection().getActionCommand());
-                productosAux.add(new Cafe("cafe cortado", bg_tipo_leche.getSelection().getActionCommand(), bg_sabores.getSelection().getActionCommand(), precio));
-           
+            System.out.println("cortado con leche de tipo: " + bg_tipo_leche.getSelection().getActionCommand());
+            //   productosAux.add(new Cafe("cafe cortado", bg_tipo_leche.getSelection().getActionCommand(), bg_sabores.getSelection().getActionCommand(),));
+
             jta_info_add_ticket_cafes.append("café cortado " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + "\t 1.30€\n");
         } catch (Exception e) {
 
@@ -587,6 +620,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ventana_cafe().setVisible(true);
+
             }
         });
     }
