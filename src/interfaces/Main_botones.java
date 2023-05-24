@@ -550,7 +550,7 @@ public class Main_botones extends javax.swing.JFrame {
          */
         
         
-        Ticket ticketNuevo = new Ticket(contadorTickets, null, rootPaneCheckingEnabled, rootPaneCheckingEnabled, null);
+        //Ticket ticketNuevo = new Ticket(contadorTickets, null, rootPaneCheckingEnabled, rootPaneCheckingEnabled, null);
         
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que llama
     }// GEN-LAST:event_jb_ticket_nuevoActionPerformed
@@ -572,7 +572,7 @@ public class Main_botones extends javax.swing.JFrame {
             conexionPrueba.conectar();
             Conexion2.recogerDatosProductos();
             Cajero cajeroNuevo = new Cajero();
-            // ConexionMySQL.conexionBaseDatos();
+
 
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

@@ -8,7 +8,7 @@ import tiposProductos.Productos;
 public class Ticket {
 
 	private int id;
-	private ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	private static ArrayList<Productos> listaProductos = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;

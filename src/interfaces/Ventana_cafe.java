@@ -503,6 +503,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
     private void jrb_chocoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_chocoActionPerformed
         // TODO add your handling code here:
         jrb_choco.setActionCommand(" de Chocolate");
+        
     }// GEN-LAST:event_jrb_chocoActionPerformed
 
     private void jrb_vainillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_vainillaActionPerformed
