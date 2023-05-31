@@ -4,6 +4,9 @@
  */
 package interfaces;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author admin
@@ -15,6 +18,48 @@ public class Ventana_comida extends javax.swing.JFrame {
      */
     public Ventana_comida() {
         initComponents();
+        // inserccion de imagenes
+        // tostada con tomate
+        ImageIcon img_tomate = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\tomate.png");
+        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del bototn que lo va a contener. getscaled lo redimensiona
+        Image im_tomate = img_tomate.getImage().getScaledInstance(jb_tomate.getWidth(), jb_tomate.getHeight(), Image.SCALE_SMOOTH);
+        jb_tomate.setIcon(new ImageIcon(im_tomate));
+        // tostada de mermelada
+        ImageIcon img_mermelada = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\mermelada.png");
+        Image im_mermelada = img_mermelada.getImage().getScaledInstance(jb_mermelada.getWidth(), jb_mermelada.getHeight(), Image.SCALE_SMOOTH);
+        jb_mermelada.setIcon(new ImageIcon(im_mermelada));
+        // tostada de aguacate
+        ImageIcon img_aguacate = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\aguacate.png");
+        Image im_aguacate = img_aguacate.getImage().getScaledInstance(jb_aguacate.getWidth(), jb_aguacate.getHeight(), Image.SCALE_SMOOTH);
+        jb_aguacate.setIcon(new ImageIcon(im_aguacate));
+        // bizcoho
+        ImageIcon img_bizcoho = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\bizcoho.png");
+        Image im_bizcoho = img_bizcoho.getImage().getScaledInstance(jb_bizcocho.getWidth(), jb_bizcocho.getHeight(), Image.SCALE_SMOOTH);
+        jb_bizcocho.setIcon(new ImageIcon(im_bizcoho));
+        // donut
+        ImageIcon img_donut = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\donut.png");
+        Image im_donut = img_donut.getImage().getScaledInstance(jb_donut.getWidth(), jb_donut.getHeight(), Image.SCALE_SMOOTH);
+        jb_donut.setIcon(new ImageIcon(im_donut));
+        // tostada con jamon
+        ImageIcon img_jamon = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\jamon.png");
+        Image im_jamon = img_jamon.getImage().getScaledInstance(jb_jamon.getWidth(), jb_jamon.getHeight(), Image.SCALE_SMOOTH);
+        jb_jamon.setIcon(new ImageIcon(im_jamon));
+        // tarta de limon
+        ImageIcon img_limon = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\limon.png");
+        Image im_limon = img_limon.getImage().getScaledInstance(jb_t_limon.getWidth(), jb_t_limon.getHeight(), Image.SCALE_SMOOTH);
+        jb_t_limon.setIcon(new ImageIcon(im_limon));
+        //pulguita
+        ImageIcon img_pulguita = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\pulguita.png");
+        Image im_pulguita = img_pulguita.getImage().getScaledInstance(jb_pulguita.getWidth(), jb_pulguita.getHeight(), Image.SCALE_SMOOTH);
+        jb_pulguita.setIcon(new ImageIcon(im_pulguita));
+         //tarta de queso
+        ImageIcon img_queso = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\queso.png");
+        Image im_queso = img_queso.getImage().getScaledInstance(jb_t_queso.getWidth(), jb_t_queso.getHeight(), Image.SCALE_SMOOTH);
+        jb_t_queso.setIcon(new ImageIcon(im_queso));
+         //tortilla
+        ImageIcon img_tortilla = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\tortilla.png");
+        Image im_tortilla = img_tortilla.getImage().getScaledInstance(jb_tortilla.getWidth(), jb_tortilla.getHeight(), Image.SCALE_SMOOTH);
+        jb_tortilla.setIcon(new ImageIcon(im_tortilla));
     }
 
     /**
@@ -45,87 +90,86 @@ public class Ventana_comida extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(217, 141, 98));
         jPanel1.setPreferredSize(new java.awt.Dimension(895, 600));
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 0));
+        jPanel2.setBackground(new java.awt.Color(115, 84, 72));
         jPanel2.setPreferredSize(new java.awt.Dimension(435, 529));
 
+        jb_jamon.setBackground(new java.awt.Color(115, 184, 191));
         jb_jamon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_jamon.setText("Jamón");
         jb_jamon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_jamonActionPerformed(evt);
             }
         });
 
+        jb_mermelada.setBackground(new java.awt.Color(115, 184, 191));
         jb_mermelada.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_mermelada.setText("Mermelada");
         jb_mermelada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_mermeladaActionPerformed(evt);
             }
         });
 
+        jb_aguacate.setBackground(new java.awt.Color(115, 184, 191));
         jb_aguacate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_aguacate.setText("Aguacate");
         jb_aguacate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_aguacateActionPerformed(evt);
             }
         });
 
+        jb_t_limon.setBackground(new java.awt.Color(115, 184, 191));
         jb_t_limon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_t_limon.setText("Tarta Limón");
         jb_t_limon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_t_limonActionPerformed(evt);
             }
         });
 
+        jb_tortilla.setBackground(new java.awt.Color(115, 184, 191));
         jb_tortilla.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_tortilla.setText("Tortilla");
         jb_tortilla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_tortillaActionPerformed(evt);
             }
         });
 
+        jb_t_queso.setBackground(new java.awt.Color(115, 184, 191));
         jb_t_queso.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_t_queso.setText("Trata Queso");
         jb_t_queso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_t_quesoActionPerformed(evt);
             }
         });
 
+        jb_bizcocho.setBackground(new java.awt.Color(115, 184, 191));
         jb_bizcocho.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_bizcocho.setText("Bizcocho");
         jb_bizcocho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_bizcochoActionPerformed(evt);
             }
         });
 
+        jb_pulguita.setBackground(new java.awt.Color(115, 184, 191));
         jb_pulguita.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_pulguita.setText("Pulguita");
         jb_pulguita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_pulguitaActionPerformed(evt);
             }
         });
 
+        jb_donut.setBackground(new java.awt.Color(115, 184, 191));
         jb_donut.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_donut.setText("Donut");
         jb_donut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_donutActionPerformed(evt);
             }
         });
 
-        jb_tomate.setBackground(new java.awt.Color(255, 102, 102));
+        jb_tomate.setBackground(new java.awt.Color(115, 184, 191));
         jb_tomate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_tomate.setText("Tomate");
         jb_tomate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_tomateActionPerformed(evt);
@@ -138,28 +182,31 @@ public class Ventana_comida extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jb_mermelada, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(jb_tomate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_aguacate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jb_t_queso, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(13, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_t_queso, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jb_aguacate, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(13, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +239,9 @@ public class Ventana_comida extends javax.swing.JFrame {
         jta_info_add_ticket_comida.setRows(5);
         jScrollPane1.setViewportView(jta_info_add_ticket_comida);
 
+        jb_aniadir_ticket_comidas.setBackground(new java.awt.Color(54, 115, 115));
         jb_aniadir_ticket_comidas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_aniadir_ticket_comidas.setForeground(new java.awt.Color(242, 214, 189));
         jb_aniadir_ticket_comidas.setText("AÑADIR AL TICKET");
         jb_aniadir_ticket_comidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,12 +255,12 @@ public class Ventana_comida extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_aniadir_ticket_comidas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62))
+                .addGap(35, 35, 35))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

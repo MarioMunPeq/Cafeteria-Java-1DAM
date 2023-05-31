@@ -54,7 +54,7 @@ public class Main_botones extends javax.swing.JFrame {
         Image im_otro = img_otros.getImage().getScaledInstance(jb_otras_bebidas.getWidth(), jb_otras_bebidas.getHeight(), Image.SCALE_SMOOTH);
         jb_otras_bebidas.setIcon(new ImageIcon(im_otro));
 // comida
-        ImageIcon img_comida = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\otras.png");
+        ImageIcon img_comida = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\comida.png");
         Image im_comida = img_comida.getImage().getScaledInstance(jb_comidas.getWidth(), jb_comidas.getHeight(), Image.SCALE_SMOOTH);
         jb_comidas.setIcon(new ImageIcon(im_comida));
     }
@@ -112,11 +112,11 @@ public class Main_botones extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jtp_pestanias.setBackground(new java.awt.Color(0, 153, 0));
+        jtp_pestanias.setBackground(new java.awt.Color(115, 84, 72));
         jtp_pestanias.setEnabled(false);
         jtp_pestanias.setPreferredSize(new java.awt.Dimension(880, 600));
 
-        jp_caja_main.setBackground(new java.awt.Color(255, 204, 204));
+        jp_caja_main.setBackground(new java.awt.Color(217, 141, 98));
 
         jl_listado_tickets.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Ticket 1", "Ticket 2", "Ticket 3", "Ticket 4" };
@@ -125,8 +125,9 @@ public class Main_botones extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jl_listado_tickets);
 
-        jb_ticket_nuevo.setBackground(new java.awt.Color(0, 255, 255));
+        jb_ticket_nuevo.setBackground(new java.awt.Color(54, 115, 115));
         jb_ticket_nuevo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_ticket_nuevo.setForeground(new java.awt.Color(242, 214, 189));
         jb_ticket_nuevo.setText("TICKET  NUEVO");
         jb_ticket_nuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +138,7 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("LISTADO TICKETS:");
 
-        jb_cobrar_ticket.setBackground(new java.awt.Color(153, 153, 255));
+        jb_cobrar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_cobrar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_cobrar_ticket.setText("COBRAR TICKET");
         jb_cobrar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +147,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_modificar_ticket.setBackground(new java.awt.Color(102, 204, 0));
+        jb_modificar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_modificar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_modificar_ticket.setText("MODIFICAR TICKET");
         jb_modificar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -155,8 +156,9 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_hacer_caja.setBackground(new java.awt.Color(153, 255, 204));
+        jb_hacer_caja.setBackground(new java.awt.Color(54, 115, 115));
         jb_hacer_caja.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_hacer_caja.setForeground(new java.awt.Color(242, 214, 189));
         jb_hacer_caja.setText("HACER CAJA");
         jb_hacer_caja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +166,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_borrar_ticket.setBackground(new java.awt.Color(102, 255, 102));
+        jb_borrar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_borrar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_borrar_ticket.setText("BORRAR TICKET");
         jb_borrar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +175,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_borrar_producto.setBackground(new java.awt.Color(102, 204, 0));
+        jb_borrar_producto.setBackground(new java.awt.Color(115, 184, 191));
         jb_borrar_producto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_borrar_producto.setText("BORRAR PRODUCTO");
         jb_borrar_producto.addActionListener(new java.awt.event.ActionListener() {
@@ -208,13 +210,12 @@ public class Main_botones extends javax.swing.JFrame {
                     .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane3))
                 .addGap(94, 94, 94)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel4)
-                        .addComponent(jScrollPane6)
-                        .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
-                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60))
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4)
+                    .addComponent(jScrollPane6)
+                    .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
         jp_caja_mainLayout.setVerticalGroup(
             jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,34 +227,36 @@ public class Main_botones extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_ticket_nuevo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_modificar_ticket)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_borrar_ticket)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_cobrar_ticket))
-                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jb_borrar_producto, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jb_borrar_producto))
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_modificar_ticket)))
+                .addGap(18, 18, 18)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jb_borrar_ticket)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jb_cobrar_ticket))
+                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         jtp_pestanias.addTab("CAJA", jp_caja_main);
 
-        jp_productos.setBackground(new java.awt.Color(255, 153, 51));
+        jp_productos.setBackground(new java.awt.Color(217, 141, 98));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("TIKECT:");
 
-        jp_botoenes_principales.setBackground(new java.awt.Color(255, 102, 102));
+        jp_botoenes_principales.setBackground(new java.awt.Color(242, 214, 189));
+        jp_botoenes_principales.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 255), new java.awt.Color(255, 204, 204)));
 
-        jb_infusiones.setBackground(new java.awt.Color(255, 204, 204));
+        jb_infusiones.setBackground(new java.awt.Color(54, 115, 115));
         jb_infusiones.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jb_infusiones.setHideActionText(true);
         jb_infusiones.addActionListener(new java.awt.event.ActionListener() {
@@ -262,7 +265,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_otras_bebidas.setBackground(new java.awt.Color(255, 204, 204));
+        jb_otras_bebidas.setBackground(new java.awt.Color(54, 115, 115));
         jb_otras_bebidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jb_otras_bebidas.setHideActionText(true);
         jb_otras_bebidas.addActionListener(new java.awt.event.ActionListener() {
@@ -271,7 +274,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_comidas.setBackground(new java.awt.Color(255, 204, 204));
+        jb_comidas.setBackground(new java.awt.Color(54, 115, 115));
         jb_comidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jb_comidas.setHideActionText(true);
         jb_comidas.addActionListener(new java.awt.event.ActionListener() {
@@ -280,7 +283,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_cafes.setBackground(new java.awt.Color(255, 204, 204));
+        jb_cafes.setBackground(new java.awt.Color(54, 115, 115));
         jb_cafes.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jb_cafes.setHideActionText(true);
         jb_cafes.addActionListener(new java.awt.event.ActionListener() {
@@ -338,7 +341,7 @@ public class Main_botones extends javax.swing.JFrame {
         jtf_id_ticket_uso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtf_id_ticket_uso.setText("id_del ticket en uso");
 
-        jb_guardar_ticket.setBackground(new java.awt.Color(0, 255, 255));
+        jb_guardar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_guardar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jb_guardar_ticket.setText("GUARDAR TICKET");
         jb_guardar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -354,7 +357,7 @@ public class Main_botones extends javax.swing.JFrame {
             .addGroup(jp_productosLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_productosLayout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -102,12 +102,12 @@ public class Ventana_cafe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jp_cafes.setBackground(new java.awt.Color(153, 153, 0));
+        jp_cafes.setBackground(new java.awt.Color(217, 141, 98));
         jp_cafes.setPreferredSize(new java.awt.Dimension(895, 600));
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 0));
+        jPanel2.setBackground(new java.awt.Color(115, 184, 191));
 
-        jb_c_cortado.setBackground(new java.awt.Color(255, 204, 204));
+        jb_c_cortado.setBackground(new java.awt.Color(115, 84, 72));
         jb_c_cortado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_c_cortado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_bombon.setBackground(new java.awt.Color(255, 204, 204));
+        jb_bombon.setBackground(new java.awt.Color(115, 84, 72));
         jb_bombon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_bombon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_capuchino.setBackground(new java.awt.Color(255, 204, 204));
+        jb_capuchino.setBackground(new java.awt.Color(115, 84, 72));
         jb_capuchino.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_capuchino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,16 +131,15 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_c_solo.setBackground(new java.awt.Color(255, 204, 204));
+        jb_c_solo.setBackground(new java.awt.Color(115, 84, 72));
         jb_c_solo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jb_c_solo.setBorder(null);
         jb_c_solo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_c_soloActionPerformed(evt);
             }
         });
 
-        jb_c_leche.setBackground(new java.awt.Color(255, 204, 204));
+        jb_c_leche.setBackground(new java.awt.Color(115, 84, 72));
         jb_c_leche.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_c_leche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +147,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_supra.setBackground(new java.awt.Color(255, 204, 204));
+        jb_supra.setBackground(new java.awt.Color(115, 84, 72));
         jb_supra.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_supra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +155,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_shakerato.setBackground(new java.awt.Color(255, 204, 204));
+        jb_shakerato.setBackground(new java.awt.Color(115, 84, 72));
         jb_shakerato.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_shakerato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +163,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jb_baileys.setBackground(new java.awt.Color(255, 204, 204));
+        jb_baileys.setBackground(new java.awt.Color(115, 84, 72));
         jb_baileys.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_baileys.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,25 +199,28 @@ public class Ventana_cafe extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(15, 15, 15)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_c_solo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_c_cortado, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_c_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_capuchino, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_bombon, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_shakerato, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_baileys, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_supra, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(242, 214, 189));
+
+        jrb_choco.setBackground(new java.awt.Color(242, 214, 189));
         bg_sabores.add(jrb_choco);
         jrb_choco.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_choco.setText("Chocolate");
@@ -228,6 +230,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_vainilla.setBackground(new java.awt.Color(242, 214, 189));
         bg_sabores.add(jrb_vainilla);
         jrb_vainilla.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_vainilla.setText("Vainilla");
@@ -237,6 +240,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_caramelo.setBackground(new java.awt.Color(242, 214, 189));
         bg_sabores.add(jrb_caramelo);
         jrb_caramelo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_caramelo.setText("Caramelo");
@@ -246,6 +250,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_clasico.setBackground(new java.awt.Color(242, 214, 189));
         bg_sabores.add(jrb_clasico);
         jrb_clasico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_clasico.setText("Clásico");
@@ -255,6 +260,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_avellana.setBackground(new java.awt.Color(242, 214, 189));
         bg_sabores.add(jrb_avellana);
         jrb_avellana.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_avellana.setText("Avellana");
@@ -294,6 +300,9 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(242, 214, 189));
+
+        jrb_avena.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_avena);
         jrb_avena.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_avena.setText("Avena");
@@ -303,6 +312,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_soja.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_soja);
         jrb_soja.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_soja.setText("Soja");
@@ -312,6 +322,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_sin_lactosa.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_sin_lactosa);
         jrb_sin_lactosa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_sin_lactosa.setText("Sin Lactosa");
@@ -321,6 +332,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_desnatada.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_desnatada);
         jrb_desnatada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_desnatada.setText("Desnatada");
@@ -330,6 +342,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
+        jrb_entera.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_entera);
         jrb_entera.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jrb_entera.setText("Entera//sin Leche");
@@ -369,7 +382,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jcb_hielo.setBackground(new java.awt.Color(153, 153, 0));
+        jcb_hielo.setBackground(new java.awt.Color(217, 141, 98));
         jcb_hielo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jcb_hielo.setText("Con Hielo");
         jcb_hielo.addActionListener(new java.awt.event.ActionListener() {
@@ -378,7 +391,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
         });
 
-        jcb_desca.setBackground(new java.awt.Color(153, 153, 0));
+        jcb_desca.setBackground(new java.awt.Color(217, 141, 98));
         jcb_desca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jcb_desca.setText("Descafeinado");
         jcb_desca.addActionListener(new java.awt.event.ActionListener() {
@@ -392,7 +405,9 @@ public class Ventana_cafe extends javax.swing.JFrame {
         jta_info_add_ticket_cafes.setRows(5);
         jScrollPane1.setViewportView(jta_info_add_ticket_cafes);
 
+        jb_aniadir_ticket_cafe.setBackground(new java.awt.Color(54, 115, 115));
         jb_aniadir_ticket_cafe.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_aniadir_ticket_cafe.setForeground(new java.awt.Color(242, 214, 189));
         jb_aniadir_ticket_cafe.setText("AÑADIR AL TICKET");
         jb_aniadir_ticket_cafe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -422,24 +437,24 @@ public class Ventana_cafe extends javax.swing.JFrame {
         jp_cafesLayout.setVerticalGroup(
             jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_cafesLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(41, 41, 41)
+                .addComponent(jcb_desca)
+                .addGap(28, 28, 28)
+                .addComponent(jcb_hielo)
+                .addGap(30, 30, 30)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
+            .addGroup(jp_cafesLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_cafesLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(27, 27, 27)
                         .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jp_cafesLayout.createSequentialGroup()
-                            .addGap(25, 25, 25)
-                            .addComponent(jcb_desca)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jcb_hielo)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -515,37 +530,37 @@ public class Ventana_cafe extends javax.swing.JFrame {
 
     private void jrb_chocoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_chocoActionPerformed
         // TODO add your handling code here:
-        jrb_choco.setActionCommand(" de Chocolate");
+        jrb_choco.setActionCommand(" de chocolate");
     }// GEN-LAST:event_jrb_chocoActionPerformed
 
     private void jrb_vainillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_vainillaActionPerformed
         // TODO add your handling code here:
-        jrb_vainilla.setActionCommand(" de Vainilla");
+        jrb_vainilla.setActionCommand(" de vainilla");
     }// GEN-LAST:event_jrb_vainillaActionPerformed
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avenaActionPerformed
         // TODO add your handling code here:
-        jrb_avena.setActionCommand(" Avena");
+        jrb_avena.setActionCommand(" avena");
     }// GEN-LAST:event_jrb_avenaActionPerformed
 
     private void jrb_sojaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sojaActionPerformed
         // TODO add your handling code here:
-        jrb_soja.setActionCommand(" Soja");
+        jrb_soja.setActionCommand(" soja");
     }// GEN-LAST:event_jrb_sojaActionPerformed
 
     private void jrb_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sin_lactosaActionPerformed
         // TODO add your handling code here:
-        jrb_sin_lactosa.setActionCommand(" Sin Lactosa");
+        jrb_sin_lactosa.setActionCommand(" sin lactosa");
     }// GEN-LAST:event_jrb_sin_lactosaActionPerformed
 
     private void jrb_desnatadaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_desnatadaActionPerformed
         // TODO add your handling code here:
-        jrb_desnatada.setActionCommand(" Desnatada");
+        jrb_desnatada.setActionCommand(" desnatada");
     }// GEN-LAST:event_jrb_desnatadaActionPerformed
 
     private void jrb_enteraActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_enteraActionPerformed
         // TODO add your handling code here:
-        jrb_entera.setActionCommand("  g");
+        jrb_entera.setActionCommand(" entera ");
     }// GEN-LAST:event_jrb_enteraActionPerformed
 
     private void jcb_hieloActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jcb_hieloActionPerformed
@@ -567,17 +582,17 @@ public class Ventana_cafe extends javax.swing.JFrame {
 
     private void jrb_avellanaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avellanaActionPerformed
         // TODO add your handling code here:
-        jrb_avellana.setActionCommand("  de Avellana");
+        jrb_avellana.setActionCommand("  de avellana");
     }// GEN-LAST:event_jrb_avellanaActionPerformed
 
     private void jrb_carameloActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_carameloActionPerformed
         // TODO add your handling code here:
-        jrb_caramelo.setActionCommand(" de Caramelo");
+        jrb_caramelo.setActionCommand(" de caramelo");
     }// GEN-LAST:event_jrb_carameloActionPerformed
 
     private void jrb_clasicoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_clasicoActionPerformed
         // TODO add your handling code here:
-        jrb_clasico.setActionCommand("a");
+        jrb_clasico.setActionCommand(" ");
     }// GEN-LAST:event_jrb_clasicoActionPerformed
 
     /**
