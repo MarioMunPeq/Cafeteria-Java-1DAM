@@ -52,31 +52,31 @@ public class Ventana_otra_bebida extends javax.swing.JFrame {
         ImageIcon img_corto = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\corto.png");
         Image im_corto = img_corto.getImage().getScaledInstance(jb_corto.getWidth(), jb_corto.getHeight(), Image.SCALE_SMOOTH);
         jb_corto.setIcon(new ImageIcon(im_corto));
-        // fanta limon
+// fanta limon
         ImageIcon img_limon = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\fanta limon.png");
         Image im_limon = img_limon.getImage().getScaledInstance(jb_f_limon.getWidth(), jb_f_limon.getHeight(), Image.SCALE_SMOOTH);
         jb_f_limon.setIcon(new ImageIcon(im_limon));
-        // fanta naranja
+// fanta naranja
         ImageIcon img_naranja = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\fanta naranja.png");
         Image im_naranja = img_naranja.getImage().getScaledInstance(jb_f_naranja.getWidth(), jb_f_naranja.getHeight(), Image.SCALE_SMOOTH);
         jb_f_naranja.setIcon(new ImageIcon(im_naranja));
-        // matini
+// matini
         ImageIcon img_martini = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\martini.png");
         Image im_martini = img_martini.getImage().getScaledInstance(jb_martini.getWidth(), jb_martini.getHeight(), Image.SCALE_SMOOTH);
         jb_martini.setIcon(new ImageIcon(im_martini));
-        // nestea
+// nestea
         ImageIcon img_nestea = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\nestea.png");
         Image im_nestea = img_nestea.getImage().getScaledInstance(jb_nestea.getWidth(), jb_nestea.getHeight(), Image.SCALE_SMOOTH);
         jb_nestea.setIcon(new ImageIcon(im_nestea));
-        // vino rosado
+// vino rosado
         ImageIcon img_rosado = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\rosado.png");
         Image im_rosado = img_rosado.getImage().getScaledInstance(jb_rosado.getWidth(), jb_rosado.getHeight(), Image.SCALE_SMOOTH);
         jb_rosado.setIcon(new ImageIcon(im_rosado));
-        // sprite
+// sprite
         ImageIcon img_sprite = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\sprite.png");
         Image im_sprite = img_sprite.getImage().getScaledInstance(jb_sprite.getWidth(), jb_sprite.getHeight(), Image.SCALE_SMOOTH);
         jb_sprite.setIcon(new ImageIcon(im_sprite));
-        // vino tinto
+// vino tinto
         ImageIcon img_tinto = new ImageIcon("src\\cafeteria_imagenes_botones\\125x90\\tinto.png");
         Image im_tinto = img_tinto.getImage().getScaledInstance(jb_tinto.getWidth(), jb_tinto.getHeight(), Image.SCALE_SMOOTH);
         jb_tinto.setIcon(new ImageIcon(im_tinto));
@@ -374,62 +374,91 @@ public class Ventana_otra_bebida extends javax.swing.JFrame {
 
     private void jb_f_naranjaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_f_naranjaActionPerformed
         // añade fanta naranja al jta_info_add_ticket_otras_bebidas
+        jta_info_add_ticket_otras_bebidas.append("Fanta Naranja \t 2.40€\n");
     }// GEN-LAST:event_jb_f_naranjaActionPerformed
 
     private void jb_aguaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aguaActionPerformed
         // añade agua mineral al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Agua Mineral \t 1.60€\n");
+
     }// GEN-LAST:event_jb_aguaActionPerformed
 
     private void jb_spriteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_spriteActionPerformed
         // añade sprite al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Sprite \t 2.40€\n");
+
     }// GEN-LAST:event_jb_spriteActionPerformed
 
     private void jb_cocacolaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cocacolaActionPerformed
         // añade Coca cola al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Coca-cola \t 2.40€\n");
+
     }// GEN-LAST:event_jb_cocacolaActionPerformed
 
     private void jb_acuariusActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_acuariusActionPerformed
         // añade acuarius al jta_info_add_ticket_otras_bebidas:
+                jta_info_add_ticket_otras_bebidas.append("Aquarius \t 2.40€\n");
+
     }// GEN-LAST:event_jb_acuariusActionPerformed
 
     private void jb_tintoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tintoActionPerformed
         // añade vino tinto al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Vino Tinto \t 2.00€\n");
+
     }// GEN-LAST:event_jb_tintoActionPerformed
 
     private void jb_agua_gasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_agua_gasActionPerformed
         // añade agua con gas al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Agua con Gas \t 1.40€\n");
+
     }// GEN-LAST:event_jb_agua_gasActionPerformed
 
     private void jb_cortoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cortoActionPerformed
         // añade corto al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Corto Ceveza \t 1.00€\n");
+
     }// GEN-LAST:event_jb_cortoActionPerformed
 
     private void jb_nesteaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_nesteaActionPerformed
         // añade nestea al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Nestea \t 2.40€\n");
+
     }// GEN-LAST:event_jb_nesteaActionPerformed
 
     private void jb_f_limonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_f_limonActionPerformed
         // añade fanta limón al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Fanta Limón \t 2.40€\n");
+
     }// GEN-LAST:event_jb_f_limonActionPerformed
 
     private void jb_canionActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_canionActionPerformed
         // añade cañón al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Cañón de Cerveza \t 2.40€\n");
+
     }// GEN-LAST:event_jb_canionActionPerformed
 
     private void jb_martiniActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_martiniActionPerformed
         /// añade martini al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Martini \t 2.00€\n");
+
     }// GEN-LAST:event_jb_martiniActionPerformed
 
     private void jb_blancoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_blancoActionPerformed
         // añade vino blanco al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Vino Blanco \t 1.60€\n");
+
     }// GEN-LAST:event_jb_blancoActionPerformed
 
     private void jb_caniaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_caniaActionPerformed
         // añade caña al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Caña \t 1.80€\n");
+
     }// GEN-LAST:event_jb_caniaActionPerformed
 
     private void jb_rosadoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_rosadoActionPerformed
         // añade vino rosado al jta_info_add_ticket_otras_bebidas
+                jta_info_add_ticket_otras_bebidas.append("Vino Rosado \t 1.80€\n");
+
     }// GEN-LAST:event_jb_rosadoActionPerformed
 
     private void jb_aniadir_ticket_iotras_bebidasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aniadir_ticket_iotras_bebidasActionPerformed

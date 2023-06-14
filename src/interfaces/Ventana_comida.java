@@ -6,6 +6,7 @@ package interfaces;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -52,11 +53,11 @@ public class Ventana_comida extends javax.swing.JFrame {
         ImageIcon img_pulguita = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\pulguita.png");
         Image im_pulguita = img_pulguita.getImage().getScaledInstance(jb_pulguita.getWidth(), jb_pulguita.getHeight(), Image.SCALE_SMOOTH);
         jb_pulguita.setIcon(new ImageIcon(im_pulguita));
-         //tarta de queso
+        //tarta de queso
         ImageIcon img_queso = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\queso.png");
         Image im_queso = img_queso.getImage().getScaledInstance(jb_t_queso.getWidth(), jb_t_queso.getHeight(), Image.SCALE_SMOOTH);
         jb_t_queso.setIcon(new ImageIcon(im_queso));
-         //tortilla
+        //tortilla
         ImageIcon img_tortilla = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\tortilla.png");
         Image im_tortilla = img_tortilla.getImage().getScaledInstance(jb_tortilla.getWidth(), jb_tortilla.getHeight(), Image.SCALE_SMOOTH);
         jb_tortilla.setIcon(new ImageIcon(im_tortilla));
@@ -212,24 +213,24 @@ public class Ventana_comida extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_aguacate, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_aguacate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_t_queso, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_t_queso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -291,42 +292,55 @@ public class Ventana_comida extends javax.swing.JFrame {
 
     private void jb_jamonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_jamonActionPerformed
         // se añade tostadas con jamón al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Tostadas con Jamón Ibérico (DO) \t 1.80€\n");
+
     }// GEN-LAST:event_jb_jamonActionPerformed
 
     private void jb_tomateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tomateActionPerformed
         // se añade tostadas con tomate al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Tostadas con Aceite y Tomate \t 1.20€\n");
     }// GEN-LAST:event_jb_tomateActionPerformed
 
     private void jb_mermeladaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_mermeladaActionPerformed
         // se añade tostadas con mermelada al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Tostadas con Mermelada \t 2.10€\n");
     }// GEN-LAST:event_jb_mermeladaActionPerformed
 
     private void jb_aguacateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aguacateActionPerformed
         // se añade tostadas con aguacate al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Tostadas con Aguacate \t 1.60€\n");
     }// GEN-LAST:event_jb_aguacateActionPerformed
 
     private void jb_t_limonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_t_limonActionPerformed
         // se añade trata de limón al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Tarta de Limón Casera \t 1.80€\n");
+
     }// GEN-LAST:event_jb_t_limonActionPerformed
 
     private void jb_tortillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tortillaActionPerformed
         // se añade pincho de tortilla al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Pincho de Tortilla \t 1.60€\n");
+
     }// GEN-LAST:event_jb_tortillaActionPerformed
 
     private void jb_t_quesoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_t_quesoActionPerformed
         // TODO add your handling code here:
+        jta_info_add_ticket_comida.append("Tarta de Queso Casera \t 2.10€\n");
     }// GEN-LAST:event_jb_t_quesoActionPerformed
 
     private void jb_bizcochoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_bizcochoActionPerformed
         // se añade bizcocho al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Bizcoho Casero \t 1.60€\n");
     }// GEN-LAST:event_jb_bizcochoActionPerformed
 
     private void jb_pulguitaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_pulguitaActionPerformed
         // se añade pulguita al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Pulguita de Tortilla \t 1.20€\n");
     }// GEN-LAST:event_jb_pulguitaActionPerformed
 
     private void jb_donutActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_donutActionPerformed
         // se añade trata de queso al jta_info_add_ticket_comida
+        jta_info_add_ticket_comida.append("Donut \t 1.50€\n");
     }// GEN-LAST:event_jb_donutActionPerformed
 
     private void jb_aniadir_ticket_comidasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aniadir_ticket_comidasActionPerformed

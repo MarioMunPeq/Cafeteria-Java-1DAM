@@ -133,29 +133,29 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_jamon" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
-                          <Component id="jb_tomate" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jb_tomate" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jb_mermelada" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_aguacate" alignment="1" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jb_mermelada" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jb_bizcocho" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_pulguita" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jb_bizcocho" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jb_tortilla" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_t_limon" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jb_tortilla" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_t_queso" alignment="1" min="-2" pref="93" max="-2" attributes="0"/>
-                          <Component id="jb_donut" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jb_donut" min="-2" pref="93" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>

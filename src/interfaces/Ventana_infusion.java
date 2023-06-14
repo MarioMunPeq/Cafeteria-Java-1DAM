@@ -8,6 +8,7 @@ package interfaces;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,19 +55,19 @@ public class Ventana_infusion extends javax.swing.JFrame {
         ImageIcon img_azul = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te azul.png");
         Image im_azul = img_azul.getImage().getScaledInstance(jb_te_azul.getWidth(), jb_te_azul.getHeight(), Image.SCALE_SMOOTH);
         jb_te_azul.setIcon(new ImageIcon(im_azul));
-        //te negro 
+//te negro 
         ImageIcon img_negro = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te negro.png");
         Image im_negro = img_negro.getImage().getScaledInstance(jb_te_negro.getWidth(), jb_te_negro.getHeight(), Image.SCALE_SMOOTH);
         jb_te_negro.setIcon(new ImageIcon(im_negro));
-        //te rojo
+//te rojo
         ImageIcon img_rojo = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te rojo.png");
         Image im_rojo = img_rojo.getImage().getScaledInstance(jb_te_rojo.getWidth(), jb_te_rojo.getHeight(), Image.SCALE_SMOOTH);
         jb_te_rojo.setIcon(new ImageIcon(im_rojo));
-        //te verde
+//te verde
         ImageIcon img_verde = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te verde.png");
         Image im_verde = img_verde.getImage().getScaledInstance(jb_te_verde.getWidth(), jb_te_verde.getHeight(), Image.SCALE_SMOOTH);
         jb_te_verde.setIcon(new ImageIcon(im_verde));
-        //tila
+//tila
         ImageIcon img_tila = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\tila.png");
         Image im_tila = img_tila.getImage().getScaledInstance(jb_tila.getWidth(), jb_tila.getHeight(), Image.SCALE_SMOOTH);
         jb_tila.setIcon(new ImageIcon(im_tila));
@@ -315,7 +316,6 @@ public class Ventana_infusion extends javax.swing.JFrame {
         jrb_agua.setBackground(new java.awt.Color(242, 214, 189));
         bg_tipo_leche.add(jrb_agua);
         jrb_agua.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jrb_agua.setSelected(true);
         jrb_agua.setText("En Agua");
         jrb_agua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,6 +357,8 @@ public class Ventana_infusion extends javax.swing.JFrame {
                 .addGap(84, 84, 84))
         );
 
+        jta_info_add_ticket_infusiones.setEditable(false);
+        jta_info_add_ticket_infusiones.setBackground(new java.awt.Color(255, 255, 255));
         jta_info_add_ticket_infusiones.setColumns(20);
         jta_info_add_ticket_infusiones.setRows(5);
         jta_info_add_ticket_infusiones.setEnabled(false);
@@ -419,64 +421,170 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
     private void jb_te_verdeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_te_verdeActionPerformed
         // té verde al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té verde  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_te_verdeActionPerformed
 
     private void jb_frutos_rojosActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_frutos_rojosActionPerformed
         // té de frutos rojos al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té de frutos rojos  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_frutos_rojosActionPerformed
 
     private void jb_te_azulActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_te_azulActionPerformed
         // té azul al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té azul  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu:
     }// GEN-LAST:event_jb_te_azulActionPerformed
 
     private void jb_te_rojoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_te_rojoActionPerformed
         // té rojo al jta_info_add_ticket_infusiones
-        // hacaces colsutla
-        // de vuelde uin id
-        // con id y el bg_leches->ticket.add(infusion.(id, bg);
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té rojo  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
+        
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_te_rojoActionPerformed
 
     private void jb_te_negroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_te_negroActionPerformed
         // té negro al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té negro  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_te_negroActionPerformed
 
     private void jb_montapoleoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_montapoleoActionPerformed
         // mentapoleo al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Mentapoleo  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_montapoleoActionPerformed
 
     private void jb_rooibosActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_rooibosActionPerformed
         // té de rooibos al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té de Rooibos  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_rooibosActionPerformed
 
     private void jb_manzanillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_manzanillaActionPerformed
         // manzanilla al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Manzanilla  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_manzanillaActionPerformed
 
     private void jb_chaiActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_chaiActionPerformed
         // té chai vainilla al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té Chai Vainilla " + bg_tipo_leche.getSelection().getActionCommand() + "\t 2.40€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_chaiActionPerformed
 
     private void jb_matchaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_matchaActionPerformed
         // té matcha al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Té Matcha  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.80€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_matchaActionPerformed
 
     private void jb_pinkActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_pinkActionPerformed
         // pink latte al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Pink Latte  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 2.40€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_pinkActionPerformed
 
     private void jb_tilaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tilaActionPerformed
         // tila al jta_info_add_ticket_infusiones
+        try {
+            if (bg_tipo_leche.getSelection() == null) {
+                JOptionPane.showMessageDialog(null, "Tienes que seleccionar con que infusionar.");
+            }
+
+           jta_info_add_ticket_infusiones.append("Tila  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR-- " + e);
+        }
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_tilaActionPerformed
 
