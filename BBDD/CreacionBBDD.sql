@@ -56,6 +56,7 @@ VALUES
   ('Te verde', 1.6, Null, 300),
   ('Te negro', 1.6, Null, 300),
   ('Te azul', 1.6, Null, 300),
+   ('Pink Latte', 2.4, Null, 300),
   ('Rooibos', 1.6, Null, 300),
   ('Frutos rojos', 1.6, Null, 300),
   ('Frtuas del pacifico', 1.6, Null, 300),
