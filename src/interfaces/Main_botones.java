@@ -32,7 +32,7 @@ public class Main_botones extends javax.swing.JFrame {
     public static Ventana_infusion infusion3 = new Ventana_infusion();
     public static Ventana_otra_bebida otrasbebe3 = new Ventana_otra_bebida();
 
-    static Conexion2 conexionPrueba = new Conexion2();
+    public static Conexion2 conexionPrueba = new Conexion2();
     public static ArrayList<Productos> productosAux = new ArrayList<Productos>();
 
     /**
