@@ -12,7 +12,7 @@ public class Cafe extends Productos {
     }
     
 
-    private String tipoCafe;
+    private String tipoCafe; // este en principio sobra
     private String sabor;
     private Boolean descafeinado;
     private String tipoLeche;

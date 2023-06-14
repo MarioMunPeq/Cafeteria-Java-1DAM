@@ -12,11 +12,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import GestionBBDD.Conexion2;
-import caja.Cajero;
-import caja.Ticket;
 import tiposProductos.Productos;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -25,50 +24,15 @@ import javax.swing.JPanel;
  *
  * @author admin
  */
-
 public class Main_botones extends javax.swing.JFrame {
 
-    /*
-     * OJO aqui se ha metido la imagen
-     * intento VERSION 0.0
-     * copnsultado en:
-     * https://panamahitek.com/insertar-una-imagen-dentro-de-un-jpanel-en-java/#:~:
-     * text=Se%20puede%20arrastrar%20desde%20cualquier,Netbeans%20donde%20la%
-     * 20tengamos%20guardada.&text=Con%20esto%20podemos%20ejecutar%20nuestro,Eso%
-     * 20es%20todo%20por%20ahora.
-     * 
-     * public class Imagen extends javax.swing.JPanel {
-     * 
-     * public Imagen() {
-     * this.setSize(700, 460);// el tamaño del panel a cubrir
-     * }
-     * // Metodo que tiene como parametri un objeto de la clase graphics
-     * 
-     * public void paint(Graphics grafico) {
-     * Dimension altura = getSize();
-     * 
-     * // se selecciona la imagen del paquete cpn la ruta de la misma
-     * ImageIcon fondo1 = new ImageIcon(getClass().
-     * getResource("C:\\Users\\admin\\Desktop\\OneDrive - Educacyl\\PROGRAMACION\\proyecto_cafe\\src\\imagenes\\fondo1.jpg"
-     * ));
-     * 
-     * // se dibuja la imagen que esta dentro del paquete imagenes dentro del jpanel
-     * que va a ocupar
-     * grafico.drawImage(fondo1.getImage(), 0, 0, altura.width, altura.height,
-     * null);
-     * 
-     * setOpaque(false);
-     * super.paintComponents(grafico);
-     * }
-     * }
-     */
     public static Main_botones boton3 = new Main_botones();
     public static Ventana_cafe cafe3 = new Ventana_cafe();
     public static Ventana_comida comida3 = new Ventana_comida();
     public static Ventana_infusion infusion3 = new Ventana_infusion();
     public static Ventana_otra_bebida otrasbebe3 = new Ventana_otra_bebida();
 
-    public static Conexion2 conexionPrueba = new Conexion2();
+    static Conexion2 conexionPrueba = new Conexion2();
     public static ArrayList<Productos> productosAux = new ArrayList<Productos>();
 
     /**
@@ -77,6 +41,22 @@ public class Main_botones extends javax.swing.JFrame {
     public Main_botones() {
         initComponents();
 
+// cafe
+        ImageIcon img_cafe = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\cafe.png");
+        Image im_cafe = img_cafe.getImage().getScaledInstance(jb_cafes.getWidth(), jb_cafes.getHeight(), Image.SCALE_SMOOTH);
+        jb_cafes.setIcon(new ImageIcon(im_cafe));
+// infusiones
+        ImageIcon img_infu = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\infusiones.png");
+        Image im_infu = img_infu.getImage().getScaledInstance(jb_infusiones.getWidth(), jb_infusiones.getHeight(), Image.SCALE_SMOOTH);
+        jb_infusiones.setIcon(new ImageIcon(im_infu));
+// otras bebidas
+        ImageIcon img_otros = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\otras.png");
+        Image im_otro = img_otros.getImage().getScaledInstance(jb_otras_bebidas.getWidth(), jb_otras_bebidas.getHeight(), Image.SCALE_SMOOTH);
+        jb_otras_bebidas.setIcon(new ImageIcon(im_otro));
+// comida
+        ImageIcon img_comida = new ImageIcon("src\\cafeteria_imagenes_botones\\240x100\\comida.png");
+        Image im_comida = img_comida.getImage().getScaledInstance(jb_comidas.getWidth(), jb_comidas.getHeight(), Image.SCALE_SMOOTH);
+        jb_comidas.setIcon(new ImageIcon(im_comida));
     }
 
     /**
@@ -86,7 +66,7 @@ public class Main_botones extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
@@ -122,37 +102,32 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 100, Short.MAX_VALUE));
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
         jPanel3Layout.setVerticalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 100, Short.MAX_VALUE));
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(880, 600));
 
-        jtp_pestanias.setBackground(new java.awt.Color(0, 153, 0));
+        jtp_pestanias.setBackground(new java.awt.Color(115, 84, 72));
+        jtp_pestanias.setEnabled(false);
         jtp_pestanias.setPreferredSize(new java.awt.Dimension(880, 600));
 
-        jp_caja_main.setBackground(new java.awt.Color(255, 204, 204));
+        jp_caja_main.setBackground(new java.awt.Color(217, 141, 98));
 
         jl_listado_tickets.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Ticket 1", "Ticket 2", "Ticket 3", "Ticket 4", "Ticket 5", "Ticket 6", "Ticket 7",
-                    "Ticket 8", "Ticket 9", "Ticket 10", "Ticket 11", "Ticket 12", "Ticket 13", "Ticket 14",
-                    "Ticket 15" };
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public String getElementAt(int i) {
-                return strings[i];
-            }
+            String[] strings = { "Ticket 1", "Ticket 2", "Ticket 3", "Ticket 4" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane3.setViewportView(jl_listado_tickets);
 
-        jb_ticket_nuevo.setBackground(new java.awt.Color(0, 255, 255));
+        jb_ticket_nuevo.setBackground(new java.awt.Color(54, 115, 115));
         jb_ticket_nuevo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_ticket_nuevo.setForeground(new java.awt.Color(242, 214, 189));
         jb_ticket_nuevo.setText("TICKET  NUEVO");
         jb_ticket_nuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +138,7 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("LISTADO TICKETS:");
 
-        jb_cobrar_ticket.setBackground(new java.awt.Color(153, 153, 255));
+        jb_cobrar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_cobrar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_cobrar_ticket.setText("COBRAR TICKET");
         jb_cobrar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +147,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_modificar_ticket.setBackground(new java.awt.Color(102, 204, 0));
+        jb_modificar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_modificar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_modificar_ticket.setText("MODIFICAR TICKET");
         jb_modificar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -181,8 +156,9 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_hacer_caja.setBackground(new java.awt.Color(153, 255, 204));
+        jb_hacer_caja.setBackground(new java.awt.Color(54, 115, 115));
         jb_hacer_caja.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_hacer_caja.setForeground(new java.awt.Color(242, 214, 189));
         jb_hacer_caja.setText("HACER CAJA");
         jb_hacer_caja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +166,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_borrar_ticket.setBackground(new java.awt.Color(102, 255, 102));
+        jb_borrar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_borrar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_borrar_ticket.setText("BORRAR TICKET");
         jb_borrar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +175,7 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_borrar_producto.setBackground(new java.awt.Color(102, 204, 0));
+        jb_borrar_producto.setBackground(new java.awt.Color(115, 184, 191));
         jb_borrar_producto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_borrar_producto.setText("BORRAR PRODUCTO");
         jb_borrar_producto.addActionListener(new java.awt.event.ActionListener() {
@@ -210,14 +186,8 @@ public class Main_botones extends javax.swing.JFrame {
 
         jl_lista_productos_ticket_seleccionado.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public String getElementAt(int i) {
-                return strings[i];
-            }
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane6.setViewportView(jl_lista_productos_ticket_seleccionado);
 
@@ -227,81 +197,67 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_caja_mainLayout = new javax.swing.GroupLayout(jp_caja_main);
         jp_caja_main.setLayout(jp_caja_mainLayout);
         jp_caja_mainLayout.setHorizontalGroup(
-                jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addGroup(jp_caja_mainLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                                                .addComponent(jLabel3)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 279,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane3))
-                                .addGap(94, 94, 94)
-                                .addGroup(jp_caja_mainLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jp_caja_mainLayout
-                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel4)
-                                                .addComponent(jScrollPane6)
-                                                .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                        317, Short.MAX_VALUE))
-                                        .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 327,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(60, 60, 60)));
+            jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+                    .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3))
+                .addGap(94, 94, 94)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4)
+                    .addComponent(jScrollPane6)
+                    .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
+        );
         jp_caja_mainLayout.setVerticalGroup(
-                jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(jp_caja_mainLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel4))
-                                .addGap(18, 18, 18)
-                                .addGroup(jp_caja_mainLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_ticket_nuevo)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_modificar_ticket)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_borrar_ticket)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_cobrar_ticket))
-                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 301,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_borrar_producto,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 20,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_borrar_producto))
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_modificar_ticket)))
+                .addGap(18, 18, 18)
+                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                        .addComponent(jb_borrar_ticket)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jb_cobrar_ticket))
+                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
 
         jtp_pestanias.addTab("CAJA", jp_caja_main);
 
-        jp_productos.setBackground(new java.awt.Color(255, 153, 51));
+        jp_productos.setBackground(new java.awt.Color(217, 141, 98));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("TIKECT:");
 
-        jp_botoenes_principales.setBackground(new java.awt.Color(153, 255, 0));
+        jp_botoenes_principales.setBackground(new java.awt.Color(242, 214, 189));
+        jp_botoenes_principales.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 255), new java.awt.Color(255, 204, 204)));
 
-        jb_infusiones.setBackground(new java.awt.Color(255, 51, 51));
+        jb_infusiones.setBackground(new java.awt.Color(54, 115, 115));
         jb_infusiones.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_infusiones.setText("INFUSIONES");
         jb_infusiones.setHideActionText(true);
         jb_infusiones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -309,9 +265,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_otras_bebidas.setBackground(new java.awt.Color(255, 51, 51));
+        jb_otras_bebidas.setBackground(new java.awt.Color(54, 115, 115));
         jb_otras_bebidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_otras_bebidas.setText("OTRAS BEBIDAS");
         jb_otras_bebidas.setHideActionText(true);
         jb_otras_bebidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -319,9 +274,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_comidas.setBackground(new java.awt.Color(255, 51, 51));
+        jb_comidas.setBackground(new java.awt.Color(54, 115, 115));
         jb_comidas.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_comidas.setText("COMIDAS");
         jb_comidas.setHideActionText(true);
         jb_comidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,9 +283,8 @@ public class Main_botones extends javax.swing.JFrame {
             }
         });
 
-        jb_cafes.setBackground(new java.awt.Color(255, 51, 51));
+        jb_cafes.setBackground(new java.awt.Color(54, 115, 115));
         jb_cafes.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jb_cafes.setText("CAFÉS");
         jb_cafes.setHideActionText(true);
         jb_cafes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,36 +295,29 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_botoenes_principalesLayout = new javax.swing.GroupLayout(jp_botoenes_principales);
         jp_botoenes_principales.setLayout(jp_botoenes_principalesLayout);
         jp_botoenes_principalesLayout.setHorizontalGroup(
-                jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
-                                .addContainerGap(32, Short.MAX_VALUE)
-                                .addGroup(jp_botoenes_principalesLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
-                                                Short.MAX_VALUE)
-                                        .addComponent(jb_cafes, javax.swing.GroupLayout.Alignment.LEADING,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
-                                .addContainerGap(32, Short.MAX_VALUE)));
+            jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addGroup(jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jb_cafes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
         jp_botoenes_principalesLayout.setVerticalGroup(
-                jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jb_cafes, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jb_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jb_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(14, Short.MAX_VALUE)));
+            jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jb_cafes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jb_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jb_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
 
         jScrollPane1.setBackground(new java.awt.Color(255, 102, 102));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255), 2));
@@ -384,8 +330,7 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("INFORMACIÓN DE AÉRGENOS:");
 
-        jScrollPane2
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 51, 255)));
+        jScrollPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 51, 255)));
 
         jta_info_ticket.setEditable(false);
         jta_info_ticket.setColumns(20);
@@ -396,7 +341,7 @@ public class Main_botones extends javax.swing.JFrame {
         jtf_id_ticket_uso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jtf_id_ticket_uso.setText("id_del ticket en uso");
 
-        jb_guardar_ticket.setBackground(new java.awt.Color(0, 255, 255));
+        jb_guardar_ticket.setBackground(new java.awt.Color(115, 184, 191));
         jb_guardar_ticket.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jb_guardar_ticket.setText("GUARDAR TICKET");
         jb_guardar_ticket.addActionListener(new java.awt.event.ActionListener() {
@@ -408,71 +353,56 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_productosLayout = new javax.swing.GroupLayout(jp_productos);
         jp_productos.setLayout(jp_productosLayout);
         jp_productosLayout.setHorizontalGroup(
-                jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jp_productosLayout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77,
-                                        Short.MAX_VALUE)
-                                .addGroup(jp_productosLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jp_productosLayout.createSequentialGroup()
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(73, 73, 73)
-                                                .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jp_productosLayout
-                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel2)
-                                                .addComponent(jScrollPane2)
-                                                .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301,
-                                                        Short.MAX_VALUE)))
-                                .addGap(89, 89, 89)));
+            jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_productosLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_productosLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
+                        .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel2)
+                        .addComponent(jScrollPane2)
+                        .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)))
+                .addGap(89, 89, 89))
+        );
         jp_productosLayout.setVerticalGroup(
-                jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_productosLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(jp_productosLayout
-                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jp_productosLayout.createSequentialGroup()
-                                                .addGroup(jp_productosLayout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jtf_id_ticket_uso,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jb_guardar_ticket)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 73,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(73, Short.MAX_VALUE)));
+            jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_productosLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_productosLayout.createSequentialGroup()
+                        .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jb_guardar_ticket)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
 
         jtp_pestanias.addTab("PRODUCTOS", jp_productos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -480,6 +410,7 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_guardar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_guardar_ticketActionPerformed
         // guarda la información del ticket con el que se esta trabajando
         jtp_pestanias.setSelectedComponent(jp_caja_main);
+
     }// GEN-LAST:event_jb_guardar_ticketActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cafesActionPerformed
@@ -548,10 +479,6 @@ public class Main_botones extends javax.swing.JFrame {
          * jp_productos.add(fondo1);
          * jp_productos.repaint();
          */
-        
-        
-        //Ticket ticketNuevo = new Ticket(contadorTickets, null, rootPaneCheckingEnabled, rootPaneCheckingEnabled, null);
-        
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que llama
     }// GEN-LAST:event_jb_ticket_nuevoActionPerformed
 
@@ -571,9 +498,8 @@ public class Main_botones extends javax.swing.JFrame {
         try {
             conexionPrueba.conectar();
             Conexion2.recogerDatosProductos();
-            Cajero cajeroNuevo = new Cajero();
 
-
+            // ConexionMySQL.conexionBaseDatos();
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -614,7 +540,6 @@ public class Main_botones extends javax.swing.JFrame {
 
         // Metodo para recoger todos los datos de la base de datos de la tabla productos
         // y los guarde en un arraylist
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -663,5 +588,4 @@ public class Main_botones extends javax.swing.JFrame {
      * }
      * }
      */
-
 }
