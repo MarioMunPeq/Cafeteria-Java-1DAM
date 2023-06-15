@@ -16,9 +16,9 @@ import tiposProductos.Productos;
  */
 public class Conexion2 {
 
-    private final String usuario;
-    private final String clave;
-    private final String url;
+    private final String USUARIO;
+    private final String CLAVE;
+    private final String URL;
     private Connection conn;
     private Statement declaracion;
     private PreparedStatement ps;
@@ -27,9 +27,9 @@ public class Conexion2 {
      * Constructor vacío de la clase
      */
     public Conexion2() {
-        this.usuario = "root";
-        this.clave = "admin";
-        this.url = "jdbc:mysql://localhost:3306/Cafeteria";
+        this.USUARIO = "root";
+        this.CLAVE = "admin";
+        this.URL = "jdbc:mysql://localhost:3306/Cafeteria";
         conn = null;
         ps = null;
     }
@@ -67,7 +67,7 @@ public class Conexion2 {
     public void conectar() {
 
         try {
-            this.conn = DriverManager.getConnection(this.url, this.usuario, this.clave);
+            this.conn = DriverManager.getConnection(this.URL, this.USUARIO, this.CLAVE);
 
         } catch (Exception e) {
             System.out.println("Error al conectar con la base de datos");
