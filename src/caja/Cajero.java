@@ -2,6 +2,8 @@ package caja;
 
 import java.util.ArrayList;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import interfaces.Main_botones;
 import tiposProductos.Productos;
 
@@ -11,32 +13,18 @@ import java.sql.ResultSet;
 
 public class Cajero {
 
+	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
+
 	public ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
-
-	private double cajaFinalMetalico = 0;
-	private double cajaFinalTarjeta = 0;
-	private static int contadorTickets = 0;
-	private static final double VALOR_CAJA_CHICA_INICIAL = 300;
-
-	/**
-	 * Añade a la lista de tickets un ticket nuevo
-	 * 
-	 * @param ticket, ticket a añadir
-	 * @return devuelve true si se ha añadido correctamente y false si no se ha
-	 *         añadido.
-	 */
-	public static void cargarIdTickets() {
-		ResultSet tickets = Main_botones.conexionPrueba.consulta("SELECT * FROM ticket");
-		ArrayList<Integer> ids = new ArrayList<Integer>();
-		try {
-			while (tickets.next()) {
-
-				ids.add(tickets.getInt("id"));
-			}
-			contadorTickets = ids.get(ids.size() - 1);
-		} catch (Exception e) {
-
-		}
+	private double cajaFinalMetalico;
+	private double cajaFinalTarjeta;
+	private double cajaChica;
+	
+	public Ticket crearNuevoTicket() {
+		
+		Ticket ticketNuevo = new Ticket(false, false, null);
+		listaTickets.add(ticketNuevo);
+		return ticketNuevo;
 	}
 
 	public boolean anadirTicket(Ticket ticket) {
@@ -166,9 +154,13 @@ public class Cajero {
 
 	// CONSTRUCTOR, GETTERS Y SETTERS
 
-	public Cajero() {
-
-		cargarIdTickets();
+	// constructor
+	public Cajero(ArrayList<Ticket> listaTickets) {
+		super();
+		this.listaTickets = listaTickets;
+		this.cajaFinalMetalico = 0;
+		this.cajaFinalTarjeta = 0;
+		this.cajaChica = VALOR_CAJA_CHICA_INICIAL;
 	}
 
 	public ArrayList<Ticket> getListaTickets() {

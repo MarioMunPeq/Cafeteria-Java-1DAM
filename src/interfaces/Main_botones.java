@@ -5,13 +5,15 @@
 package interfaces;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import GestionBBDD.Conexion2;
+import caja.Cajero;
+import caja.Ticket;
 import tiposProductos.Productos;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -24,7 +26,9 @@ import javax.swing.JPanel;
  *
  * @author admin
  */
+
 public class Main_botones extends javax.swing.JFrame {
+
 
     public static Main_botones boton3 = new Main_botones();
     public static Ventana_cafe cafe3 = new Ventana_cafe();
@@ -32,8 +36,12 @@ public class Main_botones extends javax.swing.JFrame {
     public static Ventana_infusion infusion3 = new Ventana_infusion();
     public static Ventana_otra_bebida otrasbebe3 = new Ventana_otra_bebida();
 
+
     public static Conexion2 conexionPrueba = new Conexion2();
-    public static ArrayList<Productos> productosAux = new ArrayList<Productos>();
+    public static ArrayList<Productos> productosAux = new ArrayList<Productos>();//lista donde se cargan todos los productos de la base de datos
+    public static ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+    public static Cajero cajero = new Cajero(listaTickets);
+
 
     /**
      * Creates new form Main_botones_cafe
@@ -410,7 +418,7 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_guardar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_guardar_ticketActionPerformed
         // guarda la información del ticket con el que se esta trabajando
         jtp_pestanias.setSelectedComponent(jp_caja_main);
-
+        
     }// GEN-LAST:event_jb_guardar_ticketActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cafesActionPerformed
@@ -440,6 +448,7 @@ public class Main_botones extends javax.swing.JFrame {
 
     private void jb_borrar_productoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_borrar_productoActionPerformed
         // borra el prodcuto seleccionado en jl_lista_productos_ticket_seleccionado
+        
     }// GEN-LAST:event_jb_borrar_productoActionPerformed
 
     private void jb_borrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_borrar_ticketActionPerformed
@@ -479,7 +488,10 @@ public class Main_botones extends javax.swing.JFrame {
          * jp_productos.add(fondo1);
          * jp_productos.repaint();
          */
+        
+        cajero.crearNuevoTicket();
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que llama
+        
     }// GEN-LAST:event_jb_ticket_nuevoActionPerformed
 
     /**
@@ -495,6 +507,7 @@ public class Main_botones extends javax.swing.JFrame {
          * For details see
          * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
+        //for each para recorrer la lista de productos
         try {
             conexionPrueba.conectar();
             Conexion2.recogerDatosProductos();
@@ -528,6 +541,7 @@ public class Main_botones extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Main_botones().setVisible(true);
+                
                 /*
                  * cosas para ver si funciona el cambio de pantalla OJO
                  * Cafes cafe = new Cafes();
@@ -568,7 +582,7 @@ public class Main_botones extends javax.swing.JFrame {
     private javax.swing.JPanel jp_botoenes_principales;
     private javax.swing.JPanel jp_caja_main;
     private javax.swing.JPanel jp_productos;
-    private javax.swing.JTextArea jta_info_ticket;
+    javax.swing.JTextArea jta_info_ticket;
     private javax.swing.JTextArea jta_informacion_alergenos;
     private javax.swing.JTextField jtf_id_ticket_uso;
     private javax.swing.JTabbedPane jtp_pestanias;
@@ -588,4 +602,17 @@ public class Main_botones extends javax.swing.JFrame {
      * }
      * }
      */
+    public static Date fechaActual() {
+		
+		java.util.Date fecha = new java.util.Date();
+		
+		Date fechaActual = new Date(fecha.getTime());
+		
+		return fechaActual;
+		
+	}
+    
+
+
+        
 }

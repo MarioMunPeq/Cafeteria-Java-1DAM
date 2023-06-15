@@ -9,6 +9,9 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import javax.swing.JOptionPane;
 
+import caja.Cajero;
+import caja.Ticket;
+
 /**
  *
  * @author admin
@@ -484,7 +487,8 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(1));
+        
     }// GEN-LAST:event_jb_c_cortadoActionPerformed
 
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_bombonActionPerformed
@@ -498,6 +502,8 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(4));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_bombonActionPerformed
 
@@ -512,6 +518,8 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(3));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_capuchinoActionPerformed
 
@@ -526,6 +534,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(0));
         // OJO-- si se pincha en
     }// GEN-LAST:event_jb_c_soloActionPerformed
 
@@ -540,6 +549,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(2));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_c_lecheActionPerformed
 
@@ -554,6 +564,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(5));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_supraActionPerformed
 
@@ -568,6 +579,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(7));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_shakeratoActionPerformed
 
@@ -582,6 +594,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
+        Main_botones.cajero.getListaTickets().get(Main_botones.cajero.getListaTickets().size() - 1).getListaProductos().add(Main_botones.productosAux.get(6));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_baileysActionPerformed
 
@@ -637,6 +650,8 @@ public class Ventana_cafe extends javax.swing.JFrame {
         // Main_botones_3.cafe3.setVisible(false);
         Main_botones.cafe3.dispose();
         jta_info_add_ticket_cafes.getText();
+        Main_botones.listaTickets.add(Cajero.crearNuevoTicket(Main_botones.listaProductos));
+        
     }// GEN-LAST:event_jb_aniadir_ticket_cafeActionPerformed
 
     private void jrb_avellanaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avellanaActionPerformed

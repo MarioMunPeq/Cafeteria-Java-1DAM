@@ -3,18 +3,19 @@ package caja;
 import java.sql.Date;
 import java.util.ArrayList;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import tiposProductos.Productos;
 
 public class Ticket {
 
 	private int id;
-	private static ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	private ArrayList<Productos> listaProductos = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
 	public static final double IVA = 1.21;
-	
-	
+
 	/**
 	 * Metodo para cambiar el booleano "pagado" a true
 	 * 
@@ -64,7 +65,7 @@ public class Ticket {
 
 		double precioSinIva = 0;
 
-		for (Productos productos : this.listaProductos) {
+		for (Productos productos : listaProductos1) {
 			precioSinIva = precioSinIva + productos.getPrecio();
 		}
 
@@ -78,7 +79,7 @@ public class Ticket {
 	 * @param producto
 	 */
 
-	public void añadirProducto(Productos producto) {
+	public void añadirProducto(Ticket ticket, Productos producto) {
 
 		listaProductos.add(producto);
 	}
@@ -89,7 +90,7 @@ public class Ticket {
 	 * @param producto
 	 */
 
-	public void borrarProducto(Productos producto) {
+	public void borrarProducto(Ticket ticket,Productos producto) {
 
 		listaProductos.remove(producto);
 	}
@@ -103,23 +104,28 @@ public class Ticket {
 		listaProductos.clear();
 
 	}
+	//metodo para mostrar los productos de un ticket
+	public String mostrarProductosTicket(Ticket ticket) {
+		
+		String productos = "";
+		
+		for (Productos producto : ticket.getListaProductos()) {
+			
+			productos = productos + producto.getNombre() + "\n";
+			
+		}
+		
+		return productos;
+		
+	}
+
 
 	// CONSTRUCTOR GETTERS Y SETTERS
-	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagoTarjeta, boolean pagado, Date fecha) {
+	public Ticket( boolean pagoTarjeta, boolean pagado, Date fecha) {
 		super();
-		this.id = id;
-		this.listaProductos = listaProductos;
 		this.pagoTarjeta = false;
 		this.pagado = false;
 		this.fecha = fecha;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public ArrayList<Productos> getListaProductos() {

@@ -132,10 +132,8 @@ public class Conexion2 {
             // ExecuteUpdate devuelve un entero con el número de filas afectadas
             if (this.declaracion.executeUpdate(actualiza) > 0) {
                 realizado = true;
-
             } else {
                 realizado = false;
-
             }
             return realizado;
 
