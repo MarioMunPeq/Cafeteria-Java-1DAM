@@ -675,8 +675,12 @@ public class Main_botones extends javax.swing.JFrame {
                  */
                 // for each para recorrer la lista de productos
                 try {
+
                         conexionPrueba.conectar();
                         Conexion2.recogerDatosProductos();
+
+                        // Ahora con los datos de la base de datos, imprimimos su informacion por
+                        // consola
 
                         // ConexionMySQL.conexionBaseDatos();
                         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager

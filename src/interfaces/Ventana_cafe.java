@@ -484,10 +484,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café cortado " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.30€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(1));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(1));
+        
         
     }// GEN-LAST:event_jb_c_cortadoActionPerformed
 
@@ -499,10 +500,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café bombón  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(4));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(4));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_bombonActionPerformed
 
@@ -514,10 +516,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café capuchino  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.20€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(3));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(3));
+        
         
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_capuchinoActionPerformed
@@ -530,10 +533,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café solo  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(0));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(0));
+        
         // OJO-- si se pincha en
     }// GEN-LAST:event_jb_c_soloActionPerformed
 
@@ -545,10 +549,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café con leche  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(2));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(2));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_c_lecheActionPerformed
 
@@ -560,10 +565,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Supra Caramel  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.60€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(5));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(5));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_supraActionPerformed
 
@@ -575,10 +581,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Shakerato  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(7));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(7));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_shakeratoActionPerformed
 
@@ -590,10 +597,11 @@ public class Ventana_cafe extends javax.swing.JFrame {
             }
 
             jta_info_add_ticket_cafes.append("Café con Baileys  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 3.00€\n");
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(6));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(6));
+        
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_baileysActionPerformed
 
