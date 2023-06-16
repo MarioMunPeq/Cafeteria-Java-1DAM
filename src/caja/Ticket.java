@@ -16,6 +16,7 @@ public class Ticket {
 	private Date fecha;
 	public static final double IVA = 1.21;
 
+	
 	/**
 	 * Metodo para cambiar el booleano "pagado" a true
 	 * 
@@ -121,12 +122,16 @@ public class Ticket {
 
 
 	// CONSTRUCTOR GETTERS Y SETTERS
-	public Ticket( boolean pagoTarjeta, boolean pagado, Date fecha) {
+	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagoTarjeta, boolean pagado, Date fecha) {
 		super();
+		this.id = id;
 		this.pagoTarjeta = false;
 		this.pagado = false;
 		this.fecha = fecha;
+		this.listaProductos = listaProductos;
 	}
+
+	
 
 	public ArrayList<Productos> getListaProductos() {
 		return listaProductos;

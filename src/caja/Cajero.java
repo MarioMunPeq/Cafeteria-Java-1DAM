@@ -15,17 +15,11 @@ public class Cajero {
 
 	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
 
-	public ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+	public static ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 	private double cajaFinalMetalico;
 	private double cajaFinalTarjeta;
 	private double cajaChica;
 	
-	public Ticket crearNuevoTicket() {
-		
-		Ticket ticketNuevo = new Ticket(false, false, null);
-		listaTickets.add(ticketNuevo);
-		return ticketNuevo;
-	}
 
 	public boolean anadirTicket(Ticket ticket) {
 

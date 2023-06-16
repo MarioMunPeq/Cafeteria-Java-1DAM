@@ -39,9 +39,9 @@ public class Main_botones extends javax.swing.JFrame {
 
     public static Conexion2 conexionPrueba = new Conexion2();
     public static ArrayList<Productos> productosAux = new ArrayList<Productos>();//lista donde se cargan todos los productos de la base de datos
+    public static ArrayList<Productos> listaProductos = new ArrayList<Productos>();//lista donde se cargan todos los productos de la base de datos
     public static ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
     public static Cajero cajero = new Cajero(listaTickets);
-
 
     /**
      * Creates new form Main_botones_cafe
@@ -418,12 +418,13 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_guardar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_guardar_ticketActionPerformed
         // guarda la información del ticket con el que se esta trabajando
         jtp_pestanias.setSelectedComponent(jp_caja_main);
-        
+
+        listaTickets.add(new Ticket(listaTickets.size(),listaProductos,false,false,fechaActual()));
+        listaProductos.clear();
     }// GEN-LAST:event_jb_guardar_ticketActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cafesActionPerformed
         // ir a frame cafesys
-
         // valido
         cafe3.setVisible(true);
         boton3.setVisible(false);
@@ -489,7 +490,7 @@ public class Main_botones extends javax.swing.JFrame {
          * jp_productos.repaint();
          */
         
-        cajero.crearNuevoTicket();
+        
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que llama
         
     }// GEN-LAST:event_jb_ticket_nuevoActionPerformed
