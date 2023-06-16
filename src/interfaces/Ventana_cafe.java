@@ -487,7 +487,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(1));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(1));
         
     }// GEN-LAST:event_jb_c_cortadoActionPerformed
 
@@ -502,7 +502,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-         Ticket.listaProductos.add(Main_botones.productosAux.get(4));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(4));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_bombonActionPerformed
 
@@ -517,7 +517,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        ticket.listaProductos.add(Main_botones.productosAux.get(3));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(3));
         
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_capuchinoActionPerformed
@@ -533,7 +533,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(0));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(0));
         // OJO-- si se pincha en
     }// GEN-LAST:event_jb_c_soloActionPerformed
 
@@ -548,7 +548,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(2));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(2));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_c_lecheActionPerformed
 
@@ -563,7 +563,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(5));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(5));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_supraActionPerformed
 
@@ -578,7 +578,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(7));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(7));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_shakeratoActionPerformed
 
@@ -593,7 +593,7 @@ public class Ventana_cafe extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        Ticket.listaProductos.add(Main_botones.productosAux.get(6));
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(6));
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_baileysActionPerformed
 

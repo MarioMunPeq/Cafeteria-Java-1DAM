@@ -10,7 +10,7 @@ import tiposProductos.Productos;
 public class Ticket {
 
 	private int id;
-	public static ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	private  ArrayList<Productos> listaProductos = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
@@ -122,16 +122,13 @@ public class Ticket {
 
 
 	// CONSTRUCTOR GETTERS Y SETTERS
-	public Ticket(int id, ArrayList<Productos> listaProductos, boolean pagoTarjeta, boolean pagado, Date fecha) {
+	public Ticket(int id) {
 		super();
 		this.id = id;
 		this.pagoTarjeta = false;
 		this.pagado = false;
-		this.fecha = fecha;
-		this.listaProductos = listaProductos;
-	}
-	public Ticket(){
-
+		this.fecha = new Date(System.currentTimeMillis());
+		this.listaProductos = new ArrayList<Productos>();
 	}
 	
 
