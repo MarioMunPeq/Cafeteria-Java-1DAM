@@ -10,7 +10,7 @@ import tiposProductos.Productos;
 public class Ticket {
 
 	private int id;
-	private  ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	private  ArrayList<Productos> listaProductosTicket = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
@@ -82,7 +82,7 @@ public class Ticket {
 
 	public void añadirProducto(Ticket ticket, Productos producto) {
 
-		listaProductos.add(producto);
+		listaProductosTicket.add(producto);
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class Ticket {
 
 	public void borrarProducto(Ticket ticket,Productos producto) {
 
-		listaProductos.remove(producto);
+		listaProductosTicket.remove(producto);
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class Ticket {
 
 	public void borrarTicketEntero() {
 
-		listaProductos.clear();
+		listaProductosTicket.clear();
 
 	}
 	//metodo para mostrar los productos de un ticket
@@ -128,16 +128,15 @@ public class Ticket {
 		this.pagoTarjeta = false;
 		this.pagado = false;
 		this.fecha = new Date(System.currentTimeMillis());
-		this.listaProductos = new ArrayList<Productos>();
 	}
 	
 
 	public ArrayList<Productos> getListaProductos() {
-		return listaProductos;
+		return listaProductosTicket;
 	}
 
 	public void setListaProductos(ArrayList<Productos> listaProductos) {
-		this.listaProductos = listaProductos;
+		this.listaProductosTicket = new ArrayList<>(listaProductos);
 	}
 
 	public boolean isPagado() {

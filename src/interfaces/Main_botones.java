@@ -42,6 +42,7 @@ public class Main_botones extends javax.swing.JFrame {
         static ArrayList<Productos> productosAuxiliar = new ArrayList<Productos>(); // Nueva instancia de ArrayList para
                                                                                     // cada ticket
         public static Cajero cajero = new Cajero(Cajero.listaTickets);
+        int id = 0;
 
         /**
          * Creates new form Main_botones_cafe
@@ -563,11 +564,10 @@ public class Main_botones extends javax.swing.JFrame {
                 // guarda la información del ticket con el que se esta trabajando
                 jtp_pestanias.setSelectedComponent(jp_caja_main);
 
-                int id = 1;
-
                 Ticket ticket = new Ticket(id);
                 ticket.setListaProductos(productosAuxiliar);
 
+                Cajero.listaTickets.add(ticket);
                 for (int i = 0; i < Cajero.listaTickets.size(); i++) {
                         System.out.println("Ticket " + i + ": " + Cajero.listaTickets.get(i).toString());
                         for (int j = 0; j < Cajero.listaTickets.get(i).getListaProductos().size(); j++) {
@@ -575,7 +575,7 @@ public class Main_botones extends javax.swing.JFrame {
                                                 + Cajero.listaTickets.get(i).getListaProductos().get(j).getNombre());
                         }
                 }
-                Cajero.listaTickets.add(ticket);
+
                 productosAuxiliar.clear();
                 // for each para recorrer la lista de productos
                 id++;
