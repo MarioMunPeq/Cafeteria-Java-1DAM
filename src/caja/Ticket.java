@@ -10,7 +10,7 @@ import tiposProductos.Productos;
 public class Ticket {
 
 	private int id;
-	private  ArrayList<Productos> listaProductosTicket = new ArrayList<Productos>();
+	private ArrayList<Productos> listaProductosTicket = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
@@ -48,12 +48,12 @@ public class Ticket {
 	 * 
 	 * @param precio total del precio sin iva del conjunto de productos del ticket
 	 * @return precio total con iva del conjunto de productos del ticket
-	 */
+	 
 	public double calcularIVA(double precio) {
 
 		return precio * IVA;
 	}
-
+	*/
 	/**
 	 * Este metodo sirve para calcular el total del coste de los productos de un
 	 * ticket
@@ -62,15 +62,16 @@ public class Ticket {
 	 * @return devuelve la suma de todos los prodcutos como double
 	 */
 
-	public double totalTicket(Ticket ticket,ArrayList<Productos> listaProductos1) {
+	public double totalTicket(Ticket ticket) {
 
 		double precioSinIva = 0;
 
-		for (Productos productos : listaProductos1) {
+		
+		for (Productos productos : ticket.getListaProductos()) {
 			precioSinIva = precioSinIva + productos.getPrecio();
 		}
 
-		return calcularIVA(precioSinIva);
+		return precioSinIva;     //calcularIVA(precioSinIva);metodo que se llamara en un futuro
 
 	}
 
@@ -82,7 +83,7 @@ public class Ticket {
 
 	public void añadirProducto(Ticket ticket, Productos producto) {
 
-		listaProductosTicket.add(producto);
+		ticket.listaProductosTicket.add(producto);
 	}
 
 	/**
@@ -93,16 +94,16 @@ public class Ticket {
 
 	public void borrarProducto(Ticket ticket,Productos producto) {
 
-		listaProductosTicket.remove(producto);
+		ticket.listaProductosTicket.remove(producto);
 	}
 
 	/**
 	 * Metodo para borrar todos los productos de un ticket
 	 */
 
-	public void borrarTicketEntero() {
+	public void borrarTicketEntero(Ticket ticket) {
 
-		listaProductosTicket.clear();
+		ticket.listaProductosTicket.clear();
 
 	}
 	//metodo para mostrar los productos de un ticket
@@ -161,6 +162,14 @@ public class Ticket {
 
 	public void setPagoTarjeta(boolean pagoTarjeta) {
 		this.pagoTarjeta = pagoTarjeta;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

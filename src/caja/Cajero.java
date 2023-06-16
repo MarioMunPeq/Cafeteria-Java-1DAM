@@ -2,6 +2,9 @@ package caja;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 
 import interfaces.Main_botones;
@@ -45,15 +48,29 @@ public class Cajero {
 	 * @param ticket parametro del que se coge la cantidad de dinero a añadir en la
 	 *               caja
 	 */
-	public void anadirDineroCaja(Ticket ticket) {
 
-		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
-			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket, ticket.getListaProductos());
-		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
-			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket, ticket.getListaProductos());
+	public void pagarTicket(Ticket ticket) {
+		ticket.setPagado(true);
+		JPanel panel = new JPanel();
+		JOptionPane.showMessageDialog(panel, "¿Como ha pagado el cliente?", "Pago", JOptionPane.INFORMATION_MESSAGE);
+		String[] options = { "Metalico", "Tarjeta" };
+		int seleccion = JOptionPane.showOptionDialog(null, "¿Como ha pagado el cliente?", "Pago",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+
+		if(options[seleccion].equals("Metalico")) {
+			ticket.setPagoTarjeta(false);
+		}else {
+			ticket.setPagoTarjeta(true);
 		}
 
+		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
+			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket);
+		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
+			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket);
+		}
+		
 	}
+
 
 	/**
 	 * Devuelve el valor de la caja total del dia.

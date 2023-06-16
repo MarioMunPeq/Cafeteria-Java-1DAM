@@ -323,7 +323,7 @@ public class Main_botones extends javax.swing.JFrame {
                 jp_productos.setBackground(new java.awt.Color(217, 141, 98));
 
                 jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-                jLabel1.setText("TIKECT:");
+                jLabel1.setText("TICKET:");
 
                 jp_botoenes_principales.setBackground(new java.awt.Color(242, 214, 189));
                 jp_botoenes_principales.setBorder(javax.swing.BorderFactory
@@ -567,12 +567,12 @@ public class Main_botones extends javax.swing.JFrame {
                 Ticket ticket = new Ticket(id);
                 ticket.setListaProductos(productosAuxiliar);
 
-                Cajero.listaTickets.add(ticket);
-                for (int i = 0; i < Cajero.listaTickets.size(); i++) {
-                        System.out.println("Ticket " + i + ": " + Cajero.listaTickets.get(i).toString());
-                        for (int j = 0; j < Cajero.listaTickets.get(i).getListaProductos().size(); j++) {
+                cajero.listaTickets.add(ticket);
+                for (int i = 0; i < cajero.listaTickets.size(); i++) {
+                        System.out.println("Ticket " + i + ": " + cajero.listaTickets.get(i).toString());
+                        for (int j = 0; j < cajero.listaTickets.get(i).getListaProductos().size(); j++) {
                                 System.out.println("Producto " + j + ": "
-                                                + Cajero.listaTickets.get(i).getListaProductos().get(j).getNombre());
+                                                + cajero.listaTickets.get(i).getListaProductos().get(j).getNombre());
                         }
                 }
 
@@ -612,6 +612,10 @@ public class Main_botones extends javax.swing.JFrame {
 
         private void jb_borrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_borrar_ticketActionPerformed
                 // borra el ticket seleccionado
+
+                // Se elimina el ultimo ticket de la lista
+                cajero.eliminarTicket(cajero.listaTickets.get(cajero.getListaTickets().size() - 1));
+
         }// GEN-LAST:event_jb_borrar_ticketActionPerformed
 
         private void jb_hacer_cajaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_hacer_cajaActionPerformed
@@ -630,6 +634,7 @@ public class Main_botones extends javax.swing.JFrame {
                 // OJO- en productos el jta_info_ticket debe mostrar el contenido del ticket
                 // seleccionado
                 jtp_pestanias.setSelectedComponent(jp_productos);
+
         }// GEN-LAST:event_jb_modificar_ticketActionPerformed
 
         private void jb_cobrar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cobrar_ticketActionPerformed
@@ -637,6 +642,8 @@ public class Main_botones extends javax.swing.JFrame {
                 // si se ha seleccionado pago con tarjeta no saca el joptionpanel
                 // si no esta seleccionado abre un joption panel que pide la cantidad y hace la
                 // suegerencia de devolución
+                cajero.pagarTicket(cajero.listaTickets.get(cajero.listaTickets.size() - 1));
+
         }// GEN-LAST:event_jb_cobrar_ticketActionPerformed
 
         private void jb_ticket_nuevoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_ticket_nuevoActionPerformed
