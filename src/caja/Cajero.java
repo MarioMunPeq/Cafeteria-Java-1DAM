@@ -156,6 +156,9 @@ public class Cajero {
 		this.cajaFinalTarjeta = 0;
 		this.cajaChica = VALOR_CAJA_CHICA_INICIAL;
 	}
+	public Cajero(){
+
+	}
 
 	public ArrayList<Ticket> getListaTickets() {
 		return listaTickets;

@@ -10,7 +10,7 @@ import tiposProductos.Productos;
 public class Ticket {
 
 	private int id;
-	private ArrayList<Productos> listaProductos = new ArrayList<Productos>();
+	public static ArrayList<Productos> listaProductos = new ArrayList<Productos>();
 	private boolean pagoTarjeta;
 	private boolean pagado;
 	private Date fecha;
@@ -130,7 +130,9 @@ public class Ticket {
 		this.fecha = fecha;
 		this.listaProductos = listaProductos;
 	}
+	public Ticket(){
 
+	}
 	
 
 	public ArrayList<Productos> getListaProductos() {
