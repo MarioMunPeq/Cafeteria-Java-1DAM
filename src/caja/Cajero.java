@@ -62,7 +62,15 @@ public class Cajero {
 		if(options[seleccion].equals("Metalico")) {
 			ticket.setPagoTarjeta(false);
 			//JOption pane para introducir el dinero que ha pagado el cliente
+			//repetir el joption pane hasta que el dinero introducido sea mayor o igual que el total del ticket
+
+			
+
 			String dineroPagado = JOptionPane.showInputDialog("Introduzca el dinero que ha pagado el cliente");
+			while(Double.parseDouble(dineroPagado) < totalDouble) {
+				JOptionPane.showMessageDialog(panel, "El dinero introducido es menor que el total del ticket");
+				dineroPagado = JOptionPane.showInputDialog("Introduzca el dinero que ha pagado el cliente");
+			}
 			double dineroPagadoDouble = Double.parseDouble(dineroPagado);
 			calcularVuelta(totalDouble, dineroPagadoDouble );
 			JOptionPane.showMessageDialog(panel, "La vuelta es de: " + calcularVuelta(totalDouble, dineroPagadoDouble));
@@ -119,9 +127,6 @@ public class Cajero {
 
 	public String calcularVuelta(double precio, double pagado) {
 		double totalDevolver = pagado - precio;
-		if (totalDevolver < 0) {
-			return "El dinero aportado no es suficiente";
-		}
 		return "El cambio a devolver es: " 	+ redondear(totalDevolver) + "€";
 		
 	}
