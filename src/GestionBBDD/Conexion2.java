@@ -47,10 +47,12 @@ public class Conexion2 {
             // resultado en pantalla.
             while (rs.next()) {
                 // Guardamos los datos en un arraylist
-                Main_botones.productosAux.add(
+                Main_botones.productosBBDD.add(
                         new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getString(4), rs.getInt(5)));
-               // System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4)
-                      //  + " " + rs.getInt(5));
+                        /* 
+                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4)
+                        + " " + rs.getInt(5)); 
+                        */
             }
             // Cerramos la conexión con la base de datos.
             conexion.close();
@@ -132,10 +134,8 @@ public class Conexion2 {
             // ExecuteUpdate devuelve un entero con el número de filas afectadas
             if (this.declaracion.executeUpdate(actualiza) > 0) {
                 realizado = true;
-
             } else {
                 realizado = false;
-
             }
             return realizado;
 

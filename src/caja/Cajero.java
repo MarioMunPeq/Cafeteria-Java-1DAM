@@ -2,6 +2,11 @@ package caja;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import interfaces.Main_botones;
 import tiposProductos.Productos;
 
@@ -11,33 +16,13 @@ import java.sql.ResultSet;
 
 public class Cajero {
 
-	public ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
 
-	private double cajaFinalMetalico = 0;
-	private double cajaFinalTarjeta = 0;
-	private static int contadorTickets = 0;
-	private static final double VALOR_CAJA_CHICA_INICIAL = 300;
-
-	/**
-	 * Añade a la lista de tickets un ticket nuevo
-	 * 
-	 * @param ticket, ticket a añadir
-	 * @return devuelve true si se ha añadido correctamente y false si no se ha
-	 *         añadido.
-	 */
-	public static void cargarIdTickets() {
-		ResultSet tickets = Main_botones.conexionPrueba.consulta("SELECT * FROM ticket");
-		ArrayList<Integer> ids = new ArrayList<Integer>();
-		try {
-			while (tickets.next()) {
-
-				ids.add(tickets.getInt("id"));
-			}
-			contadorTickets = ids.get(ids.size() - 1);
-		} catch (Exception e) {
-
-		}
-	}
+	public static ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+	private double cajaFinalMetalico;
+	private double cajaFinalTarjeta;
+	private double cajaChica;
+	
 
 	public boolean anadirTicket(Ticket ticket) {
 
@@ -63,15 +48,29 @@ public class Cajero {
 	 * @param ticket parametro del que se coge la cantidad de dinero a añadir en la
 	 *               caja
 	 */
-	public void anadirDineroCaja(Ticket ticket) {
 
-		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
-			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket, ticket.getListaProductos());
-		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
-			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket, ticket.getListaProductos());
+	public void pagarTicket(Ticket ticket) {
+		ticket.setPagado(true);
+		JPanel panel = new JPanel();
+		JOptionPane.showMessageDialog(panel, "¿Como ha pagado el cliente?", "Pago", JOptionPane.INFORMATION_MESSAGE);
+		String[] options = { "Metalico", "Tarjeta" };
+		int seleccion = JOptionPane.showOptionDialog(null, "¿Como ha pagado el cliente?", "Pago",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+
+		if(options[seleccion].equals("Metalico")) {
+			ticket.setPagoTarjeta(false);
+		}else {
+			ticket.setPagoTarjeta(true);
 		}
 
+		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
+			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket);
+		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
+			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket);
+		}
+		
 	}
+
 
 	/**
 	 * Devuelve el valor de la caja total del dia.
@@ -166,9 +165,16 @@ public class Cajero {
 
 	// CONSTRUCTOR, GETTERS Y SETTERS
 
-	public Cajero() {
+	// constructor
+	public Cajero(ArrayList<Ticket> listaTickets) {
+		super();
+		this.listaTickets = listaTickets;
+		this.cajaFinalMetalico = 0;
+		this.cajaFinalTarjeta = 0;
+		this.cajaChica = VALOR_CAJA_CHICA_INICIAL;
+	}
+	public Cajero(){
 
-		cargarIdTickets();
 	}
 
 	public ArrayList<Ticket> getListaTickets() {

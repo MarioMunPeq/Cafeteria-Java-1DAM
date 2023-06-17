@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main_botones",
+            "request": "launch",
+            "mainClass": "interfaces.Main_botones",
+            "projectName": "ProyectoCafeteriaNuevo"
+        },
+        {
+            "type": "java",
+            "name": "Ventana_cafe",
+            "request": "launch",
+            "mainClass": "interfaces.Ventana_cafe",
+            "projectName": "ProyectoCafeteriaNuevo"
+        },
+        {
+            "type": "java",
+            "name": "Ventana_comida",
+            "request": "launch",
+            "mainClass": "interfaces.Ventana_comida",
+            "projectName": "ProyectoCafeteriaNuevo"
+        },
+        {
+            "type": "java",
+            "name": "Ventana_infusion",
+            "request": "launch",
+            "mainClass": "interfaces.Ventana_infusion",
+            "projectName": "ProyectoCafeteriaNuevo"
+        },
+        {
+            "type": "java",
+            "name": "Ventana_otra_bebida",
+            "request": "launch",
+            "mainClass": "interfaces.Ventana_otra_bebida",
+            "projectName": "ProyectoCafeteriaNuevo"
+        }
+    ]
+}

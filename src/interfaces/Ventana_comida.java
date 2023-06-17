@@ -293,60 +293,70 @@ public class Ventana_comida extends javax.swing.JFrame {
     private void jb_jamonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_jamonActionPerformed
         // se añade tostadas con jamón al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Tostadas con Jamón Ibérico (DO) \t 1.80€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(36));
 
     }// GEN-LAST:event_jb_jamonActionPerformed
 
     private void jb_tomateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tomateActionPerformed
         // se añade tostadas con tomate al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Tostadas con Aceite y Tomate \t 1.20€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(35));
     }// GEN-LAST:event_jb_tomateActionPerformed
 
     private void jb_mermeladaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_mermeladaActionPerformed
         // se añade tostadas con mermelada al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Tostadas con Mermelada \t 2.10€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(39));
     }// GEN-LAST:event_jb_mermeladaActionPerformed
 
     private void jb_aguacateActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aguacateActionPerformed
         // se añade tostadas con aguacate al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Tostadas con Aguacate \t 1.60€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(37));
     }// GEN-LAST:event_jb_aguacateActionPerformed
 
     private void jb_t_limonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_t_limonActionPerformed
         // se añade trata de limón al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Tarta de Limón Casera \t 1.80€\n");
-
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(44));
     }// GEN-LAST:event_jb_t_limonActionPerformed
 
     private void jb_tortillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_tortillaActionPerformed
         // se añade pincho de tortilla al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Pincho de Tortilla \t 1.60€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(42));
 
     }// GEN-LAST:event_jb_tortillaActionPerformed
 
     private void jb_t_quesoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_t_quesoActionPerformed
         // TODO add your handling code here:
         jta_info_add_ticket_comida.append("Tarta de Queso Casera \t 2.10€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(38));
     }// GEN-LAST:event_jb_t_quesoActionPerformed
 
     private void jb_bizcochoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_bizcochoActionPerformed
         // se añade bizcocho al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Bizcoho Casero \t 1.60€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(40));
     }// GEN-LAST:event_jb_bizcochoActionPerformed
 
     private void jb_pulguitaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_pulguitaActionPerformed
         // se añade pulguita al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Pulguita de Tortilla \t 1.20€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(43));
     }// GEN-LAST:event_jb_pulguitaActionPerformed
 
     private void jb_donutActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_donutActionPerformed
         // se añade trata de queso al jta_info_add_ticket_comida
         jta_info_add_ticket_comida.append("Donut \t 1.50€\n");
+        Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(41));
     }// GEN-LAST:event_jb_donutActionPerformed
 
     private void jb_aniadir_ticket_comidasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_aniadir_ticket_comidasActionPerformed
         // añadir al ticket seleccionado los productos que se han recogido
         // OJO-- esto debe cerrar la ventana y volver al main
         Main_botones.comida3.dispose();
+        jta_info_add_ticket_comida.setText("");
     }// GEN-LAST:event_jb_aniadir_ticket_comidasActionPerformed
 
     /**
