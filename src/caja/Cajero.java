@@ -5,15 +5,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
-
-import interfaces.Main_botones;
-import tiposProductos.Productos;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.sql.ResultSet;
-
 public class Cajero {
 
 	public static final double VALOR_CAJA_CHICA_INICIAL = 300;
@@ -21,8 +12,7 @@ public class Cajero {
 	public static ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 	private double cajaFinalMetalico;
 	private double cajaFinalTarjeta;
-	private double cajaChica;
-	
+	// private double cajaChica;
 
 	public boolean anadirTicket(Ticket ticket) {
 
@@ -52,31 +42,30 @@ public class Cajero {
 	public void pagarTicket(Ticket ticket) {
 		ticket.setPagado(true);
 		JPanel panel = new JPanel();
-		//redondeamos el valor total del ticket a 2 decimales
+		// redondeamos el valor total del ticket a 2 decimales
 		double totalDouble = redondear(ticket.totalTicket(ticket));
 		JOptionPane.showMessageDialog(panel, "El total del ticket es: " + totalDouble);
 		String[] options = { "Metalico", "Tarjeta" };
 		int seleccion = JOptionPane.showOptionDialog(null, "¿Como ha pagado el cliente?", "Pago",
 				JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 
-		if(options[seleccion].equals("Metalico")) {
+		if (options[seleccion].equals("Metalico")) {
 			ticket.setPagoTarjeta(false);
-			//JOption pane para introducir el dinero que ha pagado el cliente
-			//repetir el joption pane hasta que el dinero introducido sea mayor o igual que el total del ticket
-
-			
+			// JOption pane para introducir el dinero que ha pagado el cliente
+			// repetir el joption pane hasta que el dinero introducido sea mayor o igual que
+			// el total del ticket
 
 			String dineroPagado = JOptionPane.showInputDialog("Introduzca el dinero que ha pagado el cliente");
-			while(Double.parseDouble(dineroPagado) < totalDouble) {
+			while (Double.parseDouble(dineroPagado) < totalDouble) {
 				JOptionPane.showMessageDialog(panel, "El dinero introducido es menor que el total del ticket");
 				dineroPagado = JOptionPane.showInputDialog("Introduzca el dinero que ha pagado el cliente");
 			}
 			double dineroPagadoDouble = Double.parseDouble(dineroPagado);
-			calcularVuelta(totalDouble, dineroPagadoDouble );
+			calcularVuelta(totalDouble, dineroPagadoDouble);
 			JOptionPane.showMessageDialog(panel, "La vuelta es de: " + calcularVuelta(totalDouble, dineroPagadoDouble));
 			sugerenciaCambio(calcularVueltaDouble(totalDouble, dineroPagadoDouble));
-			
-		}else {
+
+		} else {
 			ticket.setPagoTarjeta(true);
 		}
 
@@ -85,9 +74,8 @@ public class Cajero {
 		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
 			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket);
 		}
-		
-	}
 
+	}
 
 	/**
 	 * Devuelve el valor de la caja total del dia.
@@ -97,7 +85,7 @@ public class Cajero {
 	public double cajaTotal() {
 
 		double sumaTotalCaja = cajaFinalTarjeta + cajaFinalMetalico + VALOR_CAJA_CHICA_INICIAL;
-		
+
 		return redondear(sumaTotalCaja);
 
 	}
@@ -110,8 +98,9 @@ public class Cajero {
 	 */
 	public double beneficioDiario() {
 
-		//redondeamos el valor de la caja total a 2 decimales con math.round y lo almacenamos en un double
-		double beneficio=cajaTotal() - VALOR_CAJA_CHICA_INICIAL;
+		// redondeamos el valor de la caja total a 2 decimales con math.round y lo
+		// almacenamos en un double
+		double beneficio = cajaTotal() - VALOR_CAJA_CHICA_INICIAL;
 		return redondear(beneficio);
 
 	}
@@ -127,23 +116,24 @@ public class Cajero {
 
 	public String calcularVuelta(double precio, double pagado) {
 		double totalDevolver = pagado - precio;
-		return "El cambio a devolver es: " 	+ redondear(totalDevolver) + "€";
-		
+		return "El cambio a devolver es: " + redondear(totalDevolver) + "€";
+
 	}
+
 	public double calcularVueltaDouble(double precio, double pagado) {
 		double totalDevolver = pagado - precio;
 		if (totalDevolver < 0) {
 			return 0;
 		}
 		return redondear(totalDevolver);
-		
+
 	}
 
-	//metodo para redondear con math.round a 2 decimales
+	// metodo para redondear con math.round a 2 decimales
 	public static double redondear(double numero) {
 		return Math.round(numero * 100.0) / 100.0;
 	}
-	
+
 	/**
 	 * Este metodo sirve para sugerir el cambio que hay que dar en monedas y
 	 * billetes utilizando bucles para ir restando al cambio los distintos tipos de
@@ -160,7 +150,6 @@ public class Cajero {
 		int[] cantidadBilletes = new int[billetes.length];
 		int[] cantidadMonedas = new int[monedas.length];
 
-		
 		double cambioRedondeado = redondear(cambio);
 
 		for (int i = 0; i < billetes.length; i++) {
@@ -179,8 +168,9 @@ public class Cajero {
 		if (cambioRedondeado > 0.001) {
 			cantidadMonedas[7]++;
 		}
-		//seleccionamos solo los billetes y monedas cuya cantidad sea mayor que 0 para guardar su valores en un arraylist auxiliar y mostrarlos en JOptionPane
-		//uno debajo de otro
+		// seleccionamos solo los billetes y monedas cuya cantidad sea mayor que 0 para
+		// guardar su valores en un arraylist auxiliar y mostrarlos en JOptionPane
+		// uno debajo de otro
 
 		ArrayList<String> cambioSugerido = new ArrayList<String>();
 		for (int i = 0; i < cantidadBilletes.length; i++) {
@@ -194,23 +184,23 @@ public class Cajero {
 			}
 		}
 
-		JOptionPane.showMessageDialog(null, cambioSugerido.toString().replace("[", "").replace("]", "").replace(",", "\n"));
-		
+		JOptionPane.showMessageDialog(null,
+				cambioSugerido.toString().replace("[", "").replace("]", "").replace(",", "\n"));
 
-		
 	}
-	
+
 	// CONSTRUCTOR, GETTERS Y SETTERS
 
 	// constructor
 	public Cajero(ArrayList<Ticket> listaTickets) {
 		super();
-		this.listaTickets = listaTickets;
+		Cajero.listaTickets = listaTickets;
 		this.cajaFinalMetalico = 0;
 		this.cajaFinalTarjeta = 0;
-		this.cajaChica = VALOR_CAJA_CHICA_INICIAL;
+		// this.cajaChica = VALOR_CAJA_CHICA_INICIAL;
 	}
-	public Cajero(){
+
+	public Cajero() {
 
 	}
 
@@ -219,7 +209,7 @@ public class Cajero {
 	}
 
 	public void setListaTickets(ArrayList<Ticket> listaTickets) {
-		this.listaTickets = listaTickets;
+		Cajero.listaTickets = listaTickets;
 	}
 
 	public double getCajaFinalMetalico() {

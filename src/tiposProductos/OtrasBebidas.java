@@ -1,5 +1,5 @@
 package tiposProductos;
-import java.util.Objects;
+
 public class OtrasBebidas extends Productos {
 
     public OtrasBebidas(int id, String nombre, double precio, String alergeno, int stock) {
@@ -9,9 +9,6 @@ public class OtrasBebidas extends Productos {
 
     private Boolean tieneAlcohol;
     private String nombre;
- 
-
-
 
     public Boolean isTieneAlcohol() {
         return this.tieneAlcohol;
@@ -25,27 +22,25 @@ public class OtrasBebidas extends Productos {
         this.tieneAlcohol = tieneAlcohol;
     }
 
-
     public String getNombre() {
-		return nombre;
-	}
+        return nombre;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public OtrasBebidas tieneAlcohol(Boolean tieneAlcohol) {
+    public OtrasBebidas tieneAlcohol(Boolean tieneAlcohol) {
         setTieneAlcohol(tieneAlcohol);
         return this;
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " tieneAlcohol='" + isTieneAlcohol() + "'" +
-            ", tipo='" + getNombre() + "'" +
-            "}";
+                " tieneAlcohol='" + isTieneAlcohol() + "'" +
+                ", tipo='" + getNombre() + "'" +
+                "}";
     }
-    
+
 }

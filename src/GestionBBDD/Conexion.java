@@ -14,7 +14,7 @@ import tiposProductos.Productos;
  *
  * Clase que gestiona la conexión con la base de datos
  */
-public class Conexion2 {
+public class Conexion {
 
     private final String USUARIO;
     private final String CLAVE;
@@ -26,7 +26,7 @@ public class Conexion2 {
     /**
      * Constructor vacío de la clase
      */
-    public Conexion2() {
+    public Conexion() {
         this.USUARIO = "root";
         this.CLAVE = "admin";
         this.URL = "jdbc:mysql://localhost:3306/Cafeteria";
@@ -49,10 +49,11 @@ public class Conexion2 {
                 // Guardamos los datos en un arraylist
                 Main_botones.productosBBDD.add(
                         new Productos(rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getString(4), rs.getInt(5)));
-                        /* 
-                System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3) + " " + rs.getString(4)
-                        + " " + rs.getInt(5)); 
-                        */
+                /*
+                 * System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " +
+                 * rs.getDouble(3) + " " + rs.getString(4)
+                 * + " " + rs.getInt(5));
+                 */
             }
             // Cerramos la conexión con la base de datos.
             conexion.close();

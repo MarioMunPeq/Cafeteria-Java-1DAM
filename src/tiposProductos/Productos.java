@@ -1,4 +1,5 @@
 package tiposProductos;
+
 /**
  * Clase padre productos
  */
@@ -9,27 +10,26 @@ public class Productos {
     protected double precio; // Lo que cuesta el producto
     protected int stock; // Las unidades que quedan del producto
     protected String alergeno; // Si tiene o no alérgeno (?)
-    
-    
+
     protected static final String LECHE_ENTERA = "Entera";
     protected static final String LECHE_SEMI = "Semi";
     protected static final String LECHE_DESNATADA = "Desnatada";
     protected static final String LECHE_AVENA = "Avena";
     protected static final String LECHE_SOJA = "Soja";
     protected static final String LECHE_SINLACTOSA = "SinLactosa";
-    
+
     public static final String CONSULTA_SQL = "select id  from productos where nombre =";
-    
+
     /**
      * 
      * @param stock
      */
     public void reponer(int stock) {
-        
-          if (stock < 60) {
-          System.out.println("Queda menos de un 30%, toca reponer");
-          }
-         
+
+        if (stock < 60) {
+            System.out.println("Queda menos de un 30%, toca reponer");
+        }
+
     }
 
     /**
@@ -68,14 +68,13 @@ public class Productos {
      * @param stock
      * @param alergeno
      */
-    public Productos(int id, String nombre, double precio, String alergeno,int stock) {
+    public Productos(int id, String nombre, double precio, String alergeno, int stock) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.alergeno = alergeno;
     }
-    
-    
+
     public int getId() {
         return id;
     }

@@ -6,7 +6,6 @@ package interfaces;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,45 +20,56 @@ public class Ventana_comida extends javax.swing.JFrame {
         initComponents();
         // inserccion de imagenes
         // tostada con tomate
-        ImageIcon img_tomate = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\tomate.png");
-        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del bototn que lo va a contener. getscaled lo redimensiona
-        Image im_tomate = img_tomate.getImage().getScaledInstance(jb_tomate.getWidth(), jb_tomate.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_tomate = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\tomate.png");
+        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del
+        // bototn que lo va a contener. getscaled lo redimensiona
+        Image im_tomate = img_tomate.getImage().getScaledInstance(jb_tomate.getWidth(), jb_tomate.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_tomate.setIcon(new ImageIcon(im_tomate));
         // tostada de mermelada
-        ImageIcon img_mermelada = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\mermelada.png");
-        Image im_mermelada = img_mermelada.getImage().getScaledInstance(jb_mermelada.getWidth(), jb_mermelada.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_mermelada = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\mermelada.png");
+        Image im_mermelada = img_mermelada.getImage().getScaledInstance(jb_mermelada.getWidth(),
+                jb_mermelada.getHeight(), Image.SCALE_SMOOTH);
         jb_mermelada.setIcon(new ImageIcon(im_mermelada));
         // tostada de aguacate
-        ImageIcon img_aguacate = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\aguacate.png");
-        Image im_aguacate = img_aguacate.getImage().getScaledInstance(jb_aguacate.getWidth(), jb_aguacate.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_aguacate = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\aguacate.png");
+        Image im_aguacate = img_aguacate.getImage().getScaledInstance(jb_aguacate.getWidth(), jb_aguacate.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_aguacate.setIcon(new ImageIcon(im_aguacate));
         // bizcoho
-        ImageIcon img_bizcoho = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\bizcoho.png");
-        Image im_bizcoho = img_bizcoho.getImage().getScaledInstance(jb_bizcocho.getWidth(), jb_bizcocho.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_bizcoho = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\bizcoho.png");
+        Image im_bizcoho = img_bizcoho.getImage().getScaledInstance(jb_bizcocho.getWidth(), jb_bizcocho.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_bizcocho.setIcon(new ImageIcon(im_bizcoho));
         // donut
-        ImageIcon img_donut = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\donut.png");
-        Image im_donut = img_donut.getImage().getScaledInstance(jb_donut.getWidth(), jb_donut.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_donut = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\donut.png");
+        Image im_donut = img_donut.getImage().getScaledInstance(jb_donut.getWidth(), jb_donut.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_donut.setIcon(new ImageIcon(im_donut));
         // tostada con jamon
-        ImageIcon img_jamon = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\jamon.png");
-        Image im_jamon = img_jamon.getImage().getScaledInstance(jb_jamon.getWidth(), jb_jamon.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_jamon = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\jamon.png");
+        Image im_jamon = img_jamon.getImage().getScaledInstance(jb_jamon.getWidth(), jb_jamon.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_jamon.setIcon(new ImageIcon(im_jamon));
         // tarta de limon
-        ImageIcon img_limon = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\limon.png");
-        Image im_limon = img_limon.getImage().getScaledInstance(jb_t_limon.getWidth(), jb_t_limon.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon img_limon = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\limon.png");
+        Image im_limon = img_limon.getImage().getScaledInstance(jb_t_limon.getWidth(), jb_t_limon.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_t_limon.setIcon(new ImageIcon(im_limon));
-        //pulguita
-        ImageIcon img_pulguita = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\pulguita.png");
-        Image im_pulguita = img_pulguita.getImage().getScaledInstance(jb_pulguita.getWidth(), jb_pulguita.getHeight(), Image.SCALE_SMOOTH);
+        // pulguita
+        ImageIcon img_pulguita = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\pulguita.png");
+        Image im_pulguita = img_pulguita.getImage().getScaledInstance(jb_pulguita.getWidth(), jb_pulguita.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_pulguita.setIcon(new ImageIcon(im_pulguita));
-        //tarta de queso
-        ImageIcon img_queso = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\queso.png");
-        Image im_queso = img_queso.getImage().getScaledInstance(jb_t_queso.getWidth(), jb_t_queso.getHeight(), Image.SCALE_SMOOTH);
+        // tarta de queso
+        ImageIcon img_queso = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\queso.png");
+        Image im_queso = img_queso.getImage().getScaledInstance(jb_t_queso.getWidth(), jb_t_queso.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_t_queso.setIcon(new ImageIcon(im_queso));
-        //tortilla
-        ImageIcon img_tortilla = new ImageIcon("src\\cafeteria_imagenes_botones\\comidas\\tortilla.png");
-        Image im_tortilla = img_tortilla.getImage().getScaledInstance(jb_tortilla.getWidth(), jb_tortilla.getHeight(), Image.SCALE_SMOOTH);
+        // tortilla
+        ImageIcon img_tortilla = new ImageIcon("img\\cafeteria_imagenes_botones\\comidas\\tortilla.png");
+        Image im_tortilla = img_tortilla.getImage().getScaledInstance(jb_tortilla.getWidth(), jb_tortilla.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_tortilla.setIcon(new ImageIcon(im_tortilla));
     }
 
@@ -68,9 +78,10 @@ public class Ventana_comida extends javax.swing.JFrame {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    @SuppressWarnings("unchecked")
+
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -180,60 +191,104 @@ public class Ventana_comida extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jb_t_queso, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jb_aguacate, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(13, Short.MAX_VALUE))))
-        );
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 223,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 223,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout
+                                                .createSequentialGroup()
+                                                .addGroup(jPanel2Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                jPanel2Layout.createSequentialGroup()
+                                                                        .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                .addComponent(jb_tortilla,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(jb_donut,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addGap(18, 18, 18)
+                                                                        .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(jb_t_limon,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(jb_t_queso,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                jPanel2Layout.createSequentialGroup()
+                                                                        .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(jb_mermelada,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(jb_tomate,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addGap(18, 18, 18)
+                                                                        .addGroup(jPanel2Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(jb_jamon,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(jb_aguacate,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        223,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addContainerGap(13, Short.MAX_VALUE)))));
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_aguacate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_t_queso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_jamon, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_tomate, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_aguacate, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_mermelada, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_pulguita, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_bizcocho, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_t_limon, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_tortilla, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_t_queso, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_donut, javax.swing.GroupLayout.PREFERRED_SIZE, 93,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         jta_info_add_ticket_comida.setEditable(false);
         jta_info_add_ticket_comida.setColumns(20);
@@ -253,39 +308,48 @@ public class Ventana_comida extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_aniadir_ticket_comidas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 487,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34,
+                                        Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 292,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_aniadir_ticket_comidas,
+                                                javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 292,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(35, 35, 35)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_aniadir_ticket_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(53, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 432,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jb_aniadir_ticket_comidas,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 79,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(53, Short.MAX_VALUE)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -329,7 +393,7 @@ public class Ventana_comida extends javax.swing.JFrame {
     }// GEN-LAST:event_jb_tortillaActionPerformed
 
     private void jb_t_quesoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_t_quesoActionPerformed
-        // TODO add your handling code here:
+
         jta_info_add_ticket_comida.append("Tarta de Queso Casera \t 2.10€\n");
         Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(38));
     }// GEN-LAST:event_jb_t_quesoActionPerformed

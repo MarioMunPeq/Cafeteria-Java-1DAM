@@ -3,8 +3,6 @@ package caja;
 import java.sql.Date;
 import java.util.ArrayList;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
-
 import tiposProductos.Productos;
 
 public class Ticket {
@@ -16,7 +14,6 @@ public class Ticket {
 	private Date fecha;
 	public static final double IVA = 1.21;
 
-	
 	/**
 	 * Metodo para cambiar el booleano "pagado" a true
 	 * 
@@ -26,19 +23,20 @@ public class Ticket {
 	public boolean ticketPagado(Ticket ticket) {
 
 		ticket.setPagado(true);
-		
+
 		return ticket.isPagado();
 	}
 
 	/**
 	 * Cambia el booleano pagado con tarjeta a true
+	 * 
 	 * @param ticket, ticekt que se quiere indicar el pago con tarjeta
 	 * @return true si se cambia el atributo a true, false si no
 	 */
 	public boolean pagarConTarjeta(Ticket ticket) {
-		
+
 		ticket.setPagoTarjeta(true);
-		
+
 		return ticket.isPagoTarjeta();
 
 	}
@@ -48,12 +46,12 @@ public class Ticket {
 	 * 
 	 * @param precio total del precio sin iva del conjunto de productos del ticket
 	 * @return precio total con iva del conjunto de productos del ticket
-	 
-	public double calcularIVA(double precio) {
-
-		return precio * IVA;
-	}
-	*/
+	 * 
+	 *         public double calcularIVA(double precio) {
+	 * 
+	 *         return precio * IVA;
+	 *         }
+	 */
 	/**
 	 * Este metodo sirve para calcular el total del coste de los productos de un
 	 * ticket
@@ -66,12 +64,11 @@ public class Ticket {
 
 		double precioSinIva = 0;
 
-		
 		for (Productos productos : ticket.getListaProductos()) {
 			precioSinIva = precioSinIva + productos.getPrecio();
 		}
 
-		return precioSinIva;     //calcularIVA(precioSinIva);metodo que se llamara en un futuro
+		return precioSinIva; // calcularIVA(precioSinIva);metodo que se llamara en un futuro
 
 	}
 
@@ -92,7 +89,7 @@ public class Ticket {
 	 * @param producto
 	 */
 
-	public void borrarProducto(Ticket ticket,Productos producto) {
+	public void borrarProducto(Ticket ticket, Productos producto) {
 
 		ticket.listaProductosTicket.remove(producto);
 	}
@@ -106,21 +103,21 @@ public class Ticket {
 		ticket.listaProductosTicket.clear();
 
 	}
-	//metodo para mostrar los productos de un ticket
-	public String mostrarProductosTicket(Ticket ticket) {
-		
-		String productos = "";
-		
-		for (Productos producto : ticket.getListaProductos()) {
-			
-			productos = productos + producto.getNombre() + "\n";
-			
-		}
-		
-		return productos;
-		
-	}
 
+	// metodo para mostrar los productos de un ticket
+	public String mostrarProductosTicket(Ticket ticket) {
+
+		String productos = "";
+
+		for (Productos producto : ticket.getListaProductos()) {
+
+			productos = productos + producto.getNombre() + "\n";
+
+		}
+
+		return productos;
+
+	}
 
 	// CONSTRUCTOR GETTERS Y SETTERS
 	public Ticket(int id) {
@@ -130,7 +127,6 @@ public class Ticket {
 		this.pagado = false;
 		this.fecha = new Date(System.currentTimeMillis());
 	}
-	
 
 	public ArrayList<Productos> getListaProductos() {
 		return listaProductosTicket;

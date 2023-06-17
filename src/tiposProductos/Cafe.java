@@ -1,23 +1,20 @@
 package tiposProductos;
+
 import java.util.Objects;
 
 public class Cafe extends Productos {
 
-    
-    private static final double SUPLEMENTOLECHE = 0.7f;
+    // private static final double SUPLEMENTOLECHE = 0.7f;
 
-    public Cafe(int id, String nombre, double precio, String alergeno,int stock) {
-        super(id, nombre, precio, alergeno,stock);
-        
+    public Cafe(int id, String nombre, double precio, String alergeno, int stock) {
+        super(id, nombre, precio, alergeno, stock);
+
     }
-    
 
     private String tipoCafe; // este en principio sobra
     private String sabor;
     private Boolean descafeinado;
     private String tipoLeche;
-    
-
 
     public String getTipoCafe() {
         return this.tipoCafe;
@@ -26,14 +23,14 @@ public class Cafe extends Productos {
     public void setTipoCafe(String tipoCafe) {
         this.tipoCafe = tipoCafe;
     }
-    public String getSabor() {
-		return sabor;
-	}
 
-	public void setSabor(String sabor) {
-		this.sabor = sabor;
-	}
-    
+    public String getSabor() {
+        return sabor;
+    }
+
+    public void setSabor(String sabor) {
+        this.sabor = sabor;
+    }
 
     public Boolean isDescafeinado() {
         return this.descafeinado;
@@ -60,8 +57,6 @@ public class Cafe extends Productos {
         return this;
     }
 
-    
-
     public Cafe descafeinado(Boolean descafeinado) {
         setDescafeinado(descafeinado);
         return this;
@@ -80,7 +75,8 @@ public class Cafe extends Productos {
             return false;
         }
         Cafe cafe = (Cafe) o;
-        return Objects.equals(tipoCafe, cafe.tipoCafe) && Objects.equals(descafeinado, cafe.descafeinado) && Objects.equals(tipoLeche, cafe.tipoLeche);
+        return Objects.equals(tipoCafe, cafe.tipoCafe) && Objects.equals(descafeinado, cafe.descafeinado)
+                && Objects.equals(tipoLeche, cafe.tipoLeche);
     }
 
     @Override
@@ -91,11 +87,10 @@ public class Cafe extends Productos {
     @Override
     public String toString() {
         return "{" +
-            " tipoCafe='" + getTipoCafe() + "'" +
-            ", descafeinado='" + isDescafeinado() + "'" +
-            ", tipoLeche='" + getTipoLeche() + "'" +
-            "}";
+                " tipoCafe='" + getTipoCafe() + "'" +
+                ", descafeinado='" + isDescafeinado() + "'" +
+                ", tipoLeche='" + getTipoLeche() + "'" +
+                "}";
     }
 
-	
 }

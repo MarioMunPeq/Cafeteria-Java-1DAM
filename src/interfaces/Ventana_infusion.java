@@ -23,64 +23,64 @@ public class Ventana_infusion extends javax.swing.JFrame {
         initComponents();
         // inserccion de imagenes en los botones
         // te chai vainilla
-        ImageIcon img_chai = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\cahi vainilla.png");
+        ImageIcon img_chai = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\cahi vainilla.png");
         // crea un objeto imagen en base a l incono anteior y toma las dimensiones del
         // bototn que lo va a contener. getscaled lo redimensiona
         Image im_chai = img_chai.getImage().getScaledInstance(jb_chai.getWidth(), jb_chai.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_chai.setIcon(new ImageIcon(im_chai));
         // te de frutos rojos
-        ImageIcon img_frutos = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\frutos rojos.png");
+        ImageIcon img_frutos = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\frutos rojos.png");
         Image im_frutos = img_frutos.getImage().getScaledInstance(jb_frutos_rojos.getWidth(),
                 jb_frutos_rojos.getHeight(), Image.SCALE_SMOOTH);
         jb_frutos_rojos.setIcon(new ImageIcon(im_frutos));
         // manzanilla
-        ImageIcon img_manzanilla = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\manzanilla.png");
+        ImageIcon img_manzanilla = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\manzanilla.png");
         Image im_manzanilla = img_manzanilla.getImage().getScaledInstance(jb_manzanilla.getWidth(),
                 jb_manzanilla.getHeight(), Image.SCALE_SMOOTH);
         jb_manzanilla.setIcon(new ImageIcon(im_manzanilla));
         // te matcha
-        ImageIcon img_matcha = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\matcha.png");
+        ImageIcon img_matcha = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\matcha.png");
         Image im_matcha = img_matcha.getImage().getScaledInstance(jb_matcha.getWidth(), jb_matcha.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_matcha.setIcon(new ImageIcon(im_matcha));
         // menta poleo
-        ImageIcon img_poleo = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\menta poleo.png");
+        ImageIcon img_poleo = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\menta poleo.png");
         Image im_poleo = img_poleo.getImage().getScaledInstance(jb_montapoleo.getWidth(), jb_montapoleo.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_montapoleo.setIcon(new ImageIcon(im_poleo));
         // pink latte
-        ImageIcon img_pink = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\pink latte.png");
+        ImageIcon img_pink = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\pink latte.png");
         Image im_pink = img_pink.getImage().getScaledInstance(jb_pink.getWidth(), jb_pink.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_pink.setIcon(new ImageIcon(im_pink));
         // te de rooibos
-        ImageIcon img_rooibos = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\roibos.png");
+        ImageIcon img_rooibos = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\roibos.png");
         Image im_rooibos = img_rooibos.getImage().getScaledInstance(jb_rooibos.getWidth(), jb_rooibos.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_rooibos.setIcon(new ImageIcon(im_rooibos));
         // te azul
-        ImageIcon img_azul = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te azul.png");
+        ImageIcon img_azul = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\te azul.png");
         Image im_azul = img_azul.getImage().getScaledInstance(jb_te_azul.getWidth(), jb_te_azul.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_te_azul.setIcon(new ImageIcon(im_azul));
         // te negro
-        ImageIcon img_negro = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te negro.png");
+        ImageIcon img_negro = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\te negro.png");
         Image im_negro = img_negro.getImage().getScaledInstance(jb_te_negro.getWidth(), jb_te_negro.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_te_negro.setIcon(new ImageIcon(im_negro));
         // te rojo
-        ImageIcon img_rojo = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te rojo.png");
+        ImageIcon img_rojo = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\te rojo.png");
         Image im_rojo = img_rojo.getImage().getScaledInstance(jb_te_rojo.getWidth(), jb_te_rojo.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_te_rojo.setIcon(new ImageIcon(im_rojo));
         // te verde
-        ImageIcon img_verde = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\te verde.png");
+        ImageIcon img_verde = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\te verde.png");
         Image im_verde = img_verde.getImage().getScaledInstance(jb_te_verde.getWidth(), jb_te_verde.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_te_verde.setIcon(new ImageIcon(im_verde));
         // tila
-        ImageIcon img_tila = new ImageIcon("src\\cafeteria_imagenes_botones\\115x90\\tila.png");
+        ImageIcon img_tila = new ImageIcon("img\\cafeteria_imagenes_botones\\115x90\\tila.png");
         Image im_tila = img_tila.getImage().getScaledInstance(jb_tila.getWidth(), jb_tila.getHeight(),
                 Image.SCALE_SMOOTH);
         jb_tila.setIcon(new ImageIcon(im_tila));
@@ -92,7 +92,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    @SuppressWarnings("unchecked")
+
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
@@ -481,7 +481,6 @@ public class Ventana_infusion extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
 
         // OJO- debe tomar el valor del jbg_tipos_leche_infu
     }// GEN-LAST:event_jb_te_verdeActionPerformed
@@ -511,7 +510,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té azul  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(11));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(11));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -527,7 +526,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té rojo  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(8));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(8));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -544,7 +543,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té negro  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(10));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(10));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -560,7 +559,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Mentapoleo  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(16));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(16));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -576,7 +575,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té de Rooibos  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(12));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(12));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -592,7 +591,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Manzanilla  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(15));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(15));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -608,7 +607,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té Chai Vainilla " + bg_tipo_leche.getSelection().getActionCommand() + "\t 2.40€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(18));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(18));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -624,7 +623,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Té Matcha  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.80€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(19));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(19));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -640,7 +639,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Pink Latte  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 2.40€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(14));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(14));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -656,7 +655,7 @@ public class Ventana_infusion extends javax.swing.JFrame {
 
             jta_info_add_ticket_infusiones
                     .append("Tila  " + bg_tipo_leche.getSelection().getActionCommand() + "\t 1.60€\n");
-                    Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(17));
+            Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(17));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
@@ -664,27 +663,22 @@ public class Ventana_infusion extends javax.swing.JFrame {
     }// GEN-LAST:event_jb_tilaActionPerformed
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avenaActionPerformed
-        // TODO add your handling code here:
         jrb_avena.setActionCommand(" Avena");
     }// GEN-LAST:event_jrb_avenaActionPerformed
 
     private void jrb_sojaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sojaActionPerformed
-        // TODO add your handling code here:
         jrb_soja.setActionCommand(" Soja");
     }// GEN-LAST:event_jrb_sojaActionPerformed
 
     private void jrb_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sin_lactosaActionPerformed
-        // TODO add your handling code here:
         jrb_sin_lactosa.setActionCommand(" Sin Lactosa");
     }// GEN-LAST:event_jrb_sin_lactosaActionPerformed
 
     private void jrb_desnaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_desnaActionPerformed
-        // TODO add your handling code here:
         jrb_desna.setActionCommand(" Desnatada");
     }// GEN-LAST:event_jrb_desnaActionPerformed
 
     private void jrb_aguaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_aguaActionPerformed
-        // TODO add your handling code here:
         jrb_agua.setActionCommand("");
     }// GEN-LAST:event_jrb_aguaActionPerformed
 

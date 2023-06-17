@@ -9,9 +9,6 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import javax.swing.JOptionPane;
 
-import caja.Cajero;
-import caja.Ticket;
-
 /**
  *
  * @author admin
@@ -23,39 +20,48 @@ public class Ventana_cafe extends javax.swing.JFrame {
      */
     public Ventana_cafe() {
         initComponents();
-        //inserccion de imagenes en los botones
-// solo
-        ImageIcon img_solo = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\solo.png");
-        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del bototn que lo va a contener. getscaled lo redimensiona
-        Image im_solo = img_solo.getImage().getScaledInstance(jb_c_solo.getWidth(), jb_c_solo.getHeight(), Image.SCALE_SMOOTH);
+        // inserccion de imagenes en los botones
+        // solo
+        ImageIcon img_solo = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\solo.png");
+        // crea un objeto imagen en base a l incono anteior y toma las dimensiones del
+        // bototn que lo va a contener. getscaled lo redimensiona
+        Image im_solo = img_solo.getImage().getScaledInstance(jb_c_solo.getWidth(), jb_c_solo.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_c_solo.setIcon(new ImageIcon(im_solo));
-// cortado
-        ImageIcon img_cortado = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\cortado.png");
-        Image im_cortado = img_cortado.getImage().getScaledInstance(jb_c_cortado.getWidth(), jb_c_cortado.getHeight(), Image.SCALE_SMOOTH);
+        // cortado
+        ImageIcon img_cortado = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\cortado.png");
+        Image im_cortado = img_cortado.getImage().getScaledInstance(jb_c_cortado.getWidth(), jb_c_cortado.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_c_cortado.setIcon(new ImageIcon(im_cortado));
-// con leche
-        ImageIcon img_leche = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\con leche.png");
-        Image im_leche = img_leche.getImage().getScaledInstance(jb_c_leche.getWidth(), jb_c_leche.getHeight(), Image.SCALE_SMOOTH);
+        // con leche
+        ImageIcon img_leche = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\con leche.png");
+        Image im_leche = img_leche.getImage().getScaledInstance(jb_c_leche.getWidth(), jb_c_leche.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_c_leche.setIcon(new ImageIcon(im_leche));
-// capuchino
-        ImageIcon img_capu = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\capucchino.png");
-        Image im_capu = img_capu.getImage().getScaledInstance(jb_capuchino.getWidth(), jb_capuchino.getHeight(), Image.SCALE_SMOOTH);
+        // capuchino
+        ImageIcon img_capu = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\capucchino.png");
+        Image im_capu = img_capu.getImage().getScaledInstance(jb_capuchino.getWidth(), jb_capuchino.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_capuchino.setIcon(new ImageIcon(im_capu));
-// bombon
-        ImageIcon img_bombon = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\bombon.png");
-        Image im_bonbom = img_bombon.getImage().getScaledInstance(jb_bombon.getWidth(), jb_bombon.getHeight(), Image.SCALE_SMOOTH);
+        // bombon
+        ImageIcon img_bombon = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\bombon.png");
+        Image im_bonbom = img_bombon.getImage().getScaledInstance(jb_bombon.getWidth(), jb_bombon.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_bombon.setIcon(new ImageIcon(im_bonbom));
-// shakeraro
-        ImageIcon img_shake = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\shakerato.png");
-        Image im_shake = img_shake.getImage().getScaledInstance(jb_shakerato.getWidth(), jb_shakerato.getHeight(), Image.SCALE_SMOOTH);
+        // shakeraro
+        ImageIcon img_shake = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\shakerato.png");
+        Image im_shake = img_shake.getImage().getScaledInstance(jb_shakerato.getWidth(), jb_shakerato.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_shakerato.setIcon(new ImageIcon(im_shake));
-// supra caramel
-        ImageIcon img_supra = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\supracaramel.png");
-        Image im_supra = img_supra.getImage().getScaledInstance(jb_supra.getWidth(), jb_supra.getHeight(), Image.SCALE_SMOOTH);
+        // supra caramel
+        ImageIcon img_supra = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\supracaramel.png");
+        Image im_supra = img_supra.getImage().getScaledInstance(jb_supra.getWidth(), jb_supra.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_supra.setIcon(new ImageIcon(im_supra));
-//baeleys
-        ImageIcon img_baely = new ImageIcon("src\\cafeteria_imagenes_botones\\130x110\\baeleys.png");
-        Image im_baely = img_baely.getImage().getScaledInstance(jb_baileys.getWidth(), jb_baileys.getHeight(), Image.SCALE_SMOOTH);
+        // baeleys
+        ImageIcon img_baely = new ImageIcon("img\\cafeteria_imagenes_botones\\130x110\\baeleys.png");
+        Image im_baely = img_baely.getImage().getScaledInstance(jb_baileys.getWidth(), jb_baileys.getHeight(),
+                Image.SCALE_SMOOTH);
         jb_baileys.setIcon(new ImageIcon(im_baely));
     }
 
@@ -68,14 +74,14 @@ public class Ventana_cafe extends javax.swing.JFrame {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         bg_sabores = new javax.swing.ButtonGroup();
         bg_tipo_leche = new javax.swing.ButtonGroup();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        new javax.swing.ButtonGroup();
         javax.swing.JPanel jp_cafes = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jb_c_cortado = new javax.swing.JButton();
@@ -178,49 +184,63 @@ public class Ventana_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_baileys, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_supra, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_c_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_capuchino, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_c_solo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_c_cortado, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jb_bombon, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jb_shakerato, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jb_baileys, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jb_supra, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jb_c_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jb_capuchino, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jb_c_solo, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jb_c_cortado, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jb_bombon, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jb_shakerato, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(14, Short.MAX_VALUE)));
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_c_solo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_c_cortado, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_c_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_capuchino, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_bombon, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_shakerato, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_baileys, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_supra, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_c_solo, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_c_cortado, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_c_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_capuchino, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_bombon, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_shakerato, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_baileys, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_supra, javax.swing.GroupLayout.PREFERRED_SIZE, 110,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(17, Short.MAX_VALUE)));
 
         jPanel3.setBackground(new java.awt.Color(242, 214, 189));
 
@@ -277,32 +297,30 @@ public class Ventana_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jrb_choco)
-                    .addComponent(jrb_vainilla)
-                    .addComponent(jrb_caramelo)
-                    .addComponent(jrb_clasico)
-                    .addComponent(jrb_avellana))
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jrb_choco)
+                                        .addComponent(jrb_vainilla)
+                                        .addComponent(jrb_caramelo)
+                                        .addComponent(jrb_clasico)
+                                        .addComponent(jrb_avellana))
+                                .addContainerGap(61, Short.MAX_VALUE)));
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jrb_clasico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_choco)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_vainilla)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_caramelo)
-                .addGap(2, 2, 2)
-                .addComponent(jrb_avellana)
-                .addContainerGap())
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jrb_clasico)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_choco)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_vainilla)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_caramelo)
+                                .addGap(2, 2, 2)
+                                .addComponent(jrb_avellana)
+                                .addContainerGap()));
 
         jPanel4.setBackground(new java.awt.Color(242, 214, 189));
 
@@ -359,32 +377,31 @@ public class Ventana_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jrb_avena)
-                    .addComponent(jrb_soja)
-                    .addComponent(jrb_desnatada)
-                    .addComponent(jrb_sin_lactosa)
-                    .addComponent(jrb_entera))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jrb_avena)
+                                        .addComponent(jrb_soja)
+                                        .addComponent(jrb_desnatada)
+                                        .addComponent(jrb_sin_lactosa)
+                                        .addComponent(jrb_entera))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jrb_entera)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jrb_desnatada)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_avena)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_soja)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jrb_sin_lactosa)
-                .addContainerGap())
-        );
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jrb_entera)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jrb_desnatada)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_avena)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_soja)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrb_sin_lactosa)
+                                .addContainerGap()));
 
         jcb_hielo.setBackground(new java.awt.Color(217, 141, 98));
         jcb_hielo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -422,55 +439,67 @@ public class Ventana_cafe extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_cafesLayout = new javax.swing.GroupLayout(jp_cafes);
         jp_cafes.setLayout(jp_cafesLayout);
         jp_cafesLayout.setHorizontalGroup(
-            jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_cafesLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcb_hielo)
-                    .addComponent(jcb_desca)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42))
-        );
+                jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_cafesLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jcb_hielo)
+                                        .addComponent(jcb_desca)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29,
+                                        Short.MAX_VALUE)
+                                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                279, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(42, 42, 42)));
         jp_cafesLayout.setVerticalGroup(
-            jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_cafesLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jcb_desca)
-                .addGap(28, 28, 28)
-                .addComponent(jcb_hielo)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(jp_cafesLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_cafesLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jb_aniadir_ticket_cafe, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_cafesLayout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(jcb_desca)
+                                .addGap(28, 28, 28)
+                                .addComponent(jcb_hielo)
+                                .addGap(30, 30, 30)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(55, Short.MAX_VALUE))
+                        .addGroup(jp_cafesLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jp_cafesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jp_cafesLayout.createSequentialGroup()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 433,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(27, 27, 27)
+                                                .addComponent(jb_aniadir_ticket_cafe,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 66,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jp_cafes, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -483,13 +512,16 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Café cortado " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.30€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café cortado " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.30€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(1));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
-        
+
     }// GEN-LAST:event_jb_c_cortadoActionPerformed
 
     private void jb_bombonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_bombonActionPerformed
@@ -499,12 +531,16 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Café bombón  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café bombón  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(4));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_bombonActionPerformed
 
@@ -515,29 +551,38 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Café capuchino  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.20€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café capuchino  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.20€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(3));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_capuchinoActionPerformed
 
     private void jb_c_soloActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_c_soloActionPerformed
         // añade cafe solo al jta_info_add_ticket_cafes
         try {
-            if ((bg_tipo_leche.getSelection() == null) || (!bg_tipo_leche.getSelection().getActionCommand().equals(" entera ")) || (bg_sabores.getSelection() == null)) {
+            if ((bg_tipo_leche.getSelection() == null)
+                    || (!bg_tipo_leche.getSelection().getActionCommand().equals(" entera "))
+                    || (bg_sabores.getSelection() == null)) {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el  sabor. El café solo no lleva leche.");
             }
 
-            jta_info_add_ticket_cafes.append("Café solo  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café solo  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(0));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO-- si se pincha en
     }// GEN-LAST:event_jb_c_soloActionPerformed
 
@@ -548,12 +593,16 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Café con leche  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café con leche  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 1.40€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(2));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_c_lecheActionPerformed
 
@@ -564,12 +613,16 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Supra Caramel  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.60€\n");
+            jta_info_add_ticket_cafes
+                    .append("Supra Caramel  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.60€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(5));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_supraActionPerformed
 
@@ -580,12 +633,16 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Shakerato  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
+            jta_info_add_ticket_cafes
+                    .append("Shakerato  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 2.40€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(7));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_shakeratoActionPerformed
 
@@ -596,57 +653,61 @@ public class Ventana_cafe extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Tienes que seleccionar el tipo de leche y sabor.");
             }
 
-            jta_info_add_ticket_cafes.append("Café con Baileys  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " " + bg_tipo_leche.getSelection().getActionCommand() + " " + bg_sabores.getSelection().getActionCommand() + " " + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 3.00€\n");
+            jta_info_add_ticket_cafes
+                    .append("Café con Baileys  " + (jcb_desca.isSelected() ? jcb_desca.getActionCommand() : "") + " "
+                            + bg_tipo_leche.getSelection().getActionCommand() + " "
+                            + bg_sabores.getSelection().getActionCommand() + " "
+                            + (jcb_hielo.isSelected() ? jcb_hielo.getActionCommand() : "") + "\t 3.00€\n");
             Main_botones.productosAuxiliar.add(Main_botones.productosBBDD.get(6));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR-- " + e);
         }
-        
+
         // OJO- debe añadir las opciones marcadas en jbg_tipos_keche y jbg_sabores
     }// GEN-LAST:event_jb_baileysActionPerformed
 
     private void jrb_chocoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_chocoActionPerformed
-        // TODO add your handling code here:
+
         jrb_choco.setActionCommand(" de chocolate");
     }// GEN-LAST:event_jrb_chocoActionPerformed
 
     private void jrb_vainillaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_vainillaActionPerformed
-        // TODO add your handling code here:
+
         jrb_vainilla.setActionCommand(" de vainilla");
     }// GEN-LAST:event_jrb_vainillaActionPerformed
 
     private void jrb_avenaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avenaActionPerformed
-        // TODO add your handling code here:
+
         jrb_avena.setActionCommand(" avena");
     }// GEN-LAST:event_jrb_avenaActionPerformed
 
     private void jrb_sojaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sojaActionPerformed
-        // TODO add your handling code here:
+
         jrb_soja.setActionCommand(" soja");
     }// GEN-LAST:event_jrb_sojaActionPerformed
 
     private void jrb_sin_lactosaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_sin_lactosaActionPerformed
-        // TODO add your handling code here:
+
         jrb_sin_lactosa.setActionCommand(" sin lactosa");
     }// GEN-LAST:event_jrb_sin_lactosaActionPerformed
 
     private void jrb_desnatadaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_desnatadaActionPerformed
-        // TODO add your handling code here:
+
         jrb_desnatada.setActionCommand(" desnatada");
     }// GEN-LAST:event_jrb_desnatadaActionPerformed
 
     private void jrb_enteraActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_enteraActionPerformed
-        // TODO add your handling code here:
+
         jrb_entera.setActionCommand(" entera ");
     }// GEN-LAST:event_jrb_enteraActionPerformed
 
     private void jcb_hieloActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jcb_hieloActionPerformed
-        // TODO add your handling code here:
+
         jcb_hielo.setActionCommand(" con hielo ");
     }// GEN-LAST:event_jcb_hieloActionPerformed
 
     private void jcb_descaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jcb_descaActionPerformed
-        // TODO add your handling code here:
+
         jcb_desca.setActionCommand(" descafeinado ");
     }// GEN-LAST:event_jcb_descaActionPerformed
 
@@ -658,23 +719,23 @@ public class Ventana_cafe extends javax.swing.JFrame {
         Main_botones.cafe3.dispose();
         jta_info_add_ticket_cafes.setText("");
 
-        //necesitamos crear un ticket previo para añadirle los productos
-       //  Main_botones.listaTickets.add((Main_botones.listaProductos));
-        
+        // necesitamos crear un ticket previo para añadirle los productos
+        // Main_botones.listaTickets.add((Main_botones.listaProductos));
+
     }// GEN-LAST:event_jb_aniadir_ticket_cafeActionPerformed
 
     private void jrb_avellanaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_avellanaActionPerformed
-        // TODO add your handling code here:
+
         jrb_avellana.setActionCommand("  de avellana");
     }// GEN-LAST:event_jrb_avellanaActionPerformed
 
     private void jrb_carameloActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_carameloActionPerformed
-        // TODO add your handling code here:
+
         jrb_caramelo.setActionCommand(" de caramelo");
     }// GEN-LAST:event_jrb_carameloActionPerformed
 
     private void jrb_clasicoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jrb_clasicoActionPerformed
-        // TODO add your handling code here:
+
         jrb_clasico.setActionCommand(" ");
     }// GEN-LAST:event_jrb_clasicoActionPerformed
 
@@ -726,7 +787,6 @@ public class Ventana_cafe extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bg_sabores;
     private javax.swing.ButtonGroup bg_tipo_leche;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

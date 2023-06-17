@@ -1,7 +1,8 @@
 package tiposProductos;
+
 public class Comida extends Productos {
 
-    public Comida(int id, String nombre, double precio, String alergeno,int stock) {
+    public Comida(int id, String nombre, double precio, String alergeno, int stock) {
         super(id, nombre, precio, alergeno, stock);
         // Constructor que me ha obligado a poner por tener herencia
     }
@@ -16,6 +17,5 @@ public class Comida extends Productos {
         System.out.println("Los alergenos son:");
 
     }
-    
-   
+
 }
