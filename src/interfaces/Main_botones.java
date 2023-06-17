@@ -20,6 +20,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -627,6 +628,10 @@ public class Main_botones extends javax.swing.JFrame {
                  * total tarjeta: -- muestra el total tarjeta
                  * beneficios: -- muestra caja total- caja chica
                  */
+                JOptionPane.showMessageDialog(null, "Caja total: " + cajero.cajaTotal()+"€" + "\nCaja chica: "
+                                + Cajero.VALOR_CAJA_CHICA_INICIAL+"€" + "\nTotal metalico: " + cajero.getCajaFinalMetalico()+"€"
+                                + "\nTotal tarjeta: " + cajero.getCajaFinalTarjeta()+"€" + "\nBeneficios: "
+                                + cajero.beneficioDiario()+"€");
         }// GEN-LAST:event_jb_hacer_cajaActionPerformed
 
         private void jb_modificar_ticketActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_modificar_ticketActionPerformed
