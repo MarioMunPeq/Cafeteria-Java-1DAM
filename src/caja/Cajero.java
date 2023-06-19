@@ -70,9 +70,9 @@ public class Cajero {
 		}
 
 		if (ticket.isPagado() && ticket.isPagoTarjeta()) {
-			cajaFinalTarjeta = cajaFinalTarjeta + ticket.totalTicket(ticket);
+			cajaFinalTarjeta = redondear(cajaFinalTarjeta + ticket.totalTicket(ticket));
 		} else if (ticket.isPagado() && ticket.isPagoTarjeta() == false) {
-			cajaFinalMetalico = cajaFinalMetalico + ticket.totalTicket(ticket);
+			cajaFinalMetalico = redondear(cajaFinalMetalico + ticket.totalTicket(ticket));
 		}
 
 	}
