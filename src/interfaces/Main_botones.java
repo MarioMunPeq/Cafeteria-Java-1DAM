@@ -71,7 +71,8 @@ public class Main_botones extends javax.swing.JFrame {
      */
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
@@ -107,13 +108,11 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -192,54 +191,68 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_caja_mainLayout = new javax.swing.GroupLayout(jp_caja_main);
         jp_caja_main.setLayout(jp_caja_mainLayout);
         jp_caja_mainLayout.setHorizontalGroup(
-            jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
-                    .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
-                .addGap(94, 94, 94)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4)
-                    .addComponent(jScrollPane6)
-                    .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
-                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(70, 70, 70))
-        );
+                jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                .addGap(60, 60, 60)
+                                .addGroup(jp_caja_mainLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jb_cobrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jb_borrar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                                .addComponent(jLabel3)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 279,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jb_modificar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane3))
+                                .addGap(94, 94, 94)
+                                .addGroup(jp_caja_mainLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jScrollPane6)
+                                        .addComponent(jb_borrar_producto, javax.swing.GroupLayout.DEFAULT_SIZE, 317,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jb_hacer_caja, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(70, 70, 70)));
         jp_caja_mainLayout.setVerticalGroup(
-            jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_borrar_producto))
-                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_modificar_ticket)))
-                .addGap(18, 18, 18)
-                .addGroup(jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jp_caja_mainLayout.createSequentialGroup()
-                        .addComponent(jb_borrar_ticket)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jb_cobrar_ticket))
-                    .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
+                jp_caja_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jp_caja_mainLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel4))
+                                .addGap(18, 18, 18)
+                                .addGroup(jp_caja_mainLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 301,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jb_borrar_producto))
+                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 225,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jb_ticket_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jb_modificar_ticket)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jp_caja_mainLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jp_caja_mainLayout.createSequentialGroup()
+                                                .addComponent(jb_borrar_ticket)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jb_cobrar_ticket))
+                                        .addComponent(jb_hacer_caja, javax.swing.GroupLayout.PREFERRED_SIZE, 79,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(68, Short.MAX_VALUE)));
 
         jtp_pestanias.addTab("CAJA", jp_caja_main);
 
@@ -249,7 +262,8 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel1.setText("TIKCET:");
 
         jp_botoenes_principales.setBackground(new java.awt.Color(242, 214, 189));
-        jp_botoenes_principales.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 255), new java.awt.Color(255, 204, 204)));
+        jp_botoenes_principales.setBorder(javax.swing.BorderFactory
+                .createEtchedBorder(new java.awt.Color(204, 255, 255), new java.awt.Color(255, 204, 204)));
 
         jb_infusiones.setBackground(new java.awt.Color(54, 115, 115));
         jb_infusiones.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
@@ -290,29 +304,36 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_botoenes_principalesLayout = new javax.swing.GroupLayout(jp_botoenes_principales);
         jp_botoenes_principales.setLayout(jp_botoenes_principalesLayout);
         jp_botoenes_principalesLayout.setHorizontalGroup(
-            jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                    .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                    .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                    .addComponent(jb_cafes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
+                jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
+                                .addContainerGap(32, Short.MAX_VALUE)
+                                .addGroup(jp_botoenes_principalesLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jb_infusiones, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jb_comidas, javax.swing.GroupLayout.DEFAULT_SIZE, 240,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jb_cafes, javax.swing.GroupLayout.Alignment.LEADING,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
+                                .addContainerGap(32, Short.MAX_VALUE)));
         jp_botoenes_principalesLayout.setVerticalGroup(
-            jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jb_cafes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jb_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+                jp_botoenes_principalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_botoenes_principalesLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jb_cafes, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jb_infusiones, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jb_otras_bebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jb_comidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(14, Short.MAX_VALUE)));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 102, 102));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255), 2));
@@ -325,7 +346,8 @@ public class Main_botones extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("INFORMACIÓN DE AÉRGENOS:");
 
-        jScrollPane2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 51, 255)));
+        jScrollPane2
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 51, 255)));
 
         jta_info_ticket.setEditable(false);
         jta_info_ticket.setColumns(20);
@@ -348,56 +370,71 @@ public class Main_botones extends javax.swing.JFrame {
         javax.swing.GroupLayout jp_productosLayout = new javax.swing.GroupLayout(jp_productos);
         jp_productos.setLayout(jp_productosLayout);
         jp_productosLayout.setHorizontalGroup(
-            jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jp_productosLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_productosLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73)
-                        .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel2)
-                        .addComponent(jScrollPane2)
-                        .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)))
-                .addGap(89, 89, 89))
-        );
+                jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jp_productosLayout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73,
+                                        Short.MAX_VALUE)
+                                .addGroup(jp_productosLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jp_productosLayout.createSequentialGroup()
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(73, 73, 73)
+                                                .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jp_productosLayout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jLabel2)
+                                                .addComponent(jScrollPane2)
+                                                .addComponent(jb_guardar_ticket, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 301,
+                                                        Short.MAX_VALUE)))
+                                .addGap(89, 89, 89)));
         jp_productosLayout.setVerticalGroup(
-            jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_productosLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jp_productosLayout.createSequentialGroup()
-                        .addGroup(jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_id_ticket_uso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jb_guardar_ticket)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(73, Short.MAX_VALUE))
-        );
+                jp_productosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_productosLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jp_productosLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jp_botoenes_principales, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jp_productosLayout.createSequentialGroup()
+                                                .addGroup(jp_productosLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jtf_id_ticket_uso,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 298,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jb_guardar_ticket)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 73,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(73, Short.MAX_VALUE)));
 
         jtp_pestanias.addTab("PRODUCTOS", jp_productos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jtp_pestanias, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -421,6 +458,7 @@ public class Main_botones extends javax.swing.JFrame {
         productosAuxiliar.clear();
         // for each para recorrer la lista de productos
         id++;
+
     }// GEN-LAST:event_jb_guardar_ticketActionPerformed
 
     private void jb_cafesActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_cafesActionPerformed
@@ -463,11 +501,11 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_hacer_cajaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_hacer_cajaActionPerformed
         // abre un joptionpane con:
         /*
-                 * caja total: -- suma la caja chica + total metalico+ total tarjeta
-                 * caja chica: -- muestra la caja chica
-                 * total metalico: -- muestra el total metalico
-                 * total tarjeta: -- muestra el total tarjeta
-                 * beneficios: -- muestra caja total- caja chica
+         * caja total: -- suma la caja chica + total metalico+ total tarjeta
+         * caja chica: -- muestra la caja chica
+         * total metalico: -- muestra el total metalico
+         * total tarjeta: -- muestra el total tarjeta
+         * beneficios: -- muestra caja total- caja chica
          */
         JOptionPane.showMessageDialog(null, "Caja total: " + cajero.cajaTotal() + "€" + "\nCaja chica: "
                 + Cajero.VALOR_CAJA_CHICA_INICIAL + "€" + "\nTotal metalico: "
@@ -496,10 +534,10 @@ public class Main_botones extends javax.swing.JFrame {
     private void jb_ticket_nuevoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jb_ticket_nuevoActionPerformed
         // crea un ticket nuevo y salta a la ventana de productos
         /*
-                 * intento de poner el fondo VERSION 0.0
-                 * Imagen fondo1 = new Imagen();
-                 * jp_productos.add(fondo1);
-                 * jp_productos.repaint();
+         * intento de poner el fondo VERSION 0.0
+         * Imagen fondo1 = new Imagen();
+         * jp_productos.add(fondo1);
+         * jp_productos.repaint();
          */
 
         jtp_pestanias.setSelectedComponent(jp_productos); // .seteSelectedComponente lanza a la ventana que
@@ -515,10 +553,10 @@ public class Main_botones extends javax.swing.JFrame {
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
         // (optional) ">
         /*
-                 * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-                 * look and feel.
-                 * For details see
-                 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         // for each para recorrer la lista de productos
         try {
@@ -564,10 +602,10 @@ public class Main_botones extends javax.swing.JFrame {
                 new Main_botones().setVisible(true);
 
                 /*
-                                 * cosas para ver si funciona el cambio de pantalla OJO
-                                 * Cafes cafe = new Cafes();
-                                 * cafe.updateUI();
-                                 * cafe.setVisible(true);
+                 * cosas para ver si funciona el cambio de pantalla OJO
+                 * Cafes cafe = new Cafes();
+                 * cafe.updateUI();
+                 * cafe.setVisible(true);
                  */
             }
         });
@@ -609,18 +647,18 @@ public class Main_botones extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     /*
-         * intento poder imagen VERSION 0.1
-         * https://www.youtube.com/watch?v=CfKlAHInank
-         * 
-         * class fondo_productos extends JPanel{
-         * private Imagen fondo_produ;
-         * 
-         * @Override
-         * public void paint (Graphics g){
-         * fondo_produ = new ImageIcon(getClass);
-         * 
-         * }
-         * }
+     * intento poder imagen VERSION 0.1
+     * https://www.youtube.com/watch?v=CfKlAHInank
+     * 
+     * class fondo_productos extends JPanel{
+     * private Imagen fondo_produ;
+     * 
+     * @Override
+     * public void paint (Graphics g){
+     * fondo_produ = new ImageIcon(getClass);
+     * 
+     * }
+     * }
      */
     public static Date fechaActual() {
 

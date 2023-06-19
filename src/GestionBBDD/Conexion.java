@@ -55,6 +55,7 @@ public class Conexion {
                  * + " " + rs.getInt(5));
                  */
             }
+
             // Cerramos la conexión con la base de datos.
             conexion.close();
         } catch (SQLException e) {
